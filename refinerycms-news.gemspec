@@ -45,6 +45,7 @@ Gem::Specification.new do |s|
     "lib/generators/news/news_generator.rb",
     "lib/generators/news/templates",
     "lib/generators/news/templates/migration.rb",
+    "lib/news.rb",
     "news.md",
     "rails",
     "rails/init.rb"
