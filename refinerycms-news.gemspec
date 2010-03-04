@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name = %q{refinerycms-news}
-  s.version = "0.9.6"
+  s.version = "0.9.6.1"
 
   s.authors = ["Resolve Digital", "Philip Arndt", "David Jones"]
   s.date = %q{2010-03-04}
