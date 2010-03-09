@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name = %q{refinerycms-news}
-  s.version = "0.9.6.1"
+  s.version = "0.9.7"
 
   s.authors = ["Resolve Digital", "Philip Arndt", "David Jones"]
   s.date = %q{2010-03-04}
@@ -39,12 +39,12 @@ Gem::Specification.new do |s|
     "config/locale",
     "config/locale/en.yml",
     "config/routes.rb",
+    "generators",
+    "generators/news",
+    "generators/news/news_generator.rb",
+    "generators/news/templates",
+    "generators/news/templates/migration.rb",
     "lib",
-    "lib/generators",
-    "lib/generators/news",
-    "lib/generators/news/news_generator.rb",
-    "lib/generators/news/templates",
-    "lib/generators/news/templates/migration.rb",
     "lib/news.rb",
     "news.md",
     "rails",

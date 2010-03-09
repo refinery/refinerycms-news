@@ -3,9 +3,10 @@ class <%= migration_name %> < ActiveRecord::Migration
   def self.up
     create_table :<%= table_name %> do |t|
 <% attributes.each do |attribute| -%>
-    t.<%= attribute.type %> :<%= attribute.name %>
+      t.<%= attribute.type %> :<%= attribute.name %>
 <% end -%>
-    t.timestamps
+      t.timestamps
+    end
 
     add_index :<%= table_name %>, :id
 

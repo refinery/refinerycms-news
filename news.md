@@ -18,3 +18,6 @@ Your news section loads because you have a page in your site that is told to not
 By default this page is called "News". Go to your "Pages" tab in the Refinery admin area and click the edit icon on "News". Now  click on "Hide/Show Advanced Options" and you'll see that a "Custom URL" is set to ``/news``. Simply change this to nothing, or delete the "News" page.
 
 You might also want to remove the News plugin from your backend view. To do that, you go to the "Users" tab in the Refinery admin area, edit your user, uncheck "News" from the list of plugins you can access.
+
+The plugin automatically adds an RSS feed to your entire site by injecting this into the head section of your layout:
+  <%= auto_discovery_link_tag(:rss, news_items_url(:format => 'rss')) %>
