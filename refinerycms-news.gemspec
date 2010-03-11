@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.version = "0.9.7"
 
   s.authors = ["Resolve Digital", "Philip Arndt", "David Jones"]
-  s.date = %q{2010-03-04}
+  s.date = %q{2010-03-12}
 
   s.description = %q{A really straightforward open source Ruby on Rails news plugin designed for integration with RefineryCMS.}
   s.summary = %q{Ruby on Rails news plugin for RefineryCMS.}
