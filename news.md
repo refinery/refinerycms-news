@@ -19,5 +19,5 @@ By default this page is called "News". Go to your "Pages" tab in the Refinery ad
 
 You might also want to remove the News plugin from your backend view. To do that, you go to the "Users" tab in the Refinery admin area, edit your user, uncheck "News" from the list of plugins you can access.
 
-The plugin automatically adds an RSS feed to your entire site by injecting this into the head section of your layout:
+To get RSS for your entire site, insert this into the head section of your layout after installing:
   <%= auto_discovery_link_tag(:rss, news_items_url(:format => 'rss')) %>
