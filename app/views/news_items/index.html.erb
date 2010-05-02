@@ -9,6 +9,7 @@
       </p>
       <%= truncate(item.body, :length => 200, :omission => " ... #{link_to "Read more", news_item_url(item)}", :preserve_html_tags => true) %>
     <% end %>
+    <%= will_paginate(@news_items) %>
   <% else %>
     <p><em>Sorry we haven't posted up any news yet.</em></p>
   <% end %>
