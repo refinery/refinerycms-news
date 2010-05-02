@@ -1,5 +1,5 @@
 <% content_for :body_content_left do %>
-  <%= @page[:body] %>
+  <%= @page[:body] if @news_items.offset == 0 %>
 
   <% if @news_items.any? %>
     <% @news_items.each do |item| %>
@@ -14,5 +14,5 @@
     <p><em>Sorry we haven't posted up any news yet.</em></p>
   <% end %>
 <% end %>
-
+<% content_for :body_content_right, "&nbsp;" if @news_items.offset > 0 -%>
 <%= render :partial => "/shared/content_page" %>
