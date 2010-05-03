@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
 
   s.name = %q{refinerycms-news}
-  s.version = "0.9.7.1"
+  s.version = "0.9.7.2"
 
   s.authors = ["Resolve Digital", "Philip Arndt", "David Jones"]
-  s.date = %q{2010-05-01}
+  s.date = %q{2010-05-03}
 
   s.description = %q{A really straightforward open source Ruby on Rails news plugin designed for integration with RefineryCMS.}
   s.summary = %q{Ruby on Rails news plugin for RefineryCMS.}
@@ -13,8 +13,6 @@ Gem::Specification.new do |s|
 
   s.homepage = %q{http://refinerycms.com}
   s.rubygems_version = %q{1.3.4}
-
-  s.add_dependency('will_paginate', '>= 2.3.11')
 
   s.files = [
     "app",
@@ -38,8 +36,9 @@ Gem::Specification.new do |s|
     "app/views/news_items/index.rss.builder",
     "app/views/news_items/show.html.erb",
     "config",
-    "config/locale",
-    "config/locale/en.yml",
+    "config/locales",
+    "config/locales/en.yml",
+    "config/locales/nl.yml",
     "config/routes.rb",
     "generators",
     "generators/news",

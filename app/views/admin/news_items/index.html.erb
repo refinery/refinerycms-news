@@ -19,13 +19,10 @@
   <% else %>
     <% unless searching? %>
       <p>
-        <strong>
-          There are no news items yet.
-          Click "Create News Item" to add your first news item.
-        </strong>
+        <strong><%= t('.no_items_yet') %></strong>
       </p>
     <% else %>
-      <p>Sorry, no results found.</p>
+      <p><%= t('.no_results_found') %></p>
     <% end %>
   <% end %>
 </div>

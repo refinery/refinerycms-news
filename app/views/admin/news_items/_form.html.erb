@@ -1,5 +1,5 @@
-<%= error_messages_for :news_item %>
 <% form_for [:admin, @news_item] do |f| %>
+  <%= f.error_messages %>
   <div class='field'>
     <%= f.label :title %>
     <%= f.text_field :title, :class => "larger", :style => 'width: 954px' %>

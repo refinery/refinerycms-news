@@ -8,6 +8,7 @@ class NewsItem < ActiveRecord::Base
                   :index_file => %W(#{Rails.root} tmp index)
 
   default_scope :order => "publish_date DESC"
+
   # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
   # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)
   named_scope :latest, lambda { { :conditions => ["publish_date < ?", Time.now], :limit => 10 } }
@@ -17,6 +18,7 @@ class NewsItem < ActiveRecord::Base
     publish_date > Time.now
   end
 
+  # for will_paginate
   def self.per_page
     20
   end
