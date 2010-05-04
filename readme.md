@@ -11,13 +11,31 @@ Key features:
 * Default news page shows a summary of recent news posts
 * Detail view shows the full post and also linked to recent news on the "side bar"
 
-## But I don't want a News Section, how do I kill it?
+## How do I use it?
 
-Your news section loads because you have a page in your site that is told to not just render a normal page, but load the news section instead.
+To install the news plugin, you can either include the gem or install as a plugin.
 
-By default this page is called "News". Go to your "Pages" tab in the Refinery admin area and click the edit icon on "News". Now  click on "Hide/Show Advanced Options" and you'll see that a "Custom URL" is set to ``/news``. Simply change this to nothing, or delete the "News" page.
+### Installation via Gem
 
-You might also want to remove the News plugin from your backend view. To do that, you go to the "Users" tab in the Refinery admin area, edit your user, uncheck "News" from the list of plugins you can access.
+Include the latest (gem)[http://rubygems.org/gems/refinerycms-news] into your config/application.rb file like so:
+
+    config.gem "refinerycms-news", :lib => "news", :source => "rubygems.org", :version => "~> 0.9.7.1"
+
+Then type the following at command line inside your Refinery CMS application's root directory:
+
+    rake gems:install
+    script/generate news
+    rake db:migrate
+
+### Installation as a plugin
+
+Inside your Refinery CMS application's root directory, type this at command line:
+
+    script/plugin install git://github.com/resolve/refinerycms-news.git
+    script/generate news
+    rake db:migrate
+
+## RSS (Really Simple Syndication)
 
 To get RSS for your entire site, insert this into the head section of your layout after installing:
 
