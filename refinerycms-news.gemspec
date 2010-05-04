@@ -1,5 +1,4 @@
 Gem::Specification.new do |s|
-
   s.name = %q{refinerycms-news}
   s.version = "0.9.7.2"
 
