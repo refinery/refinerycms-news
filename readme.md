@@ -4,7 +4,7 @@
 
 ## About
 
-__Refinery's news plugin allows you to post updates to the news section of your website.__
+__Refinery's news engine allows you to post updates to the news section of your website.__
 
 Key features:
 
@@ -13,9 +13,9 @@ Key features:
 
 ## How do I use it?
 
-To install the news plugin, you can either include the gem or install as a plugin.
+To install the news engine, you can either include the gem or install as a plugin.
 
-### Installation via Gem
+### RubyGems Installation
 
 Include the latest (gem)[http://rubygems.org/gems/refinerycms-news] into your config/application.rb file like so:
 
@@ -27,9 +27,10 @@ Then type the following at command line inside your Refinery CMS application's r
     script/generate news
     rake db:migrate
 
-### Installation as a plugin
+### Rails Engine Installation
 
-Inside your Refinery CMS application's root directory, type this at command line:
+If you do not want to install the engine via RubyGems then you can install it as an engine inside your application's vendor directory.
+Type the following at command line inside your Refinery CMS application's root directory:
 
     script/plugin install git://github.com/resolve/refinerycms-news.git
     script/generate news
