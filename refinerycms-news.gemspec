@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{0.9.7.2}
+  s.version           = %q{0.9.7.3}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
   s.date              = %q{2010-06-15}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
-  s.authors           = %w(Resolve Digital Philip Arndt David Jones)
+  s.authors           = %w(Resolve\ Digital Philip\ Arndt David\ Jones)
   s.require_paths     = %w(lib)
   s.executables       = %w()
 

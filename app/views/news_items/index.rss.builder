@@ -9,7 +9,7 @@ xml.rss :version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
 
     # Feed basics.
     xml.title             page_title
-    xml.description       @page[:body].gsub(/<\/?[^>]*>/, "")
+    xml.description       @page[:body].to_s.gsub(/<\/?[^>]*>/, "") # .to_s protects from nil errors
     xml.link              news_items_url(:format => 'rss')
 
     # News items.
