@@ -1,5 +1,5 @@
 module Refinery
-  module Portfolio
+  module News
     class Version
       MAJOR = 0
       MINOR = 9

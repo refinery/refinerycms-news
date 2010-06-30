@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require File.expand_path('../news.rb', __FILE__)
-version = Refinery::Portfolio::Version::STRING
+version = Refinery::News::Version::STRING
 raise "Could not get version so gemspec can not be built" if version.nil?
 files = %w( readme.md license.md  )
 %w(app bin config db lib public rails test vendor).each do |dir|
