@@ -15,21 +15,25 @@ Key features:
 
 To install the news engine, you can either include the gem or install as a plugin.
 
-### RubyGems Installation
+## Requirements
 
-Include the latest (gem)[http://rubygems.org/gems/refinerycms-news] into your config/application.rb file like so:
+[RefineryCMS](http://refinerycms.com) version 0.9.6 or later.
 
-    config.gem "refinerycms-news", :lib => "news", :source => "rubygems.org", :version => "~> 0.9.7.1"
+### Gem Installation using Bundler
+
+Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
+
+    gem "refinerycms-news", '~> 0.9.8', :require => "news"
 
 Then type the following at command line inside your Refinery CMS application's root directory:
 
-    rake gems:install
+    bundle install
     script/generate news
     rake db:migrate
 
 ### Rails Engine Installation
 
-If you do not want to install the engine via RubyGems then you can install it as an engine inside your application's vendor directory.
+If you do not want to install the engine via bundler then you can install it as an engine inside your application's vendor directory.
 Type the following at command line inside your Refinery CMS application's root directory:
 
     script/plugin install git://github.com/resolve/refinerycms-news.git

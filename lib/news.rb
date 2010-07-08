@@ -1,12 +1,9 @@
 module Refinery
   module News
-    class Version
-      MAJOR = 0
-      MINOR = 9
-      TINY = 7
-      BUILD = 3
-
-      STRING = [MAJOR, MINOR, TINY, BUILD].compact.join('.')
+    class << self
+      def version
+        %q{0.9.8}
+      end
     end
   end
 end

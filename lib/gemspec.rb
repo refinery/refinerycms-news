@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 require File.expand_path('../news.rb', __FILE__)
-version = Refinery::News::Version::STRING
+version = ::Refinery::News.version
 raise "Could not get version so gemspec can not be built" if version.nil?
-files = %w( readme.md license.md  )
+files = %w( *.md  ).map { |file| Dir[file] }.flatten
 %w(app bin config db lib public rails test vendor).each do |dir|
   files += Dir.glob("#{dir}/**/*") if File.directory?(dir)
 end
@@ -16,9 +16,8 @@ Gem::Specification.new do |s|
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
-  s.authors           = %w(Resolve\\ Digital Philip\\ Arndt David\\ Jones)
+  s.authors           = %w(Resolve\\ Digital)
   s.require_paths     = %w(lib)
-  s.executables       = %w()
 
   s.files             = [
     '#{files.join("',\n    '")}'
@@ -29,11 +28,4 @@ Gem::Specification.new do |s|
 end
 EOF
 
-if (save = ARGV.delete('-s'))
-  if File.exist?(file = File.expand_path("../../refinerycms-news.gemspec", __FILE__))
-    File.delete(file)
-  end
-  File.open(file, 'w') { |f| f.puts gemspec }
-else
-  puts gemspec
-end
+File.open(File.expand_path("../../refinerycms-news.gemspec", __FILE__), 'w').puts(gemspec)
