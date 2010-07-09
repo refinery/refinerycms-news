@@ -11,7 +11,7 @@ class <%= migration_name %> < ActiveRecord::Migration
     add_index :<%= table_name %>, :id
 
     User.find(:all).each do |user|
-      user.plugins.create(:title => "News", :position => (user.plugins.maximum(:position) || -1) + 1)
+      user.plugins.create(:name => "News", :position => (user.plugins.maximum(:position) || -1) + 1)
     end
 
     page = Page.create(:title => "News",
