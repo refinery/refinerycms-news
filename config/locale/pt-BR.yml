@@ -1,0 +1,21 @@
+pt-BR:
+  admin:
+    plugins:
+      title: Notícias
+    activerecord:
+      models:
+        news_item: Notícia
+      attributes:
+        news_item:
+          title: Título
+          body: Contéudo
+          publish_date: Data de publicação
+    news_items:
+      index:
+        actions: Ações
+        create_news_item: "Criar Notícia"
+        reorder_news_item: "Reordenar Notícias"
+        reorder_news_item_done: "Finalizar reordenação de Notícias"
+        news_item: Notícia
+        no_news_items: 'Não há notícias cadastradas.'
+        no_news_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'

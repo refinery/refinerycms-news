@@ -1,0 +1,7 @@
+en:
+  admin:
+    news_items:
+      index:
+        create_news_item: "Create News Item"
+        reorder_news_item: "Reordenar Notícias"
+        no_news_items: 'Sorry, no results found.'
