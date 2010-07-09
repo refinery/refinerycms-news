@@ -1,10 +1,14 @@
 pt-BR:
   news_items:
-    back_to_all_news: "Voltar para todas as notícias"
-    published: Publicado
-    no_news_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
-    read_more: Leia mais
-    recent_posts: Notícias recentes
+    show:
+      back_to_all_news: "Voltar para todas as notícias"
+      published: Publicado
+      no_news_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
+      read_more: Leia mais
+    recent_posts:
+      recent_posts: Notícias recentes
+    index:
+     published: Publicado
   admin:
     plugins:
       title: Notícias

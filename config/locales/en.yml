@@ -1,10 +1,14 @@
 en:
   news_items:
-    back_to_all_news: "Back to all news"
-    published: Published
-    no_news_items: "Sorry we haven't posted up any news yet."
-    read_more: Read more
-    recent_posts: Recent Posts
+    show:
+      back_to_all_news: "Back to all news"
+      published: Published
+      no_news_items: "Sorry we haven't posted up any news yet."
+      read_more: Read more
+    recent_posts:
+      recent_posts: Recent Posts
+    index:
+      published: Published
   admin:
     news_items:
       news_item:

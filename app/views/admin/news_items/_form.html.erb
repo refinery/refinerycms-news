@@ -9,7 +9,7 @@
     <%= f.datetime_select :publish_date %>
   </div>
   <div class='field'>
-    <%= f.label :body, t('.content') %>
+    <%= f.label :body, t('.body') %>
     <%= f.text_area :body, :rows => "20", :class => "wymeditor widest" %>
   </div>
   <%= render :partial => "/shared/admin/form_actions", :locals => {:f => f,
