@@ -1,4 +1,7 @@
 pt-BR:
+  plugins:
+    news:
+      title: Notícias
   news_items:
     show:
       back_to_all_news: "Voltar para todas as notícias"
@@ -10,8 +13,6 @@ pt-BR:
     index:
      published: Publicado
   admin:
-    plugins:
-      title: Notícias
     activerecord:
       models:
         news_item: Notícia
