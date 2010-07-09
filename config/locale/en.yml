@@ -1,7 +1,23 @@
 en:
+  news_items:
+    back_to_all_news: "Back to all news"
+    published: Published
+    no_news_items: "Sorry we haven't posted up any news yet."
+    read_more: Read more
+    recent_posts: Recent Posts
   admin:
     news_items:
+      news_item:
+        view_live: "View this news item live <br/><em>(opens in a new window)</em>"
+        edit_this_entry: "Edit this news item"
+        confirm_delete_entry_title: "Remove this news item forever"
+      form:
+        title: Title
+        body: Body
+        publish_date: Publish date
       index:
+        actions: Ações
         create_news_item: "Create News Item"
-        reorder_news_item: "Reordenar Notícias"
+        news_item: News
         no_news_items: 'Sorry, no results found.'
+        no_news_items_yet: 'There are no news item entries yet. Click "Create News Item" to add your first news item entries.'
