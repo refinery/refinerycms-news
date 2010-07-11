@@ -2,9 +2,8 @@
 require File.expand_path('../news.rb', __FILE__)
 version = ::Refinery::News.version
 raise "Could not get version so gemspec can not be built" if version.nil?
-files = %w( *.md  ).map { |file| Dir[file] }.flatten
-%w(app bin config db lib public rails test vendor).each do |dir|
-  files += Dir.glob("#{dir}/**/*") if File.directory?(dir)
+files = Dir.glob("**/*").flatten.reject do |file|
+  file =~ /\.gem(spec)?$/
 end
 
 gemspec = <<EOF

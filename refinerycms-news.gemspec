@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{0.9.8}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2010-07-08}
+  s.date              = %q{2010-07-12}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -10,8 +10,7 @@ Gem::Specification.new do |s|
   s.require_paths     = %w(lib)
 
   s.files             = [
-    'license.md',
-    'readme.md',
+    'app',
     'app/controllers',
     'app/controllers/admin',
     'app/controllers/admin/news_items_controller.rb',
@@ -31,12 +30,22 @@ Gem::Specification.new do |s|
     'app/views/news_items/index.html.erb',
     'app/views/news_items/index.rss.builder',
     'app/views/news_items/show.html.erb',
+    'config',
     'config/locale',
     'config/locale/en.yml',
     'config/routes.rb',
+    'generators',
+    'generators/news',
+    'generators/news/news_generator.rb',
+    'generators/news/templates',
+    'generators/news/templates/migration.rb',
+    'lib',
     'lib/gemspec.rb',
     'lib/news.rb',
-    'rails/init.rb'
+    'license.md',
+    'rails',
+    'rails/init.rb',
+    'readme.md'
   ]
   
 end
