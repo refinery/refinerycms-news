@@ -6,14 +6,14 @@ class NewsItemsTest < ActiveSupport::TestCase
 
   def setup
     @new_news_item = NewsItem.new
-    @new_valid_news_item = NewsItem.new(:title => "valid post", :body => "yep looks valid", :publish_date => Date.today)
+    @new_valid_news_item = NewsItem.new(:title => "valid post", :content => "yep looks valid", :publish_date => Date.today)
   end
 
   def test_should_not_save_without_title_and_body
     assert !@new_news_item.save
 
     assert_equal "can't be blank", @new_news_item.errors.on('title')
-    assert_equal "can't be blank", @new_news_item.errors.on('body')
+    assert_equal "can't be blank", @new_news_item.errors.on('content')
     assert_equal "can't be blank", @new_news_item.errors.on('publish_date')
 
     assert @new_valid_news_item.save
