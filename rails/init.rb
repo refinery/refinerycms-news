@@ -9,4 +9,5 @@ Refinery::Plugin.register do |plugin|
     :title => 'title',
     :url_prefix => 'edit'
   }
+  plugin.directory = directory
 end

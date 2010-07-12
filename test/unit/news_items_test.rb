@@ -2,6 +2,7 @@ require 'test_helper'
 
 class NewsItemsTest < ActiveSupport::TestCase
 
+  self.fixture_path = File.expand_path("../../fixtures", __FILE__)
   fixtures :news_items
 
   def setup
