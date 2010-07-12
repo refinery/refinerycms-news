@@ -4,12 +4,12 @@
       <%= render :partial => "/shared/admin/search", :locals => {:url => admin_news_items_url} %>
     </li>
     <li>
-      <%= link_to t('.create_news_item'), new_admin_news_item_url, :class => "add_icon" %>
+      <%= link_to t('.create'), new_admin_news_item_url, :class => "add_icon" %>
     </li>
   </ul>
 </div>
 <div id='records'>
-  <%= "<h2>#{t('admin.search_results_for')} \"#{params[:search]}\"</h2>" if searching? %>
+  <%= "<h2>#{t('admin.search_results_for', :query => params[:search])}</h2>" if searching? %>
   <% if @news_items.any? %>
     <%= will_paginate @news_items, :previous_label => '&laquo;', :next_label => '&raquo;' %>
     <ul>
@@ -19,10 +19,10 @@
   <% else %>
     <% unless searching? %>
       <p>
-        <strong><%= t('.no_news_items_yet') %></strong>
+        <strong><%= t('.no_items_yet') %></strong>
       </p>
     <% else %>
-      <p><%= t('.no_news_items') %></p>
+      <p><%= t('admin.search_no_results') %></p>
     <% end %>
   <% end %>
 </div>

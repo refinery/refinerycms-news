@@ -1,0 +1,33 @@
+nl:
+  plugins:
+    news:
+      title: Nieuws
+  activerecord:
+    attributes:
+      news_item:
+        title: Titel
+        content: Inhoud
+        publish_date: Publiceer Datum
+    models:
+      news_item: Nieuws Item
+  admin:
+    news_items:
+      news_item:
+        view_live: Bekijk dit bericht op de website.<br/><em>(opent in een nieuw venster.)</em>
+        edit: Bewerk dit bericht
+        delete: Verwijder dit bericht permanent
+      index:
+        create: Maak een nieuw nieuwsbericht
+        no_items_yet: Er zijn nog geen nieuwsberichten. Klik op "Maak een nieuw niewsbericht" om het eerste bericht te maken.
+  news_items:
+    recent_posts:
+      recent_posts: Laatste nieuws item
+    index:
+      create: Maak Nieuws Item
+      published: "Gepubliceerd op"
+      read_more: Lees meer
+      no_items_yet: "Sorry, er zijn nog geen nieuwsberichten geplaatst."
+    show:
+      published: Gepubliceerd op
+      back_to_index: Terug naar de andere berichten
+

@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
     'config',
     'config/locales',
     'config/locales/en.yml',
+    'config/locales/nl.yml',
     'config/locales/pt-BR.yml',
     'config/routes.rb',
     'generators',
@@ -46,7 +47,14 @@ Gem::Specification.new do |s|
     'license.md',
     'rails',
     'rails/init.rb',
-    'readme.md'
+    'readme.md',
+    'test',
+    'test/fixtures',
+    'test/fixtures/news_items.yml',
+    'test/unit',
+    'test/unit/news_items_test.rb'
   ]
-  
+  s.test_files        = [
+    'test/unit/news_items_test.rb'
+  ]
 end

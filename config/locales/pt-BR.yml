@@ -2,37 +2,33 @@ pt-BR:
   plugins:
     news:
       title: Notícias
+  activerecord:
+    attributes:
+      news_item:
+        title: Título
+        content: Contéudo
+        publish_date: Data de publicação
+    models:
+      news_item: Notícia
+  admin:
+    news_items:
+      news_item:
+        view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
+        edit: "Alterar esta notícia"
+        delete: "Remover esta notícia para sempre"
+      index:
+        actions: Ações
+        create: "Criar Notícia"
+        news_item: Notícia
+        no_items: 'Não há notícias cadastradas.'
+        no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
   news_items:
     show:
-      back_to_all_news: "Voltar para todas as notícias"
+      back_to_index: "Voltar para todas as notícias"
       published: Publicado
-      no_news_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
+      no_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
       read_more: Leia mais
     recent_posts:
       recent_posts: Notícias recentes
     index:
      published: Publicado
-  admin:
-    activerecord:
-      models:
-        news_item: Notícia
-      attributes:
-        news_item:
-          title: Título
-          body: Contéudo
-          publish_date: Data de publicação
-    news_items:
-      news_item:
-        view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
-        edit_this_entry: "Alterar esta notícia"
-        confirm_delete_entry_title: "Remover esta notícia para sempre"
-      form:
-        title: Título
-        body: Contéudo
-        publish_date: Data de publicação
-      index:
-        actions: Ações
-        create_news_item: "Criar Notícia"
-        news_item: Notícia
-        no_news_items: 'Não há notícias cadastradas.'
-        no_news_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'

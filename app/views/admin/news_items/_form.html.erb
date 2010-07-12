@@ -1,17 +1,25 @@
-<%= error_messages_for :news_item %>
 <% form_for [:admin, @news_item] do |f| %>
+  <%= f.error_messages %>
+
   <div class='field'>
-    <%= f.label :title, t('.title') %>
+    <%= f.label :title %>
     <%= f.text_field :title, :class => "larger widest" %>
   </div>
+
   <div class='field'>
-    <%= f.label :publish_date, t('.publish_date') %>
+    <%= f.label :publish_date %>
     <%= f.datetime_select :publish_date %>
   </div>
+
   <div class='field'>
-    <%= f.label :body, t('.body') %>
-    <%= f.text_area :body, :rows => "20", :class => "wymeditor widest" %>
+    <%= f.label :content %>
+    <%= f.text_area :content, :rows => "20", :class => "wymeditor widest" %>
   </div>
-  <%= render :partial => "/shared/admin/form_actions", :locals => {:f => f,
-                                                                   :continue_editing => true} %>
+
+  <%= render :partial => "/shared/admin/form_actions",
+             :locals => {
+               :f => f,
+               :continue_editing => true
+             } %>
+
 <% end %>

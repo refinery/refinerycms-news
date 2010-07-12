@@ -1,6 +1,6 @@
 # News
 
-![Refinery News](http://refinerycms.com/system/images/0000/0646/news.png)
+![Refinery News](http://refinerycms.com/system/images/0000/0876/news.png)
 
 ## About
 
