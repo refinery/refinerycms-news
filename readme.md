@@ -23,7 +23,7 @@ To install the news engine, you can either include the gem or install as a plugi
 
 Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
 
-    gem "refinerycms-news", '~> 0.9.8', :require => "news"
+    gem "refinerycms-news", '~> 0.9.8.1', :require => "news"
 
 Then type the following at command line inside your Refinery CMS application's root directory:
 
