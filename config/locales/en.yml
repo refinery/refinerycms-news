@@ -19,11 +19,11 @@ en:
       back_to_index: "Back to all news"
       published: Published
       no_items: "Sorry we haven't posted up any news yet."
-      read_more: Read more
     recent_posts:
       recent_posts: Recent Posts
     index:
       published: Published
+      read_more: Read more
   activerecord:
     attributes:
       news_item:

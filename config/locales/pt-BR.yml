@@ -22,12 +22,12 @@ pt-BR:
         news_item: Notícia
         no_items: 'Não há notícias cadastradas.'
         no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
+        read_more: Leia mais
   news_items:
     show:
       back_to_index: "Voltar para todas as notícias"
       published: Publicado
       no_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
-      read_more: Leia mais
     recent_posts:
       recent_posts: Notícias recentes
     index:
