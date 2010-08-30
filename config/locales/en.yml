@@ -24,6 +24,7 @@ en:
     index:
       published: Published
       read_more: Read more
+      no_items_yet: There are no news item entries yet.
   activerecord:
     attributes:
       news_item:
