@@ -13,7 +13,7 @@ en:
         create: "Create News Item"
         news_item: News
         no_items: "Sorry, no results found."
-        no_items_yet: 'There are no news item entries yet. Click "Create News Item" to add your first news item entries.'
+        no_items_yet: 'There are no news items yet. Click "Create News Item" to add your first news item.'
   news_items:
     show:
       back_to_index: "Back to all news"
