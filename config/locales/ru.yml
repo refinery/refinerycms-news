@@ -1,0 +1,34 @@
+ru:
+  plugins:
+    news:
+      title: "Новости"
+  admin:
+    news_items:
+      news_item:
+        view_live: "Просмотреть новость <br/><em>(будет открыто в новом окне)</em>"
+        edit: "Редактировать новость"
+        delete: "Удалить новость"
+      index:
+        actions: "Действия"
+        create: "Создать новость"
+        news_item: "Новости"
+        no_items: "Ничего не найдено."
+        no_items_yet: 'Новостей пока нет.'
+  news_items:
+    show:
+      back_to_index: "Вернуться к новостям"
+      published: "Опубликована"
+      no_items: "Пока новостей нет."
+    recent_posts:
+      recent_posts: "Последние публикации"
+    index:
+      published: "Опубликовано"
+      read_more: "Читать далее"
+  activerecord:
+    attributes:
+      news_item:
+        title: "Заголовок"
+        body: "Публикация"
+        publish_date: "Дата публикации"
+    models:
+      news_item: "Новость"
