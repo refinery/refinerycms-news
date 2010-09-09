@@ -1,13 +1,15 @@
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{0.9.8.4}
+  s.version           = %q{0.9.9}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2010-08-31}
+  s.date              = %q{2010-09-09}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
   s.authors           = %w(Resolve\ Digital)
   s.require_paths     = %w(lib)
+
+  s.add_dependency    'refinerycms', '~> 0.9.8'
 
   s.files             = [
     'app',
@@ -35,18 +37,22 @@ Gem::Specification.new do |s|
     'config/locales/en.yml',
     'config/locales/nl.yml',
     'config/locales/pt-BR.yml',
+    'config/locales/ru.yml',
     'config/routes.rb',
-    'generators',
-    'generators/news',
-    'generators/news/news_generator.rb',
-    'generators/news/templates',
-    'generators/news/templates/migration.rb',
     'lib',
     'lib/gemspec.rb',
+    'lib/generators',
+    'lib/generators/refinerycms_news',
+    'lib/generators/refinerycms_news/templates',
+    'lib/generators/refinerycms_news/templates/db',
+    'lib/generators/refinerycms_news/templates/db/migrate',
+    'lib/generators/refinerycms_news/templates/db/migrate/migration_number_create_singular_name.rb',
+    'lib/generators/refinerycms_news/templates/db/seeds',
+    'lib/generators/refinerycms_news/templates/db/seeds/seed.rb',
+    'lib/generators/refinerycms_news_generator.rb',
     'lib/news.rb',
+    'lib/refinerycms-news.rb',
     'license.md',
-    'rails',
-    'rails/init.rb',
     'readme.md',
     'test',
     'test/fixtures',

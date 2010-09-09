@@ -1,7 +1,8 @@
 en:
   plugins:
-    news:
+    refinerycms_news:
       title: News
+      description: Provides a blog-like news section
   admin:
     news_items:
       news_item:
