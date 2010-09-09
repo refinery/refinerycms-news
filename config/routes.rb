@@ -1,7 +1,7 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :news_items, :as => :news
+Refinery::Application.routes.draw do
+  resources :news, :as => :news_items, :controller => :news_items
 
-  map.namespace(:admin, :path_prefix => (defined?(REFINERY_GEM_VERSION) ? 'admin' : 'refinery')) do |admin|
-    admin.resources :news_items, :as => :news
+  scope(:path => 'refinery', :as => 'admin', :module => 'admin') do
+    resources :news, :as => :news_items, :controller => :news_items
   end
 end

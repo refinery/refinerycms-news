@@ -1,5 +1,9 @@
 <% form_for [:admin, @news_item] do |f| %>
-  <%= f.error_messages %>
+  <%= render :partial => "/shared/admin/error_messages",
+             :locals => {
+               :object => @news_item,
+               :include_object_name => true
+             } %>
 
   <div class='field'>
     <%= f.label :title %>
@@ -19,7 +23,9 @@
   <%= render :partial => "/shared/admin/form_actions",
              :locals => {
                :f => f,
-               :continue_editing => true
+               :continue_editing => true,
+               :delete_title => t('admin.news_items.news_item.delete'),
+               :delete_confirmation => t('shared.admin.delete.message', :title => @news_item.title)
              } %>
 
 <% end %>
