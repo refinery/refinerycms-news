@@ -11,8 +11,12 @@ class NewsItem < ActiveRecord::Base
 
   # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
   # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)
-  scope :latest, lambda { |*limit| { :conditions => ["publish_date < ?", Time.now], :limit => (limit.first || 10) } }
-  scope :published, lambda { { :conditions => ["publish_date < ?", Time.now] } }
+  scope :published, lambda {
+    where( "publish_date < ?", Time.now )
+  }
+  scope :latest, lambda { |*l_params|
+    published.limit( l_params.first || 10)
+  }
 
   def not_published? # has the published date not yet arrived?
     publish_date > Time.now
