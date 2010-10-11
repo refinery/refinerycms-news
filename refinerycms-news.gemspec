@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{0.9.9.3}
+  s.version           = %q{0.9.9.4}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2010-09-21}
+  s.date              = %q{2010-10-12}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -35,6 +35,7 @@ Gem::Specification.new do |s|
     'config',
     'config/locales',
     'config/locales/en.yml',
+    'config/locales/es.yml',
     'config/locales/nl.yml',
     'config/locales/pt-BR.yml',
     'config/locales/ru.yml',
