@@ -12,7 +12,7 @@ en:
       index:
         actions: Azioni
         create: "Crea Notizia"
-        news_item: Notizie
+        news_item: Notizia
         no_items: "Spiacente, nessun risultato trovato."
         no_items_yet: 'Non ci sono ancora notizie. Fare clic su "Crea Notizia" per aggiungere la prima notizie.'
   news_items:
