@@ -1,8 +1,7 @@
 class NewsItemsController < ApplicationController
-
-  before_filter :find_latest_news_items, :find_page
-  before_filter :find_published_news_items, :find_page, :only => [:index]
-  before_filter :find_news_item, :only => [:show]
+  before_filter :find_page
+  before_filter :find_published_news_items, :only => [:index]
+  before_filter :find_news_item, :find_latest_news_items, :only => [:show]
 
   def index
     render 'index'
