@@ -16,6 +16,7 @@ pt-BR:
         view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
         edit: "Alterar esta notícia"
         delete: "Remover esta notícia para sempre"
+        published: Publicado
       index:
         actions: Ações
         create: "Criar Notícia"

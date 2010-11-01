@@ -9,6 +9,7 @@ lv:
         view_live_html: Apskatīt šo jaunumu <br/><em>Atvērsies jaunā logā</em>
         delete: Dzēst šo jaunumu
         edit: Labot šo jaunumu
+        published: Ievietots
       index:
         create: Izveidot Jaunumu
         news_item: Jaunumi

@@ -9,6 +9,7 @@ it:
         view_live_html: "Visualzza questa notizia live <br/><em>(si apre in una nuova finestra)</em>"
         edit: "Modifica questa notizia"
         delete: "Rimuovi questa notizia per sempre"
+        published: Pubblicata
       index:
         actions: Azioni
         create: "Crea Notizia"

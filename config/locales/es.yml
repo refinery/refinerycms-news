@@ -9,6 +9,7 @@ es:
         view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
         edit: "Editar esta noticia"
         delete: "Borrar completament esta noticia"
+        published: Publicada
       index:
         actions: Acciones
         create: "Crear noticia"

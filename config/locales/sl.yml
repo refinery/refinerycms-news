@@ -9,6 +9,7 @@ sl:
         view_live_html: "Poglej si to novico v živo <br/><em>(odpre se v novem oknu)</em>"
         edit: "Uredi novico"
         delete: "Odstrani novico"
+        published: Objavljeno
       index:
         actions: Akcije
         create: "Ustvari novico"

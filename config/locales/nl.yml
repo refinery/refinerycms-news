@@ -16,6 +16,7 @@ nl:
         view_live_html: Bekijk dit bericht op de website.<br/><em>(opent in een nieuw venster.)</em>
         edit: Bewerk dit bericht
         delete: Verwijder dit bericht permanent
+        published: Gepubliceerd op
       index:
         create: Maak een nieuw nieuwsbericht
         no_items_yet: Er zijn nog geen nieuwsberichten. Klik op "Maak een nieuw niewsbericht" om het eerste bericht te maken.
