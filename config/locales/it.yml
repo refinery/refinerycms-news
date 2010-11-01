@@ -6,9 +6,10 @@ it:
   admin:
     news_items:
       news_item:
-        view_live: "Visualzza questa notizia live <br/><em>(si apre in una nuova finestra)</em>"
+        view_live_html: "Visualzza questa notizia live <br/><em>(si apre in una nuova finestra)</em>"
         edit: "Modifica questa notizia"
         delete: "Rimuovi questa notizia per sempre"
+        published: Pubblicata
       index:
         actions: Azioni
         create: "Crea Notizia"
@@ -19,7 +20,6 @@ it:
     show:
       back_to_index: "Torna a tutte le notizie"
       published: Pubblicata
-      no_items: "Spiacente, non abbiamo ancora pubblicato nessuna notizia"
     recent_posts:
       recent_posts: Messaggi Recenti
     index:

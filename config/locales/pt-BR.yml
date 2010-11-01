@@ -16,6 +16,7 @@ pt-BR:
         view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
         edit: "Alterar esta notícia"
         delete: "Remover esta notícia para sempre"
+        published: Publicado
       index:
         actions: Ações
         create: "Criar Notícia"
@@ -27,7 +28,6 @@ pt-BR:
     show:
       back_to_index: "Voltar para todas as notícias"
       published: Publicado
-      no_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
     recent_posts:
       recent_posts: Notícias recentes
     index:

@@ -6,9 +6,10 @@ sl:
   admin:
     news_items:
       news_item:
-        view_live: "Poglej si to novico v živo <br/><em>(odpre se v novem oknu)</em>"
+        view_live_html: "Poglej si to novico v živo <br/><em>(odpre se v novem oknu)</em>"
         edit: "Uredi novico"
         delete: "Odstrani novico"
+        published: Objavljeno
       index:
         actions: Akcije
         create: "Ustvari novico"
@@ -19,7 +20,6 @@ sl:
     show:
       back_to_index: "Nazaj na seznam novic"
       published: Objavljeno
-      no_items: "Oprostite, nismo še objavili nobene novice."
     recent_posts:
       recent_posts: Zadnji vnosi      
     index:
