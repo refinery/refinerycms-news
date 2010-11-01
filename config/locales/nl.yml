@@ -13,7 +13,7 @@ nl:
   admin:
     news_items:
       news_item:
-        view_live: Bekijk dit bericht op de website.<br/><em>(opent in een nieuw venster.)</em>
+        view_live_html: Bekijk dit bericht op de website.<br/><em>(opent in een nieuw venster.)</em>
         edit: Bewerk dit bericht
         delete: Verwijder dit bericht permanent
       index:
@@ -30,4 +30,3 @@ nl:
     show:
       published: Gepubliceerd op
       back_to_index: Terug naar de andere berichten
-

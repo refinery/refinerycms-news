@@ -6,7 +6,7 @@ es:
   admin:
     news_items:
       news_item:
-        view_live: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
+        view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
         edit: "Editar esta noticia"
         delete: "Borrar completament esta noticia"
       index:
@@ -19,7 +19,6 @@ es:
     show:
       back_to_index: "Volver al listado de noticias"
       published: Publicada
-      no_items: "Lo sentimos, aún no hemos publicado ninguna noticia."
     recent_posts:
       recent_posts: Posts recientes
     index:
@@ -34,4 +33,3 @@ es:
         publish_date: Data de publicación
     models:
       news_item: Noticia
-

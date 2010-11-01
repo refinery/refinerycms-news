@@ -27,7 +27,6 @@ pt-BR:
     show:
       back_to_index: "Voltar para todas as notícias"
       published: Publicado
-      no_items: "Nos desculpe, nós não postamos nenhuma notícia ainda."
     recent_posts:
       recent_posts: Notícias recentes
     index:

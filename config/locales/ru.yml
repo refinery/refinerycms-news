@@ -5,7 +5,7 @@ ru:
   admin:
     news_items:
       news_item:
-        view_live: "Просмотреть новость <br/><em>(будет открыто в новом окне)</em>"
+        view_live_html: "Просмотреть новость <br/><em>(будет открыто в новом окне)</em>"
         edit: "Редактировать новость"
         delete: "Удалить новость"
       index:
@@ -18,7 +18,6 @@ ru:
     show:
       back_to_index: "Вернуться к новостям"
       published: "Опубликована"
-      no_items: "Пока новостей нет."
     recent_posts:
       recent_posts: "Последние публикации"
     index:

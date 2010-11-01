@@ -6,7 +6,7 @@ en:
   admin:
     news_items:
       news_item:
-        view_live: "View this news item live <br/><em>(opens in a new window)</em>"
+        view_live_html: "View this news item live <br/><em>(opens in a new window)</em>"
         edit: "Edit this news item"
         delete: "Remove this news item forever"
       index:
@@ -19,7 +19,6 @@ en:
     show:
       back_to_index: "Back to all news"
       published: Published
-      no_items: "Sorry we haven't posted up any news yet."
     recent_posts:
       recent_posts: Recent Posts
     index:
