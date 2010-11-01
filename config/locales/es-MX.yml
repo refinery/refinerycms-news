@@ -1,0 +1,34 @@
+es-MX:
+  plugins:
+    news:
+      title: Noticias
+  admin:
+    news_items:
+      news_item:
+        view_live: "View this news item live <br/><em>(opens in a new window)</em>"
+        edit: "Modificar esta noticia"
+        delete: "Eliminar esta noticia"
+      index:
+        actions: Acciones
+        create: "Crear una noticia"
+        news_item: Noticias
+        no_items: "Lo sentimos no hay resultados."
+        no_items_yet: 'Aun no hay noticias. Haga click en "Crear una noticia" para agregar la primera noticia.'
+  news_items:
+    show:
+      back_to_index: "Regresar a noticias"
+      published: Publicada
+      no_items: "Lo sentimos, aun no ha publicado noticias."
+    recent_posts:
+      recent_posts: Publicaciones recientes
+    index:
+      published: Publicada
+      read_more: Leer mas
+  activerecord:
+    attributes:
+      news_item:
+        title: Título
+        body: Contenido
+        publish_date: Fecha de publicación
+    models:
+      news_item: Noticia
