@@ -4,11 +4,9 @@ class NewsItemsController < ApplicationController
   before_filter :find_news_item, :find_latest_news_items, :only => [:show]
 
   def index
-    render 'index'
   end
 
   def show
-    render 'show'
   end
 
 protected
