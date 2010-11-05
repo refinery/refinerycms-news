@@ -9,7 +9,7 @@
     <% @news_items.each do |item| %>
       <h3><%= link_to item.title, news_item_url(item) %></h3>
       <p>
-        <small><%= t('.published') %> <%= l(item.publish_date) %></small>
+        <small><%= t('.published') %> <%= l(item.publish_date, :format => :long) %></small>
       </p>
       <%= truncate  item.body, :length => 200,
                     :omission => " ... #{link_to t('.read_more'), news_item_url(item)}",
