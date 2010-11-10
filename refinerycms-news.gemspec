@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{0.9.9.5}
+  s.version           = %q{0.9.9.6}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2010-10-22}
+  s.date              = %q{2010-11-11}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -35,12 +35,23 @@ Gem::Specification.new do |s|
     'config',
     'config/locales',
     'config/locales/en.yml',
+    'config/locales/es-MX.yml',
     'config/locales/es.yml',
+    'config/locales/it.yml',
+    'config/locales/lv.yml',
     'config/locales/nl.yml',
     'config/locales/pt-BR.yml',
     'config/locales/ru.yml',
     'config/locales/sl.yml',
     'config/routes.rb',
+    'features',
+    'features/manage_news_items.feature',
+    'features/step_definitions',
+    'features/step_definitions/news_steps.rb',
+    'features/support',
+    'features/support/factories.rb',
+    'features/support/paths.rb',
+    'features/visit_news_items.feature',
     'lib',
     'lib/gemspec.rb',
     'lib/generators',
@@ -56,6 +67,9 @@ Gem::Specification.new do |s|
     'lib/refinerycms-news.rb',
     'license.md',
     'readme.md',
+    'spec',
+    'spec/models',
+    'spec/models/news_item_spec.rb',
     'test',
     'test/fixtures',
     'test/fixtures/news_items.yml',

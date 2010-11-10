@@ -1,7 +1,7 @@
 require 'factory_girl'
 
 Factory.define :news_item do |ni|
-  ni.title "RefinyerCMS"
+  ni.title "RefineryCMS News Item"
   ni.content "Some random text ..."
-  ni.publish_date Date.today
+  ni.publish_date Time.now - 5.minutes
 end

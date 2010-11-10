@@ -2,7 +2,7 @@ en:
   plugins:
     refinerycms_news:
       title: News
-      description: Provides a blog-like news section
+      description: Provides a simple news section
   admin:
     news_items:
       news_item:
@@ -12,10 +12,10 @@ en:
         published: Published
       index:
         actions: Actions
-        create: "Create News Item"
+        create: "Add News Item"
         news_item: News
         no_items: "Sorry, no results found."
-        no_items_yet: 'There are no news items yet. Click "Create News Item" to add your first news item.'
+        no_items_yet: 'There are no news items yet. Click "Add News Item" to add your first news item.'
   news_items:
     show:
       back_to_index: "Back to all news"
