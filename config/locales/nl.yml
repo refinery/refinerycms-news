@@ -1,33 +1,36 @@
 nl:
   plugins:
-    news:
+    refinerycms_news:
       title: Nieuws
+      description: Nieuwsberichten voor de op de site.
+  admin:
+    news_items:
+      news_item:
+        view_live_html: "Bekijk dit bericht op de website.<br/><em>(opent in een nieuw venster.)</em>"
+        edit: "Bewerk dit bericht"
+        delete: "Verwijder dit bericht permanent"
+        published: Gepubliceerd op
+      index:
+        actions: Acties
+        create: "Maak een nieuw nieuwsbericht"
+        news_item: Nieuws
+        no_items: "Sorry, geen nieuwsberichten gevonden."
+        no_items_yet: 'Er zijn nog geen nieuwsberichten. Klik op "Maak een nieuw niewsbericht" om het eerste bericht te maken.'
+  news_items:
+    show:
+      back_to_index: "Terug naar de andere berichten"
+      published: Gepubliceerd op
+    recent_posts:
+      recent_posts: Laatste nieuws item
+    index:
+      published: Gepubliceerd op
+      read_more: Lees meer
+      no_items_yet: "Sorry, er zijn nog geen nieuwsberichten geplaatst."
   activerecord:
     attributes:
       news_item:
         title: Titel
-        content: Inhoud
-        publish_date: Publiceer Datum
+        body: Inhoud
+        publish_date: Publiceer datum
     models:
       news_item: Nieuws Item
-  admin:
-    news_items:
-      news_item:
-        view_live_html: Bekijk dit bericht op de website.<br/><em>(opent in een nieuw venster.)</em>
-        edit: Bewerk dit bericht
-        delete: Verwijder dit bericht permanent
-        published: Gepubliceerd op
-      index:
-        create: Maak een nieuw nieuwsbericht
-        no_items_yet: Er zijn nog geen nieuwsberichten. Klik op "Maak een nieuw niewsbericht" om het eerste bericht te maken.
-  news_items:
-    recent_posts:
-      recent_posts: Laatste nieuws item
-    index:
-      create: Maak Nieuws Item
-      published: "Gepubliceerd op"
-      read_more: Lees meer
-      no_items_yet: "Sorry, er zijn nog geen nieuwsberichten geplaatst."
-    show:
-      published: Gepubliceerd op
-      back_to_index: Terug naar de andere berichten
