@@ -2,7 +2,7 @@ de:
   plugins:
     refinerycms_news:
       title: News
-      description: Bietet einen einfachen Newsbereich anProvides a simple news section
+      description: Bietet einen einfachen Newsbereich an
   admin:
     news_items:
       news_item:
