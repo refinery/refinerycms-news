@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     'app/views/news_items/show.html.erb',
     'config',
     'config/locales',
+    'config/locales/de.yml',
     'config/locales/en.yml',
     'config/locales/es-MX.yml',
     'config/locales/es.yml',

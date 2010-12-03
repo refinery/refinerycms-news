@@ -1,0 +1,36 @@
+en:
+  plugins:
+    refinerycms_news:
+      title: News
+      description: Bietet einen einfachen Newsbereich anProvides a simple news section
+  admin:
+    news_items:
+      news_item:
+        view_live_html: "Diesen News-Eintrag live anschauen <br/><em>(Öffnet sich in eine neuen Fenster)</em>"
+        edit: "Diesen News-Eintrag editieren"
+        delete: "Diesen News-Eintrag endgültig löschen"
+        published: Veröffentlicht
+      index:
+        actions: Actions
+        create: "News-Eintrag hinzufügen"
+        news_item: News
+        no_items: "Entschuldigung, es wurde nichts gefunden."
+        no_items_yet: 'Es sind keine News-Einträge vorhanden. Klick auf "News-Eintrag hinzufügen" um den ersten Eintrag zu machen.'
+  news_items:
+    show:
+      back_to_index: "Zurück zur Übersicht"
+      published: Veröffentlicht
+    recent_posts:
+      recent_posts: Aktuelle Einträge
+    index:
+      published: Veröffentlicht
+      read_more: Weiterlesen
+      no_items_yet: Zur Zeit gibt es keine News.
+  activerecord:
+    attributes:
+      news_item:
+        title: Titel
+        body: Inhalt
+        publish_date: Veröffentlichungsdatum
+    models:
+      news_item: News-Eintrag
