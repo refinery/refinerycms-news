@@ -26,6 +26,15 @@ Then type the following at command line inside your Refinery CMS application's r
     bundle install
     rails generate refinerycms_news
     rake db:migrate
+    
+## Customising the views
+
+Type this command at your project root to override the default front end views:
+
+    $ rake refinery:override view=news_items/*
+    Copied view template file to app/views/news_items/_recent_posts.html.erb
+    Copied view template file to app/views/news_items/index.html.erb
+    Copied view template file to app/views/news_items/show.html.erb
 
 ## RSS (Really Simple Syndication)
 
