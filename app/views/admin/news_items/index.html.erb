@@ -13,11 +13,11 @@
     <h2><%= t('shared.admin.search.results_for', :query => params[:search]) %></h2>
   <% end %>
   <% if @news_items.any? %>
-    <%= will_paginate @news_items, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+    <%= will_paginate @news_items %>
     <ul>
       <%= render :partial => "news_item", :collection => @news_items %>
     </ul>
-    <%= will_paginate @news_items, :previous_label => '&laquo;', :next_label => '&raquo;' %>
+    <%= will_paginate @news_items %>
   <% else %>
     <p>
       <% unless searching? %>
