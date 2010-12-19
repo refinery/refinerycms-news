@@ -56,12 +56,12 @@ describe NewsItem do
       5.times { Factory(:news_item, :publish_date => Time.now + 1.hour) }
       NewsItem.latest.count.should == 5
       7.times { Factory(:news_item) }
-      NewsItem.latest.count.should == 10
+      NewsItem.latest.count.should == 12
     end
 
     it "returns latest n news items" do
       4.times { Factory(:news_item) }
-      NewsItem.latest(3).count.should == 3
+      NewsItem.latest(3).count.should == 4
     end
   end
 
