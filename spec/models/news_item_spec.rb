@@ -60,7 +60,7 @@ describe NewsItem do
     end
 
     it "returns latest n news items" do
-      5.times { Factory(:news_item) }
+      4.times { Factory(:news_item) }
       NewsItem.latest(3).length.should == 3
     end
   end
