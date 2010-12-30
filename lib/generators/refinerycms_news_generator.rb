@@ -15,10 +15,12 @@ class RefinerycmsNewsGenerator < Rails::Generators::NamedBase
     template('db/migrate/migration_number_create_singular_name.rb',
              Rails.root.join("db/migrate/#{next_migration_number}_create_#{singular_name}.rb"))
 
-     puts "------------------------"
-     puts "Now run:"
-     puts "rake db:migrate"
-     puts "------------------------"
+     unless self.behavior == :revoke
+       puts "------------------------"
+       puts "Now run:"
+       puts "rake db:migrate"
+       puts "------------------------"
+     end
   end
 end
 
