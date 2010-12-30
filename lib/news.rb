@@ -2,7 +2,7 @@ module Refinery
   module News
     class << self
       def version
-        %q{0.9.9.6}
+        %q{1.0}
       end
     end
   end

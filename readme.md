@@ -19,14 +19,14 @@ Key features:
 
 Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
 
-    gem "refinerycms-news", '~> 0.9.9'
+    gem "refinerycms-news", '~> 1.0'
 
 Then type the following at command line inside your Refinery CMS application's root directory:
 
     bundle install
     rails generate refinerycms_news
     rake db:migrate
-    
+
 ## Customising the views
 
 Type this command at your project root to override the default front end views:
