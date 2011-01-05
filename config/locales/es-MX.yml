@@ -30,5 +30,7 @@ es-MX:
         title: Título
         body: Contenido
         publish_date: Fecha de publicación
+        external_url: URL externa
+        image: Imagen
     models:
       news_item: Noticia

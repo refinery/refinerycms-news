@@ -31,5 +31,7 @@ lv:
         body: Saturs
         content: Saturs
         publish_date: Publikācijas datums
+        external_url: ārējo URL
+        image: Attēlu
     models:
       news_item: jaunums

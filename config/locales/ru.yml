@@ -30,5 +30,7 @@ ru:
         title: "Заголовок"
         body: "Публикация"
         publish_date: "Дата публикации"
+        external_url: "внешний URL"
+        image: "Изображение"
     models:
       news_item: "Новость"

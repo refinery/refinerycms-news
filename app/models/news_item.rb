@@ -1,4 +1,5 @@
 class NewsItem < ActiveRecord::Base
+  belongs_to :image, :class_name => 'Resource'
 
   alias_attribute :content, :body
   validates_presence_of :title, :content, :publish_date

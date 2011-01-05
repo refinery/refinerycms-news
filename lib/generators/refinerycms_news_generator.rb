@@ -6,6 +6,7 @@ class RefinerycmsNewsGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../refinerycms_news/templates/', __FILE__)
   argument :name, :type => :string, :default => 'news_items', :banner => ''
   argument :attributes, :type => :array, :default => ["title:string", "body:text", "publish_date:datetime"]
+  argument :attributes, :type => :array, :default => ["title:string", "body:text", "publish_date:datetime", "image_id:integer", "external_url:string"]
 
   def generate
     # seed file
