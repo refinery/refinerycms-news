@@ -1,5 +1,5 @@
 class Admin::NewsItemsController < Admin::BaseController
 
-  crudify :news_item, :order => "created_at DESC"
+  crudify :news_item, :order => "publish_date DESC"
 
 end
