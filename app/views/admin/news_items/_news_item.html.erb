@@ -4,6 +4,14 @@
     <span class="preview">
       <%= t('.published') %> <%= l(news_item.publish_date, :format => :short) %>
     </span>
+    <% if ::Refinery::I18n.frontend_locales.many? and
+          (locales = news_item.translations.collect{|t| t.locale}).present? %>
+      <span class='preview'>
+        <% locales.each do |locale| %>
+          <%= refinery_icon_tag "flags/#{locale}.png", :size => '16x11' %>
+        <% end %>
+      </span>
+    <% end %>
   </span>
   <span class='actions'>
     <%= link_to refinery_icon_tag('application_go.png'), news_item_url(news_item),

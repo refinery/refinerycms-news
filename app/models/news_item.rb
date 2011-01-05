@@ -1,6 +1,10 @@
 class NewsItem < ActiveRecord::Base
   belongs_to :image, :class_name => 'Resource'
 
+  translates :title, :body, :external_url
+  
+  attr_accessor :locale # to hold temporarily
+
   alias_attribute :content, :body
   validates_presence_of :title, :content, :publish_date
 
@@ -17,6 +21,15 @@ class NewsItem < ActiveRecord::Base
   }
   scope :latest, lambda { |*l_params|
     published.limit( l_params.first || 10)
+  }
+
+  # rejects any page that has not been translated to the current locale.
+  scope :translated, lambda {
+    pages = Arel::Table.new(NewsItem.table_name)
+    translations = Arel::Table.new(NewsItem.translations_table_name)
+
+    includes(:translations).where(
+      translations[:locale].eq(Globalize.locale)).where(pages[:id].eq(translations[:news_item_id]))
   }
 
   def not_published? # has the published date not yet arrived?

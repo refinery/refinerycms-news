@@ -4,8 +4,7 @@ class RefinerycmsNewsGenerator < Rails::Generators::NamedBase
   include Rails::Generators::Migration
 
   source_root File.expand_path('../refinerycms_news/templates/', __FILE__)
-  argument :name, :type => :string, :default => 'news_items', :banner => ''
-  argument :attributes, :type => :array, :default => ["title:string", "body:text", "publish_date:datetime"]
+  argument :name, :type => :string, :default => 'news_item', :banner => ''
   argument :attributes, :type => :array, :default => ["title:string", "body:text", "publish_date:datetime", "image_id:integer", "external_url:string"]
 
   def generate
@@ -14,8 +13,8 @@ class RefinerycmsNewsGenerator < Rails::Generators::NamedBase
 
     next_migration_number = ActiveRecord::Generators::Base.next_migration_number(File.dirname(__FILE__))
     template('db/migrate/migration_number_create_singular_name.rb',
-             Rails.root.join("db/migrate/#{next_migration_number}_create_#{singular_name}.rb"))
-
+             Rails.root.join("db/migrate/#{next_migration_number}_create_#{plural_name}.rb"))
+             
      unless self.behavior == :revoke
        puts "------------------------"
        puts "Now run:"

@@ -14,16 +14,16 @@ class NewsItemsController < ApplicationController
 protected
 
   def find_latest_news_items
-    @news_items = NewsItem.latest
+    @news_items = NewsItem.latest.translated
   end
 
   def find_published_news_items
-    @news_items = NewsItem.published.paginate(:page => params[:page],
+    @news_items = NewsItem.published.translated.paginate(:page => params[:page],
                                               :per_page => NewsItem.per_page)
   end
 
   def find_news_item
-    @news_item = NewsItem.published.find(params[:id])
+    @news_item = NewsItem.published.translated.find(params[:id])
   end
 
   def find_page
