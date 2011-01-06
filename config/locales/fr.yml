@@ -33,6 +33,11 @@ fr:
         body: Texte
         publish_date: Date de publication
         external_url: Lien externe
-        image: Image
+        image: &image Image
     models:
       news_item: Nouvelle
+  shared:
+    admin:
+      image_picker:
+        image: *image
+      

@@ -32,7 +32,7 @@
 
   <div class='field'>
     <%= f.label :image %>
-    <%= render :partial => "/shared/admin/resource_picker", :locals => {:f => f, :field => :image_id, :resource => @news_item.image } %>
+    <%= render :partial => "/shared/admin/image_picker", :locals => {:f => f, :field => :image_id, :image => @news_item.image } %>
   </div>
 
   <%= render :partial => "/shared/admin/form_actions",

@@ -1,5 +1,5 @@
 class NewsItem < ActiveRecord::Base
-  belongs_to :image, :class_name => 'Resource'
+  belongs_to :image, :class_name => 'Image'
 
   translates :title, :body, :external_url
   

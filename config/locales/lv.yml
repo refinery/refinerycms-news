@@ -32,6 +32,11 @@ lv:
         content: Saturs
         publish_date: Publikācijas datums
         external_url: ārējo URL
-        image: Attēlu
+        image: &image Attēlu
     models:
       news_item: jaunums
+  shared:
+    admin:
+      image_picker:
+        image: *image
+      

@@ -31,6 +31,11 @@ ru:
         body: "Публикация"
         publish_date: "Дата публикации"
         external_url: "внешний URL"
-        image: "Изображение"
+        image: &image "Изображение"
     models:
       news_item: "Новость"
+  shared:
+    admin:
+      image_picker:
+        image: *image
+      

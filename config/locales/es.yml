@@ -33,6 +33,11 @@ es:
         body: Cuerpo
         publish_date: Data de publicación
         external_url: URL externa
-        image: Imagen
+        image: &image Imagen
     models:
       news_item: Noticia
+  shared:
+    admin:
+      image_picker:
+        image: *image
+      
