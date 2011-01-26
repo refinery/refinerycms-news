@@ -1,31 +1,31 @@
 fr:
   plugins:
     refinerycms_news:
-      title: Nouvelles
-      description: Fournit une section de nouvelles
+      title: Actualités
+      description: 'Fournit une rubrique "Actualités"'
   admin:
     news_items:
       news_item:
-        view_live_html: "Visualiser cette nouvelle en-ligne <br/><em>(ouverture dans une nouvelle fenêtre)</em>"
-        edit: "Modifier cette nouvelle"
-        delete: "Détruire cette nouvelle à tout jamais"
-        published: Publié
+        view_live_html: "Visualiser cette nouvelle <br/><em>(ouvre une nouvelle fenêtre)</em>"
+        edit: "Modifier cette actualité"
+        delete: "Détruire cette actualité à tout jamais"
+        published: Publiée
       index:
         actions: Actions
-        create: "Créer une nouvelle"
-        news_item: Nouvelles
+        create: "Créer une actualité"
+        news_item: Actualité
         no_items: "Désolé, aucun résultat."
-        no_items_yet: 'Aucune nouvelle. Cliquer "Créer une nouvelle" pour créer la première nouvelle.'
+        no_items_yet: 'Aucune actualité. Cliquer sur "Créer une actualité" pour créer votre première actualité.'
   news_items:
     show:
-      back_to_index: "Retour à la liste des nouvelles"
-      published: Publié le
+      back_to_index: "Retour à la liste des actualités"
+      published: Publiée le
     recent_posts:
-      recent_posts: Dernières nouvelles
+      recent_posts: Dernières actualités
     index:
-      published: Publié le
+      published: Publiée le
       read_more: Plus
-      no_items_yet: Aucune nouvelle présentement.
+      no_items_yet: Aucune actualité pour le moment.
   activerecord:
     attributes:
       news_item:
@@ -40,4 +40,3 @@ fr:
     admin:
       image_picker:
         image: *image
-      
