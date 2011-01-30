@@ -17,7 +17,7 @@ Given /^I have no news items$/ do
 end
 
 Given /^the news item titled "?([^\"]*)"? is not published$/ do |title|
-  NewsItem.find_by_title(title).update_attribute(:publish_date, Time.now + 1.day)
+  NewsItem.where(:title => title).first.update_attribute(:publish_date, Time.now + 1.day)
 end
 
 Then /^I should have ([0-9]+) news items?$/ do |count|
