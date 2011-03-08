@@ -25,13 +25,13 @@ es:
     index:
       published: Publicada
       read_more: Leer mas
-      no_items_yet: Aún no hay ningu noticia.
+      no_items_yet: Aún no hay ninguna noticia.
   activerecord:
     attributes:
       news_item:
         title: Título
-        body: Cuerpo
-        publish_date: Data de publicación
+        body: Contenido
+        publish_date: Fecha de publicación
         external_url: URL externa
         image: &image Imagen
     models:
