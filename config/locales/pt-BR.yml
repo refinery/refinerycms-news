@@ -1,6 +1,6 @@
 pt-BR:
   plugins:
-    news:
+    refinerycms_news:
       title: Notícias
   activerecord:
     attributes:
