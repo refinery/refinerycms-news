@@ -1,6 +1,6 @@
 ru:
   plugins:
-    news:
+    refinerycms_news:
       title: "Новости"
   admin:
     news_items:
@@ -38,4 +38,4 @@ ru:
     admin:
       image_picker:
         image: *image
-      
+

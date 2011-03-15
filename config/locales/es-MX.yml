@@ -1,6 +1,6 @@
 es-MX:
   plugins:
-    news:
+    refinerycms_news:
       title: Noticias
   admin:
     news_items:
@@ -38,4 +38,3 @@ es-MX:
     admin:
       image_picker:
         image: *image
-      
