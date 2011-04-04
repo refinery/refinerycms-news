@@ -11,7 +11,7 @@ module NavigationHelpers
           new_admin_news_item_path
         else
           begin
-            if page_name =~ /the news item titled "?([^\"]*)"?/ and (news_item = NewsItem.find_by_title($1)).present?
+            if page_name =~ /the news item titled "?([^\"]*)"?/ and (news_item = NewsItem.where(:title => $1).first).present?
               self.url_for(news_item)
             else
               nil

@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{1.0}
+  s.version           = %q{1.0.1}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2010-12-31}
+  s.date              = %q{2011-04-04}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
     'app/views/admin',
     'app/views/admin/news_items',
     'app/views/admin/news_items/_form.html.erb',
+    'app/views/admin/news_items/_locale_picker.html.erb',
     'app/views/admin/news_items/_news_item.html.erb',
     'app/views/admin/news_items/edit.html.erb',
     'app/views/admin/news_items/index.html.erb',
@@ -34,15 +35,19 @@ Gem::Specification.new do |s|
     'app/views/news_items/show.html.erb',
     'config',
     'config/locales',
+    'config/locales/cs.yml',
     'config/locales/de.yml',
     'config/locales/en.yml',
     'config/locales/es-MX.yml',
     'config/locales/es.yml',
+    'config/locales/fr.yml',
     'config/locales/it.yml',
     'config/locales/lv.yml',
+    'config/locales/nb.yml',
     'config/locales/nl.yml',
     'config/locales/pt-BR.yml',
     'config/locales/ru.yml',
+    'config/locales/sk.yml',
     'config/locales/sl.yml',
     'config/routes.rb',
     'features',
