@@ -13,13 +13,13 @@ Key features:
 
 ## Requirements
 
-[RefineryCMS](http://refinerycms.com) version 0.9.8 or later.
+[RefineryCMS](http://refinerycms.com) "core" engine version 0.9.9.15 or later.
 
 ### Gem Installation using Bundler (The very best way)
 
 Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
 
-    gem "refinerycms-news", '~> 1.0'
+    gem "refinerycms-news", '~> 1.1'
 
 Then type the following at command line inside your Refinery CMS application's root directory:
 
