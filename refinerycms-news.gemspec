@@ -55,6 +55,7 @@ Gem::Specification.new do |s|
     'db/migrate/1_create_news_items.rb',
     'db/migrate/2_add_external_url_to_news_items.rb',
     'db/migrate/3_translate_news_items.rb',
+    'db/migrate/4_add_image_id_to_news_items.rb',
     'db/seeds',
     'db/seeds/refinerycms_news.rb',
     'features',
