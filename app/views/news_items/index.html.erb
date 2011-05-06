@@ -3,7 +3,7 @@
 <% end %>
 
 <% content_for :body_content_left do %>
-  <%= @page[:body] if @news_items.offset == 0 %>
+  <%=raw @page[:body] if @news_items.offset == 0 %>
 
   <% if @news_items.any? %>
     <% @news_items.each do |item| %>
