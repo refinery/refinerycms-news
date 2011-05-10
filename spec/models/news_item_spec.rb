@@ -3,33 +3,28 @@ require 'spec_helper'
 Dir[File.expand_path('../../../features/support/factories.rb', __FILE__)].each {|f| require f}
 
 describe NewsItem do
+  
+  let(:time_now) { Time.now }
+  let(:news_item) { Factory(:news_item) }
+
   describe "validations" do
-    before(:each) do
-      @attr = {
-        :title => "RefinyerCMS",
-        :content => "Some random text ...",
-        :publish_date => Date.today
-      }
+    subject do
+      news_item = NewsItem.create! :title => "RefinyerCMS",
+                                   :content => "Some random text ...",
+                                   :publish_date => time_now
+      news_item
     end
 
-    it "rejects empty title" do
-      NewsItem.new(@attr.merge(:title => "")).should_not be_valid
-    end
-
-    it "rejects empty content" do
-      NewsItem.new(@attr.merge(:content => "")).should_not be_valid
-    end
-
-    it "rejects empty publish date" do
-      NewsItem.new(@attr.merge(:publish_date => "")).should_not be_valid
-    end
+    it { should be_valid }
+    its(:errors) { should be_empty }
+    its(:title) { should == "RefinyerCMS" }
+    its(:content) { should == "Some random text ..." }
+    its(:publish_date) { should == time_now }
   end
 
   describe "attribute aliasing" do
-    it "aliases content to body" do
-      news_item = Factory(:news_item)
-      news_item.content.should == news_item.body
-    end
+    subject { news_item }
+    its(:content) { should == news_item.body }
   end
 
   describe "default scope" do
