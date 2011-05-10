@@ -42,6 +42,26 @@ describe NewsItem do
     end
   end
 
+  describe ".not_expired" do
+    let!(:news_item) { Factory(:news_item) }
+
+    specify "expiration date not set" do
+      NewsItem.not_expired.count.should == 1
+    end
+
+    specify "expiration date set in future" do
+      news_item.expiration_date = Time.now + 1.hour
+      news_item.save!
+      NewsItem.not_expired.count.should == 1
+    end
+
+    specify "expiration date in past" do
+      news_item.expiration_date = Time.now - 1.hour
+      news_item.save!
+      NewsItem.not_expired.count.should == 0
+    end
+  end
+
   describe ".published" do
     it "returns only published news items" do
       Factory(:news_item)
