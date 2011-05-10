@@ -21,6 +21,12 @@
   </div>
 
   <div class='field'>
+    <%= f.label :expiration_date %>
+    <%= f.datetime_select :expiration_date, :start_year => Time.now.year,
+                                            :include_blank => true %>
+  </div>
+
+  <div class='field'>
     <%= f.label :content %>
     <%= f.text_area :content, :rows => "20", :class => "wymeditor widest" %>
   </div>

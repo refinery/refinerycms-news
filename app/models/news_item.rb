@@ -16,8 +16,12 @@ class NewsItem < ActiveRecord::Base
 
   # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
   # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)
+  scope :not_expired, lambda {
+    news_items = Arel::Table.new(NewsItem.table_name)
+    where(news_items[:expiration_date].eq(nil).or(news_items[:expiration_date].gt(Time.now)))
+  }
   scope :published, lambda {
-    where( "publish_date < ?", Time.now )
+    not_expired.where("publish_date < ?", Time.now)
   }
   scope :latest, lambda { |*l_params|
     published.limit( l_params.first || 10)
