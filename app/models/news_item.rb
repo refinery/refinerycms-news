@@ -6,7 +6,7 @@ class NewsItem < ActiveRecord::Base
   attr_accessor :locale # to hold temporarily
 
   alias_attribute :content, :body
-  validates_presence_of :title, :content, :publish_date
+  validates :title, :content, :publish_date, :presence => true
 
   has_friendly_id :title, :use_slug => true
 
