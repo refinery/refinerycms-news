@@ -1,7 +1,3 @@
-<% content_for :body_content_title do %>
-  <%= t('plugins.refinerycms_news.title') %>
-<% end %>
-
 <% content_for :body_content_left do %>
   <%=raw @page[:body] if @news_items.offset == 0 %>
 
