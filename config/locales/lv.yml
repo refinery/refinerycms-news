@@ -31,12 +31,14 @@ lv:
         body: Saturs
         content: Saturs
         publish_date: Publikācijas datums
-        external_url: ārējo URL
-        image: &image Attēlu
+        expiration_date: Publikācijas beigu datums
+        external_url: Ārējo vietrāžu URL
+        image: Bilde
     models:
       news_item: jaunums
   shared:
     admin:
       image_picker:
-        image: *image
+        image: bilde
+        remove_current: Dzēst pašreizējo bildi
       
