@@ -31,16 +31,6 @@
     <%= f.text_area :content, :rows => "20", :class => "wymeditor widest" %>
   </div>
 
-  <div class='field'>
-    <%= f.label :external_url %>
-    <%= f.text_field :external_url, :class => "larger widest" %>
-  </div>
-
-  <div class='field'>
-    <%= f.label :image %>
-    <%= render :partial => "/shared/admin/image_picker", :locals => {:f => f, :field => :image_id, :image => @news_item.image } %>
-  </div>
-
   <%= render :partial => "/shared/admin/form_actions",
              :locals => {
                :f => f,

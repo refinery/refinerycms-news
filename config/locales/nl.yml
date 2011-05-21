@@ -32,12 +32,5 @@ nl:
         title: Titel
         body: Inhoud
         publish_date: Publiceer datum
-        external_url: Externe URL
-        image: &image Beeld
     models:
       news_item: Nieuws Item
-  shared:
-    admin:
-      image_picker:
-        image: *image
-      

@@ -32,11 +32,5 @@ sl:
         title: Naslov
         body: Opis
         publish_date: Datum objave
-        external_url: Externé URL
-        image: &image "obrázok"
     models:
       news_item: Novice
-  shared:
-    admin:
-      image_picker:
-        image: *image

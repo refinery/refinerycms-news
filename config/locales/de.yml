@@ -32,11 +32,5 @@ de:
         title: Titel
         body: Inhalt
         publish_date: Veröffentlichungsdatum
-        external_url: Externe URL
-        image: &image Image
     models:
       news_item: News-Eintrag
-  shared:
-    admin:
-      image_picker:
-        image: *image

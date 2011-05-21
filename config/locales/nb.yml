@@ -32,12 +32,5 @@ nb:
         title: Tittel
         body: Tekst
         publish_date: Publiseringsdato
-        external_url: Ekstern adresse
-        image: &image Bilde
     models:
       news_item: Nyhet
-  shared:
-    admin:
-      image_picker:
-        image: *image
-        

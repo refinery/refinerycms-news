@@ -32,11 +32,5 @@ cs:
         title: Název
         body: Obsah
         publish_date: Datum zveřejnění
-        external_url: Veřejná URL
-        image: &image Obrázek
     models:
       news_item: Novinka
-  shared:
-    admin:
-      image_picker:
-        image: *image

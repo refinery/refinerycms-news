@@ -30,11 +30,5 @@ es-MX:
         title: Título
         body: Contenido
         publish_date: Fecha de publicación
-        external_url: URL externa
-        image: &image Imagen
     models:
       news_item: Noticia
-  shared:
-    admin:
-      image_picker:
-        image: *image

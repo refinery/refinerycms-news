@@ -33,11 +33,5 @@ en:
         body: Body
         publish_date: Publish date
         expiration_date: Expiration date
-        external_url: External URL
-        image: &image Image
     models:
       news_item: News Item
-  shared:
-    admin:
-      image_picker:
-        image: *image
