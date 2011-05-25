@@ -2,14 +2,14 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{1.1.0}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2011-05-21}
+  s.date              = %q{2011-05-26}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
   s.authors           = %w(Resolve\ Digital)
   s.require_paths     = %w(lib)
 
-  s.add_dependency    'refinerycms-core', '~> 1.0.0.pre'
+  s.add_dependency    'refinerycms-core', '~> 1.0.0'
 
   s.files             = [
     'app',
