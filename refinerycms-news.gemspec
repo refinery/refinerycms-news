@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{1.1.0}
+  s.version           = %q{1.2.0}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2011-05-26}
+  s.date              = %q{2011-05-27}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -57,6 +57,7 @@ Gem::Specification.new do |s|
     'db/migrate/3_translate_news_items.rb',
     'db/migrate/4_add_image_id_to_news_items.rb',
     'db/migrate/5_add_expiration_date_to_news_items.rb',
+    'db/migrate/6_remove_image_id_and_external_url_from_news.rb',
     'db/seeds',
     'db/seeds/refinerycms_news.rb',
     'features',
