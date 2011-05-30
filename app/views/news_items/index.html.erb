@@ -1,5 +1,5 @@
 <% content_for :body_content_left do %>
-  <%=raw @page[:body] if @news_items.offset == 0 %>
+  <%=raw @page.content_for(Page.default_parts.first.to_sym) if @news_items.offset == 0 %>
 
   <% if @news_items.any? %>
     <% @news_items.each do |item| %>
