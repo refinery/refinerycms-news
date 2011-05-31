@@ -4,7 +4,7 @@
   <% if @news_items.any? %>
     <% @news_items.each do |item| %>
       <article class="news_item_truncated">
-        <h3><%= link_to item.title, news_item_url(item) %></h3>
+        <h2><%= link_to item.title, news_item_url(item) %></h2>
         <p>
           <small><%= t('.published') %> <%= l(item.publish_date, :format => :long) %></small>
         </p>
