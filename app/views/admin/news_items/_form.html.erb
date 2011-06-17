@@ -19,13 +19,20 @@
     <%= f.label :publish_date %>
     <%= f.datetime_select :publish_date %>
   </div>
-
+  
   <div class='field'>
     <%= f.label :expiration_date %>
     <%= f.datetime_select :expiration_date, :start_year => Time.now.year,
                                             :include_blank => true %>
   </div>
 
+  <% if @show_preview %>
+  <div class='field'>
+    <%= f.label :preview_text %>
+    <%= f.text_area :preview_text, :rows => "5", :class => "widest" %>
+  </div>
+  <% end %>
+  
   <div class='field'>
     <%= f.label :content %>
     <%= f.text_area :content, :rows => "20", :class => "wymeditor widest" %>

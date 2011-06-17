@@ -4,7 +4,11 @@
     <p>
       <small><%= t('.published') %> <%= l(@news_item.publish_date, :format => :long) %></small>
     </p>
-    <%= @news_item.body.html_safe %>
+    <% if @show_preview %>
+      <%= @news_item.preview_text.html_safe %>
+    <% else %>
+      <%= @news_item.body.html_safe %>
+    <% end %>
     <p>
       <%= link_to t('.back_to_index'), news_items_url %>
     </p>
