@@ -3,6 +3,7 @@ class NewsItemsController < ApplicationController
   before_filter :find_published_news_items, :only => [:index]
   before_filter :find_news_item, :find_latest_news_items, :only => [:show]
   before_filter :show_preview, :only => [:index, :show]
+  before_filter :has_image, :only => [:index, :show]
   
 
   def index
@@ -34,6 +35,9 @@ protected
   
   def show_preview
     @show_preview ||= RefinerySetting.get_or_set(:refinery_news_show_preview, true)
+  end
+  def has_image
+    @has_image ||= RefinerySetting.get_or_set(:refinery_news_has_image, true)
   end
 
 end

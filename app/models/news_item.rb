@@ -1,5 +1,5 @@
 class NewsItem < ActiveRecord::Base
-  translates :title,:preview_text, :body, :external_url
+  translates :title, :preview_text, :body, :external_url
   
   attr_accessor :locale # to hold temporarily
 
@@ -11,6 +11,8 @@ class NewsItem < ActiveRecord::Base
   acts_as_indexed :fields => [:title, :body]
 
   default_scope :order => "publish_date DESC"
+  
+  image_accessor :cover_image
 
   # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
   # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)

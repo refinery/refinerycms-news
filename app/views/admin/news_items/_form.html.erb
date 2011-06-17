@@ -1,4 +1,4 @@
-<%= form_for [:admin, @news_item] do |f| %>
+<%= form_for [:admin, @news_item], :html => {:multipart => true} do |f| %>
   <%= render :partial => "/shared/admin/error_messages",
              :locals => {
                :object => @news_item,
@@ -14,6 +14,14 @@
     <%= f.label :title %>
     <%= f.text_field :title, :class => "larger widest" %>
   </div>
+  
+  <% if @has_image %>
+  <div class='field'>
+    <%= f.label :cover_image %>
+    <%= f.file_field :cover_image %><br />
+    <%= image_tag @news_item.cover_image.thumb('100x100').url if @news_item.cover_image_uid %>
+  </div>
+  <% end %>
 
   <div class='field'>
     <%= f.label :publish_date %>
