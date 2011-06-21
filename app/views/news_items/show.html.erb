@@ -1,9 +1,11 @@
 <% content_for :body_content_title, @news_item.title %>
 <% content_for :body_content_left do %>
   <article class="news_item">
-    <p>
-      <%= image_tag @news_item.cover_image.thumb('150x150#').url if @news_item.cover_image_uid %>
-    </p>
+    <% if @has_image && @news_item.cover_image_uid %>%>
+      <p>
+        <%= image_tag @news_item.cover_image.thumb('150x150#').url
+      </p>
+    <% end %>
     <p>
       <small><%= t('.published') %> <%= l(@news_item.publish_date, :format => :long) %></small>
     </p>
