@@ -36,6 +36,7 @@ protected
   def show_preview
     @show_preview ||= RefinerySetting.find_or_set(:refinery_news_show_preview, true)
   end
+  
   def has_image
     @has_image ||= RefinerySetting.find_or_set(:refinery_news_has_image, true)
   end
