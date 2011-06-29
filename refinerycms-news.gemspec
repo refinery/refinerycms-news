@@ -58,6 +58,8 @@ Gem::Specification.new do |s|
     'db/migrate/4_add_image_id_to_news_items.rb',
     'db/migrate/5_add_expiration_date_to_news_items.rb',
     'db/migrate/6_remove_image_id_and_external_url_from_news.rb',
+    'db/migrate/7_add_preview_text.rb',
+    'db/migrate/8_add_cover_image.rb',
     'db/seeds',
     'db/seeds/refinerycms_news.rb',
     'features',
