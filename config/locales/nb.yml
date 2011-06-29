@@ -1,36 +1,37 @@
 nb:
-  plugins:
-    refinerycms_news:
-      title: Nyheter
-      description: Legger til en seksjon for nyheter
-  admin:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Nyheter
+        description: Legger til en seksjon for nyheter
+    admin:
+      news_items:
+        news_item:
+          view_live_html: "Se hvordan nyheten ser ut for dine besøkende akkurat nå <br/><em>(åpnes i et nytt vindu)</em>"
+          edit: "Rediger denne nyheten"
+          delete: "Fjern denne nyheten permanent"
+          published: Publisert
+        index:
+          actions: Handlinger
+          create: "Legg til Nyhet"
+          news_item: Nyhet
+          no_items: "Beklager, fant ingen resultater."
+          no_items_yet: 'Det er ikke lagt til noen nyheter enda. Klikk "Legg til Nyhet" for å legge inn din første nyhet.'
     news_items:
-      news_item:
-        view_live_html: "Se hvordan nyheten ser ut for dine besøkende akkurat nå <br/><em>(åpnes i et nytt vindu)</em>"
-        edit: "Rediger denne nyheten"
-        delete: "Fjern denne nyheten permanent"
+      show:
+        back_to_index: "Tilbake til nyhetsoversikt"
         published: Publisert
+      recent_posts:
+        recent_posts: Nylige Poster
       index:
-        actions: Handlinger
-        create: "Legg til Nyhet"
+        published: Publisert
+        read_more: Les mer
+        no_items_yet: Det er ingen nyheter enda.
+    activerecord:
+      attributes:
+        news_item:
+          title: Tittel
+          body: Tekst
+          publish_date: Publiseringsdato
+      models:
         news_item: Nyhet
-        no_items: "Beklager, fant ingen resultater."
-        no_items_yet: 'Det er ikke lagt til noen nyheter enda. Klikk "Legg til Nyhet" for å legge inn din første nyhet.'
-  news_items:
-    show:
-      back_to_index: "Tilbake til nyhetsoversikt"
-      published: Publisert
-    recent_posts:
-      recent_posts: Nylige Poster
-    index:
-      published: Publisert
-      read_more: Les mer
-      no_items_yet: Det er ingen nyheter enda.
-  activerecord:
-    attributes:
-      news_item:
-        title: Tittel
-        body: Tekst
-        publish_date: Publiseringsdato
-    models:
-      news_item: Nyhet

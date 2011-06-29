@@ -1,36 +1,37 @@
 es:
-  plugins:
-    refinerycms_news:
-      title: Noticias
-      description: Proporciona una seccion de noticias similar a un blog
-  admin:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Noticias
+        description: Proporciona una seccion de noticias similar a un blog
+    admin:
+      news_items:
+        news_item:
+          view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
+          edit: "Editar esta noticia"
+          delete: "Borrar completament esta noticia"
+          published: Publicada
+        index:
+          actions: Acciones
+          create: "Crear noticia"
+          news_item: Noticia
+          no_items: "Lo sentimos, no se ha encontrado ningún resultado"
+          no_items_yet: 'Aún no hay noticias. Haz click en "Crear noticia" para añadir la primera.'
     news_items:
-      news_item:
-        view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
-        edit: "Editar esta noticia"
-        delete: "Borrar completament esta noticia"
+      show:
+        back_to_index: "Volver al listado de noticias"
         published: Publicada
+      recent_posts:
+        recent_posts: Posts recientes
       index:
-        actions: Acciones
-        create: "Crear noticia"
+        published: Publicada
+        read_more: Leer mas
+        no_items_yet: Aún no hay ninguna noticia.
+    activerecord:
+      attributes:
+        news_item:
+          title: Título
+          body: Contenido
+          publish_date: Fecha de publicación
+      models:
         news_item: Noticia
-        no_items: "Lo sentimos, no se ha encontrado ningún resultado"
-        no_items_yet: 'Aún no hay noticias. Haz click en "Crear noticia" para añadir la primera.'
-  news_items:
-    show:
-      back_to_index: "Volver al listado de noticias"
-      published: Publicada
-    recent_posts:
-      recent_posts: Posts recientes
-    index:
-      published: Publicada
-      read_more: Leer mas
-      no_items_yet: Aún no hay ninguna noticia.
-  activerecord:
-    attributes:
-      news_item:
-        title: Título
-        body: Contenido
-        publish_date: Fecha de publicación
-    models:
-      news_item: Noticia

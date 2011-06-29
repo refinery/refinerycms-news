@@ -1,5 +1,5 @@
-<%= form_for [:admin, @news_item] do |f| %>
-  <%= render :partial => "/shared/admin/error_messages",
+<%= form_for [main_app, :refinery, :admin, @news_item] do |f| %>
+  <%= render :partial => "/refinery/admin/error_messages",
              :locals => {
                :object => @news_item,
                :include_object_name => true
@@ -31,7 +31,7 @@
     <%= f.text_area :content, :rows => "20", :class => "wymeditor widest" %>
   </div>
 
-  <%= render :partial => "/shared/admin/form_actions",
+  <%= render :partial => "/refinery/admin/form_actions",
              :locals => {
                :f => f,
                :continue_editing => true,

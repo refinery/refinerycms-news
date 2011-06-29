@@ -1,0 +1,30 @@
+<div id='actions'>
+  <ul>
+    <li>
+      <%= render :partial => "/refinery/admin/search", :locals => {:url => main_app.refinery_admin_news_items_path} %>
+    </li>
+    <li>
+      <%= link_to t('.create'), main_app.new_refinery_admin_news_item_path, :class => "add_icon" %>
+    </li>
+  </ul>
+</div>
+<div id='records'>
+  <% if searching? %>
+    <h2><%= t('refinery.admin.search.results_for', :query => params[:search]) %></h2>
+  <% end %>
+  <% if @news_items.any? %>
+    <%= paginate @news_items %>
+    <ul>
+      <%= render :partial => "news_item", :collection => @news_items %>
+    </ul>
+    <%= paginate @news_items %>
+  <% else %>
+    <p>
+      <% unless searching? %>
+        <strong><%= t('.no_items_yet') %></strong>
+      <% else %>
+        <%= t('refinery.admin.search.no_results') %>
+      <% end %>
+    </p>
+  <% end %>
+</div>

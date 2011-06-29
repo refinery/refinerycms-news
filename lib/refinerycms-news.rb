@@ -7,17 +7,17 @@ module Refinery
     class << self
       attr_accessor :root
       def root
-	@root ||= Pathname.new(File.expand_path('../../', __FILE__))	
+	      @root ||= Pathname.new(File.expand_path('../../', __FILE__))
       end
     end
 
     class Engine < Rails::Engine
-      config.after_initialize do
+      initializer "init plugin", :after => :set_routes_reloader do |app|
         Refinery::Plugin.register do |plugin|
-	  plugin.pathname = root
+	        plugin.pathname = root
           plugin.name = "refinerycms_news"
           plugin.menu_match = /(admin|refinery)\/news(_items)?$/
-          plugin.url = {:controller => '/admin/news_items', :action => 'index'}
+          plugin.url = app.routes.url_helpers.refinery_admin_news_items_path
           plugin.activity = {
             :class => NewsItem,
             :title => 'title',

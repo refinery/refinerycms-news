@@ -1,34 +1,35 @@
 pt-BR:
-  plugins:
-    refinerycms_news:
-      title: Notícias
-  activerecord:
-    attributes:
-      news_item:
-        title: Título
-        content: Contéudo
-        publish_date: Data de publicação
-    models:
-      news_item: Notícia
-  admin:
-    news_items:
-      news_item:
-        view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
-        edit: "Alterar esta notícia"
-        delete: "Remover esta notícia para sempre"
-        published: Publicado
-      index:
-        actions: Ações
-        create: "Criar Notícia"
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Notícias
+    activerecord:
+      attributes:
+        news_item:
+          title: Título
+          content: Contéudo
+          publish_date: Data de publicação
+      models:
         news_item: Notícia
-        no_items: 'Não há notícias cadastradas.'
-        no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
-        read_more: Leia mais
-  news_items:
-    show:
-      back_to_index: "Voltar para todas as notícias"
-      published: Publicado
-    recent_posts:
-      recent_posts: Notícias recentes
-    index:
-     published: Publicado
+    admin:
+      news_items:
+        news_item:
+          view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
+          edit: "Alterar esta notícia"
+          delete: "Remover esta notícia para sempre"
+          published: Publicado
+        index:
+          actions: Ações
+          create: "Criar Notícia"
+          news_item: Notícia
+          no_items: 'Não há notícias cadastradas.'
+          no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
+          read_more: Leia mais
+    news_items:
+      show:
+        back_to_index: "Voltar para todas as notícias"
+        published: Publicado
+      recent_posts:
+        recent_posts: Notícias recentes
+      index:
+       published: Publicado

@@ -1,36 +1,37 @@
 sk:
-  plugins:
-    refinerycms_news:
-      title: Novinky
-      description: Poskytuje jednoduchú správu noviniek
-  admin:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Novinky
+        description: Poskytuje jednoduchú správu noviniek
+    admin:
+      news_items:
+        news_item:
+          view_live_html: "Zobraziť novinku v novom okne"
+          edit: "Editovať novinku"
+          delete: "Zmazať novinku"
+          published: Uverejnená
+        index:
+          actions: Možnosti
+          create: "Pridať novinku"
+          news_item: Novinka
+          no_items: "Ľutujeme, žiadne výsledky nenájdené."
+          no_items_yet: 'Momentálne nie sú žiadne novinky. Klikni na "Pridať novinku" pre vytvorenie prvej.'
     news_items:
-      news_item:
-        view_live_html: "Zobraziť novinku v novom okne"
-        edit: "Editovať novinku"
-        delete: "Zmazať novinku"
-        published: Uverejnená
+      show:
+        back_to_index: "Návrat na zoznam noviniek"
+        published: Zverejnené
+      recent_posts:
+        recent_posts: Posledné príspevky
       index:
-        actions: Možnosti
-        create: "Pridať novinku"
+        published: Zverejnené
+        read_more: Čítať viac
+        no_items_yet: Neexistujú žiadne záznamy noviniek.
+    activerecord:
+      attributes:
+        news_item:
+          title: Názov
+          body: Obsah
+          publish_date: Dátum zverejnenia
+      models:
         news_item: Novinka
-        no_items: "Ľutujeme, žiadne výsledky nenájdené."
-        no_items_yet: 'Momentálne nie sú žiadne novinky. Klikni na "Pridať novinku" pre vytvorenie prvej.'
-  news_items:
-    show:
-      back_to_index: "Návrat na zoznam noviniek"
-      published: Zverejnené
-    recent_posts:
-      recent_posts: Posledné príspevky
-    index:
-      published: Zverejnené
-      read_more: Čítať viac
-      no_items_yet: Neexistujú žiadne záznamy noviniek.
-  activerecord:
-    attributes:
-      news_item:
-        title: Názov
-        body: Obsah
-        publish_date: Dátum zverejnenia
-    models:
-      news_item: Novinka

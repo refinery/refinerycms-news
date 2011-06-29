@@ -1,36 +1,37 @@
 it:
-  plugins:
-    refinerycms_news:
-      title: Notizie
-      description: Fornisce una sezione notizie in stile blog
-  admin:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Notizie
+        description: Fornisce una sezione notizie in stile blog
+    admin:
+      news_items:
+        news_item:
+          view_live_html: "Visualzza questa notizia live <br/><em>(si apre in una nuova finestra)</em>"
+          edit: "Modifica questa notizia"
+          delete: "Rimuovi questa notizia per sempre"
+          published: Pubblicata
+        index:
+          actions: Azioni
+          create: "Crea Notizia"
+          news_item: Notizia
+          no_items: "Spiacente, nessun risultato trovato."
+          no_items_yet: 'Non ci sono ancora notizie. Fare clic su "Crea Notizia" per aggiungere la prima notizie.'
     news_items:
-      news_item:
-        view_live_html: "Visualzza questa notizia live <br/><em>(si apre in una nuova finestra)</em>"
-        edit: "Modifica questa notizia"
-        delete: "Rimuovi questa notizia per sempre"
+      show:
+        back_to_index: "Torna a tutte le notizie"
         published: Pubblicata
+      recent_posts:
+        recent_posts: Messaggi Recenti
       index:
-        actions: Azioni
-        create: "Crea Notizia"
+        published: Pubblicata
+        read_more: Per saperne di più
+        no_items_yet: Non ci sono ancora notizie.
+    activerecord:
+      attributes:
+        news_item:
+          title: Titolo
+          body: Corpo
+          publish_date: Data di pubblicazione
+      models:
         news_item: Notizia
-        no_items: "Spiacente, nessun risultato trovato."
-        no_items_yet: 'Non ci sono ancora notizie. Fare clic su "Crea Notizia" per aggiungere la prima notizie.'
-  news_items:
-    show:
-      back_to_index: "Torna a tutte le notizie"
-      published: Pubblicata
-    recent_posts:
-      recent_posts: Messaggi Recenti
-    index:
-      published: Pubblicata
-      read_more: Per saperne di più
-      no_items_yet: Non ci sono ancora notizie.
-  activerecord:
-    attributes:
-      news_item:
-        title: Titolo
-        body: Corpo
-        publish_date: Data di pubblicazione
-    models:
-      news_item: Notizia
