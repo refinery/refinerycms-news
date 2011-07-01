@@ -19,8 +19,7 @@ module Refinery
     end
 
     def find_published_news_items
-      @news_items = Refinery::NewsItem.published.translated.paginate(:page => params[:page],
-                                                                     :per_page => Refinery::NewsItem.per_page)
+      @news_items = Refinery::NewsItem.published.translated.paginate(:page => params[:page])
     end
 
     def find_news_item

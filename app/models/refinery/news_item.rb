@@ -1,5 +1,9 @@
 module Refinery
   class NewsItem < ActiveRecord::Base
+
+    # for kaminari
+    paginates_per 20
+
     translates :title, :body, :external_url
 
     attr_accessor :locale # to hold temporarily
@@ -37,11 +41,6 @@ module Refinery
 
     def not_published? # has the published date not yet arrived?
       publish_date > Time.now
-    end
-
-    # for will_paginate
-    def self.per_page
-      20
     end
 
   end

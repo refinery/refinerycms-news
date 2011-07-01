@@ -14,7 +14,7 @@
       </article>
     <% end %>
 
-    <%= will_paginate(@news_items) %>
+    <%= paginate @news_items %>
   <% else %>
     <p><em><%= t('.no_items_yet') %></em></p>
   <% end %>
