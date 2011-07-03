@@ -1,4 +1,4 @@
-en:
+zh-CN:
   plugins:
     refinerycms_news:
       title: 新闻
@@ -25,7 +25,7 @@ en:
     index:
       published: 已发布
       read_more: 更多
-      no_items_yet: 目前没有新闻.
+      no_items_yet: 目前没有新闻。
   activerecord:
     attributes:
       news_item:
