@@ -1,5 +1,5 @@
 class NewsItem < ActiveRecord::Base
-  translates :title, :body, :external_url
+  translates :title, :body
   
   attr_accessor :locale # to hold temporarily
 
