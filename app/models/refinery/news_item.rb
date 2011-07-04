@@ -4,7 +4,7 @@ module Refinery
     # for kaminari
     paginates_per 20
 
-    translates :title, :body, :external_url
+    translates :title, :body
 
     attr_accessor :locale # to hold temporarily
 
