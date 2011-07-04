@@ -7,7 +7,7 @@ module NavigationHelpers
           refinery_admin_news_items_path
         else
           begin
-            if page_name =~ /the news item titled "?([^\"]*)"?/ and (news_item = Refinery::NewsItem.where(:title => $1).first).present?
+            if page_name =~ /the news item titled "?([^\"]*)"?/ and (news_item = ::Refinery::NewsItem.where(:title => $1).first).present?
               news_item_path(news_item)
             else
               nil
