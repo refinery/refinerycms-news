@@ -36,7 +36,7 @@ module Refinery
       translations = Arel::Table.new(NewsItem.translations_table_name)
 
       includes(:translations).where(
-        translations[:locale].eq(Globalize.locale)).where(pages[:id].eq(translations[:news_item_id]))
+        translations[:locale].eq(Globalize.locale)).where(pages[:id].eq(translations[:refinery_news_item_id]))
     }
 
     def not_published? # has the published date not yet arrived?

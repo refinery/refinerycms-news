@@ -6,10 +6,10 @@
     </p>
     <%= @news_item.body.html_safe %>
     <p>
-      <%= link_to t('.back_to_index'), news_items_url %>
+      <%= link_to t('.back_to_index'), main_app.news_items_path %>
     </p>
   </article>
 <% end %>
 <% content_for :body_content_right, render(:partial => 'recent_posts') %>
 
-<%= render :partial => "/shared/content_page" %>
+<%= render :partial => "/refinery/content_page" %>

@@ -1,15 +1,16 @@
 <% content_for :body_content_left do %>
-  <%=raw @page.content_for(Page.default_parts.first.to_sym) if @news_items.offset == 0 %>
+  <%# TODO: Fix this! %>
+  <%#=raw @page.content_for(Refinery::Page.default_parts.first.to_sym) %>
 
   <% if @news_items.any? %>
     <% @news_items.each do |item| %>
       <article class="news_item_truncated">
-        <h2><%= link_to item.title, news_item_url(item) %></h2>
+        <h2><%= link_to item.title, main_app.news_item_path(item) %></h2>
         <p>
           <small><%= t('.published') %> <%= l(item.publish_date, :format => :long) %></small>
         </p>
         <%= truncate  item.body, :length => 200,
-                      :omission => " ... #{link_to t('.read_more'), news_item_url(item)}",
+                      :omission => " ... #{link_to t('.read_more'), main_app.news_item_path(item)}",
                       :preserve_html_tags => true %>
       </article>
     <% end %>
@@ -20,4 +21,4 @@
   <% end %>
 <% end -%>
 
-<%= render :partial => "/shared/content_page" %>
+<%= render :partial => "/refinery/content_page" %>
