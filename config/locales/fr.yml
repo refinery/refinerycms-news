@@ -27,11 +27,13 @@ fr:
         published: Publiée le
         read_more: Plus
         no_items_yet: Aucune actualité pour le moment.
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Titre
           body: Texte
           publish_date: Date de publication
-      models:
+    models:
+      refinery:
         news_item: Nouvelle

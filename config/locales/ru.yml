@@ -25,11 +25,13 @@ ru:
       index:
         published: "Опубликовано"
         read_more: "Читать далее"
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: "Заголовок"
           body: "Публикация"
           publish_date: "Дата публикации"
-      models:
+    models:
+      refinery:
         news_item: "Новость"

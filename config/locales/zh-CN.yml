@@ -1,37 +1,40 @@
 zh-CN:
-  plugins:
-    refinerycms_news:
-      title: 新闻
-      description: 提供一个简单的新闻分类
-  admin:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: 新闻
+        description: 提供一个简单的新闻分类
+    admin:
+      news_items:
+        news_item:
+          view_live_html: "查看这条新闻 <br/><em>(在新窗口打开)</em>"
+          edit: "编辑这条新闻"
+          delete: "永远删除这条新闻"
+          published: 已发布
+        index:
+          actions: 动作
+          create: "添加一条新闻"
+          news_item: 新闻
+          no_items: "对不起，没有返回结果."
+          no_items_yet: '目前没有新闻. 点击 "添加新闻" 来添加你的第一条新闻.'
     news_items:
-      news_item:
-        view_live_html: "查看这条新闻 <br/><em>(在新窗口打开)</em>"
-        edit: "编辑这条新闻"
-        delete: "永远删除这条新闻"
+      show:
+        back_to_index: "返回所有新闻"
         published: 已发布
+      recent_posts:
+        recent_posts: 最近新闻
       index:
-        actions: 动作
-        create: "添加一条新闻"
-        news_item: 新闻
-        no_items: "对不起，没有返回结果."
-        no_items_yet: '目前没有新闻. 点击 "添加新闻" 来添加你的第一条新闻.'
-  news_items:
-    show:
-      back_to_index: "返回所有新闻"
-      published: 已发布
-    recent_posts:
-      recent_posts: 最近新闻
-    index:
-      published: 已发布
-      read_more: 更多
-      no_items_yet: 目前没有新闻。
+        published: 已发布
+        read_more: 更多
+        no_items_yet: 目前没有新闻。
   activerecord:
     attributes:
-      news_item:
-        title: 标题
-        body: 正文
-        publish_date: 发布时间
-        expiration_date: 过期时间
+      refinery:
+        news_item:
+          title: 标题
+          body: 正文
+          publish_date: 发布时间
+          expiration_date: 过期时间
     models:
-      news_item: 新闻条目
+      refinery:
+        news_item: 新闻条目

@@ -3,14 +3,6 @@ pt-BR:
     plugins:
       refinerycms_news:
         title: Notícias
-    activerecord:
-      attributes:
-        news_item:
-          title: Título
-          content: Contéudo
-          publish_date: Data de publicação
-      models:
-        news_item: Notícia
     admin:
       news_items:
         news_item:
@@ -33,3 +25,13 @@ pt-BR:
         recent_posts: Notícias recentes
       index:
        published: Publicado
+  activerecord:
+    attributes:
+      refinery:
+        news_item:
+          title: Título
+          content: Contéudo
+          publish_date: Data de publicação
+    models:
+      refinery:
+        news_item: Notícia

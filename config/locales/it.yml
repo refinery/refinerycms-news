@@ -27,11 +27,13 @@ it:
         published: Pubblicata
         read_more: Per saperne di più
         no_items_yet: Non ci sono ancora notizie.
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Titolo
           body: Corpo
           publish_date: Data di pubblicazione
-      models:
+    models:
+      refinery:
         news_item: Notizia

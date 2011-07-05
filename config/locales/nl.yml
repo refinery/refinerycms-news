@@ -27,11 +27,13 @@ nl:
         published: Gepubliceerd op
         read_more: Lees meer
         no_items_yet: "Sorry, er zijn nog geen nieuwsberichten geplaatst."
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Titel
           body: Inhoud
           publish_date: Publiceer datum
-      models:
+    models:
+      refinery:
         news_item: Nieuws Item

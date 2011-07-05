@@ -27,11 +27,13 @@ nb:
         published: Publisert
         read_more: Les mer
         no_items_yet: Det er ingen nyheter enda.
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Tittel
           body: Tekst
           publish_date: Publiseringsdato
-      models:
+    models:
+      refinery:
         news_item: Nyhet

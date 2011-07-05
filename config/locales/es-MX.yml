@@ -25,11 +25,13 @@ es-MX:
       index:
         published: Publicada
         read_more: Leer mas
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Título
           body: Contenido
           publish_date: Fecha de publicación
-      models:
+    models:
+      refinery:
         news_item: Noticia

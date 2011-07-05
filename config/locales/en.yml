@@ -27,12 +27,14 @@ en:
         published: Published
         read_more: Read more
         no_items_yet: There are no news item entries yet.
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Title
           body: Body
           publish_date: Publish date
           expiration_date: Expiration date
-      models:
+    models:
+      refinery:
         news_item: News Item

@@ -25,13 +25,15 @@ lv:
         published: Ievietots
         read_more: Lasīt vairāk
         no_items_yet: Vēl nav neviena jaunuma.
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Virsraksts
           body: Saturs
           content: Saturs
           publish_date: Publikācijas datums
           expiration_date: Publikācijas beigu datums
-      models:
+    models:
+      refinery:
         news_item: jaunums

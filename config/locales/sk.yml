@@ -27,11 +27,13 @@ sk:
         published: Zverejnené
         read_more: Čítať viac
         no_items_yet: Neexistujú žiadne záznamy noviniek.
-    activerecord:
-      attributes:
+  activerecord:
+    attributes:
+      refinery:
         news_item:
           title: Názov
           body: Obsah
           publish_date: Dátum zverejnenia
-      models:
+    models:
+      refinery:
         news_item: Novinka
