@@ -5,8 +5,7 @@ class TranslateNewsItems < ActiveRecord::Migration
     unless defined?(::NewsItem::Translation) && ::NewsItem::Translation.table_exists?
       ::NewsItem.create_translation_table!({
         :title => :string,
-        :body => :text,
-        :external_url => :string
+        :body => :text
       }, {
         :migrate_data => true
       })
@@ -22,3 +21,4 @@ class TranslateNewsItems < ActiveRecord::Migration
   end
 
 end
+
