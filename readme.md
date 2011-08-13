@@ -13,18 +13,18 @@ Key features:
 
 ## Requirements
 
-[RefineryCMS](http://refinerycms.com) "core" engine version 1.0.0 or later.
+[RefineryCMS](http://refinerycms.com) "core" engine version 2.0.0 or later.
 
 ### Gem Installation using Bundler (The very best way)
 
 Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
 
-    gem "refinerycms-news", '~> 1.2'
+    gem "refinerycms-news", '~> 2.0.0'
 
 Then type the following at command line inside your Refinery CMS application's root directory:
 
     bundle install
-    rails generate refinerycms_news
+    rails generate refinery:news
     rake db:migrate
 
 ## Customising the views
