@@ -70,7 +70,6 @@ Gem::Specification.new do |s|
     'features/step_definitions',
     'features/step_definitions/news_steps.rb',
     'features/support',
-    'features/support/factories.rb',
     'features/support/paths.rb',
     'features/visit_news_items.feature',
     'lib',
@@ -84,6 +83,9 @@ Gem::Specification.new do |s|
     'spec',
     'spec/models',
     'spec/models/refinery',
-    'spec/models/refinery/news_item_spec.rb'
+    'spec/models/refinery/news_item_spec.rb',
+    'spec/support',
+    'spec/support/refinery',
+    'spec/support/refinery/factories.rb'
   ]
 end
