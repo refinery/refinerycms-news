@@ -6,7 +6,6 @@ class TranslateNewsItems < ActiveRecord::Migration
       ::Refinery::NewsItem.create_translation_table!({
         :title => :string,
         :body => :text,
-        :external_url => :string
       }, {
         :migrate_data => true
       })
