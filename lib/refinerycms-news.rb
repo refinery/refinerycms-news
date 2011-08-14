@@ -1,4 +1,4 @@
-require 'refinery'
+require File.expand_path('../generators/news_generator', __FILE__)
 require File.expand_path('../news', __FILE__)
 
 module Refinery
