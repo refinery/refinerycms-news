@@ -29,12 +29,10 @@ bg:
         no_items_yet: Все още няма публикувани новини.
   activerecord:
     attributes:
-      refinery:
-        news_item:
-          title: Заглавие
-          body: Съдържание
-          publish_date: Дата на публикуване
-          expiration_date: Крайна дата
+      refinery/news_item:
+        title: Заглавие
+        body: Съдържание
+        publish_date: Дата на публикуване
+        expiration_date: Крайна дата
     models:
-      refinery:
-        news_item: Новина
+      refinery/news_item: Новина

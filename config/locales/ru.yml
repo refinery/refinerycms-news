@@ -27,11 +27,9 @@ ru:
         read_more: "Читать далее"
   activerecord:
     attributes:
-      refinery:
-        news_item:
-          title: "Заголовок"
-          body: "Публикация"
-          publish_date: "Дата публикации"
+      refinery/news_item:
+        title: "Заголовок"
+        body: "Публикация"
+        publish_date: "Дата публикации"
     models:
-      refinery:
-        news_item: "Новость"
+      refinery/news_item: "Новость"

@@ -27,11 +27,9 @@ es-MX:
         read_more: Leer mas
   activerecord:
     attributes:
-      refinery:
-        news_item:
-          title: Título
-          body: Contenido
-          publish_date: Fecha de publicación
+      refinery/news_item:
+        title: Título
+        body: Contenido
+        publish_date: Fecha de publicación
     models:
-      refinery:
-        news_item: Noticia
+      refinery/news_item: Noticia

@@ -29,11 +29,9 @@ sk:
         no_items_yet: Neexistujú žiadne záznamy noviniek.
   activerecord:
     attributes:
-      refinery:
-        news_item:
-          title: Názov
-          body: Obsah
-          publish_date: Dátum zverejnenia
+      refinery/news_item:
+        title: Názov
+        body: Obsah
+        publish_date: Dátum zverejnenia
     models:
-      refinery:
-        news_item: Novinka
+      refinery/news_item: Novinka

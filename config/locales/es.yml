@@ -29,11 +29,9 @@ es:
         no_items_yet: Aún no hay ninguna noticia.
   activerecord:
     attributes:
-      refinery:
-        news_item:
-          title: Título
-          body: Contenido
-          publish_date: Fecha de publicación
+      refinery/news_item:
+        title: Título
+        body: Contenido
+        publish_date: Fecha de publicación
     models:
-      refinery:
-        news_item: Noticia
+      refinery/news_item: Noticia

@@ -29,11 +29,9 @@ it:
         no_items_yet: Non ci sono ancora notizie.
   activerecord:
     attributes:
-      refinery:
-        news_item:
-          title: Titolo
-          body: Corpo
-          publish_date: Data di pubblicazione
+      refinery/news_item:
+        title: Titolo
+        body: Corpo
+        publish_date: Data di pubblicazione
     models:
-      refinery:
-        news_item: Notizia
+      refinery/news_item: Notizia
