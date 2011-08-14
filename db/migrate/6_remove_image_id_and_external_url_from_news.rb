@@ -1,5 +1,5 @@
 class RemoveImageIdAndExternalUrlFromNews < ActiveRecord::Migration
-  def self.up
+  def up
     if ::Refinery::NewsItem.column_names.map(&:to_sym).include?(:external_url)
       remove_column ::Refinery::NewsItem.table_name, :external_url
     end
@@ -8,7 +8,7 @@ class RemoveImageIdAndExternalUrlFromNews < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     unless ::Refinery::NewsItem.column_names.map(&:to_sym).include?(:external_url)
       add_column ::Refinery::NewsItem.table_name, :external_url, :string
     end
