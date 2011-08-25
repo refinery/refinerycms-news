@@ -13,11 +13,11 @@
     <h2><%= t('refinery.admin.search.results_for', :query => params[:search]) %></h2>
   <% end %>
   <% if @news_items.any? %>
-    <%= paginate @news_items %>
+    <%= will_paginate @news_items %>
     <ul>
       <%= render :partial => "news_item", :collection => @news_items %>
     </ul>
-    <%= paginate @news_items %>
+    <%= will_paginate @news_items %>
   <% else %>
     <p>
       <% unless searching? %>

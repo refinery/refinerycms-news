@@ -1,9 +1,6 @@
 module Refinery
   class NewsItem < ActiveRecord::Base
 
-    # for kaminari
-    paginates_per 20
-
     translates :title, :body
 
     attr_accessor :locale # to hold temporarily
