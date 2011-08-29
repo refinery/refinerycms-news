@@ -6,7 +6,7 @@ pt-BR:
     attributes:
       news_item:
         title: Título
-        content: Contéudo
+        body: Contéudo
         publish_date: Data de publicação
     models:
       news_item: Notícia
