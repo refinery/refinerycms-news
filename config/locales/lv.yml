@@ -30,7 +30,6 @@ lv:
       refinery/news_item:
         title: Virsraksts
         body: Saturs
-        content: Saturs
         publish_date: Publikācijas datums
         expiration_date: Publikācijas beigu datums
     models:
