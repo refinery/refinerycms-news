@@ -31,6 +31,8 @@ es:
       news_item:
         title: Título
         body: Contenido
+        content: Contenido
         publish_date: Fecha de publicación
+        expiration_date: Expiration date
     models:
       news_item: Noticia
