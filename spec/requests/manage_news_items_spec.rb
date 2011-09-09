@@ -28,7 +28,7 @@ describe "manage news items" do
       click_link "Add News Item"
 
       fill_in "Title", :with => "My first news item"
-      fill_in "Content", :with => "bla bla"
+      fill_in "Body", :with => "bla bla"
       click_button "Save"
 
       page.should have_content("'My first news item' was successfully added.")
@@ -80,7 +80,7 @@ describe "manage news items" do
       visit new_refinery_admin_news_item_path
 
       fill_in "Title", :with => "I was here first"
-      fill_in "Content", :with => "Doesn't matter"
+      fill_in "Body", :with => "Doesn't matter"
       click_button "Save"
 
       Refinery::NewsItem.count.should == 2
