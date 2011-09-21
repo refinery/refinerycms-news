@@ -1,0 +1,38 @@
+zh-TW:
+  plugins:
+    refinerycms_news:
+      title: 新聞 
+      description: 提供簡單的新聞發佈功能
+  admin:
+    news_items:
+      news_item:
+        view_live_html: "查看此新聞 <br/><em>(在新視窗打開)</em>"
+        edit: "編輯此新聞"
+        delete: "永遠删除此新聞"
+        published: 已發佈
+      index:
+        actions: 動作
+        create: "新增新聞"
+        news_item: 新聞
+        no_items: "對不起，找不到資料."
+        no_items_yet: '目前沒有新聞. 點選 "新增新聞" 來新增你的第一條新聞.'
+  news_items:
+    show:
+      back_to_index: "回到新聞清單"
+      published: 已發佈
+    recent_posts:
+      recent_posts: 近期發佈新聞
+    index:
+      published: 已發佈
+      read_more: 更多
+      no_items_yet: 目前沒有新聞.
+  activerecord:
+    attributes:
+      news_item:
+        title: 標題
+        body: 內文
+        publish_date: 發佈時間
+        expiration_date: 失效時間
+    models:
+      news_item: 新聞條目
+
