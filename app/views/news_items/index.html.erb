@@ -6,6 +6,7 @@
       <article class="news_item_truncated">
         <h2><%= link_to item.title, news_item_url(item) %></h2>
         <p>
+          <small><%= t('.source') %> <%= item.source %></small>
           <small><%= t('.published') %> <%= l(item.publish_date, :format => :long) %></small>
         </p>
         <%= truncate  item.body, :length => 200,
