@@ -1,4 +1,4 @@
-Refinery::Application.routes.draw do
+Refinery::News::Engine.routes.draw do
   scope(:module => 'refinery') do
     resources :news, :as => :news_items, :controller => :news_items, :only => [:show, :index]
 
