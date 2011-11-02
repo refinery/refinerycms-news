@@ -1,0 +1,37 @@
+pl:
+  plugins:
+    refinerycms_news:
+      title: Aktualności
+      description: Aktualności i wydarzenia
+  admin:
+    news_items:
+      news_item:
+        view_live_html: "Zobacz podgląd <br/><em>(otwiera nowe okno)</em>"
+        edit: "Edytuj wiadomość"
+        delete: "Skasuj wiadomość na zawsze"
+        published: Opublikowano
+      index:
+        actions: Akcje
+        create: "Dodaj nową aktualizację"
+        news_item: Aktualizacja
+        no_items: "Przepraszamy, brak rezultatów."
+        no_items_yet: 'W bazie nie ma żadnych rezultatów, dodaj nową aktualizację.'
+  news_items:
+    show:
+      back_to_index: "Powrót do wszystkich aktualności"
+      published: Opublikowano
+    recent_posts:
+      recent_posts: Ostatnie aktualności
+    index:
+      published: Opublikowano
+      read_more: Czytaj więcej
+      no_items_yet: "Przepraszamy, brak rezultatów."
+  activerecord:
+    attributes:
+      news_item:
+        title: Tytuł
+        body: Treść
+        publish_date: Data opublikowania
+        expiration_date: Data wygaśnięcia
+    models:
+      news_item: Aktualnośći
