@@ -12,7 +12,7 @@ class TranslateNewsItems < ActiveRecord::Migration
       })
     end
 
-    load(Rails.root.join('db', 'seeds', 'refinerycms_news.rb').to_s)
+    Refinery::News::Engine.load_seed
   end
 
   def self.down

@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{2.0.0}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2011-08-14}
+  s.date              = %q{2011-11-08}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -31,6 +31,8 @@ Gem::Specification.new do |s|
     'app/views/refinery/admin/news_items/edit.html.erb',
     'app/views/refinery/admin/news_items/index.html.erb',
     'app/views/refinery/admin/news_items/new.html.erb',
+    'app/views/refinery/news',
+    'app/views/refinery/news/items',
     'app/views/refinery/news_items',
     'app/views/refinery/news_items/_recent_posts.html.erb',
     'app/views/refinery/news_items/index.html.erb',
@@ -46,14 +48,17 @@ Gem::Specification.new do |s|
     'config/locales/es.yml',
     'config/locales/fr.yml',
     'config/locales/it.yml',
+    'config/locales/jp.yml',
     'config/locales/lv.yml',
     'config/locales/nb.yml',
     'config/locales/nl.yml',
+    'config/locales/pl.yml',
     'config/locales/pt-BR.yml',
     'config/locales/ru.yml',
     'config/locales/sk.yml',
     'config/locales/sl.yml',
     'config/locales/zh-CN.yml',
+    'config/locales/zh-TW.yml',
     'config/routes.rb',
     'db',
     'db/migrate',
@@ -63,13 +68,17 @@ Gem::Specification.new do |s|
     'db/migrate/4_add_image_id_to_news_items.rb',
     'db/migrate/5_add_expiration_date_to_news_items.rb',
     'db/migrate/6_remove_image_id_and_external_url_from_news.rb',
-    'db/seeds',
-    'db/seeds/refinerycms_news.rb',
+    'db/seeds.rb',
     'lib',
     'lib/gemspec.rb',
     'lib/generators',
-    'lib/generators/news_generator.rb',
-    'lib/news.rb',
+    'lib/generators/refinery',
+    'lib/generators/refinery/news_generator.rb',
+    'lib/refinery',
+    'lib/refinery/news',
+    'lib/refinery/news/engine.rb',
+    'lib/refinery/news/version.rb',
+    'lib/refinery/news.rb',
     'lib/refinerycms-news.rb',
     'license.md',
     'readme.md',
