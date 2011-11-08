@@ -38,7 +38,7 @@ describe "manage news items" do
       page.body.should =~ /View this news item live/
       page.body.should =~ /\/news\/my-first-news-item/
 
-      Refinery::NewsItem.count.should == 1
+      Refinery::News::Item.count.should == 1
     end
   end
 
@@ -69,7 +69,7 @@ describe "manage news items" do
 
       page.should have_content("'Delete me' was successfully removed.")
 
-      Refinery::NewsItem.count.should == 0
+      Refinery::News::Item.count.should == 0
     end
   end
 
@@ -83,7 +83,7 @@ describe "manage news items" do
       fill_in "Body", :with => "Doesn't matter"
       click_button "Save"
 
-      Refinery::NewsItem.count.should == 2
+      Refinery::News::Item.count.should == 2
     end
   end
 end

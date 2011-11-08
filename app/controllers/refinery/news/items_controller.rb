@@ -16,15 +16,15 @@ module Refinery
       protected
 
       def find_latest_news_items
-        @news_items = Refinery::NewsItem.latest.translated
+        @news_items = Refinery::News::Item.latest.translated
       end
 
       def find_published_news_items
-        @news_items = Refinery::NewsItem.published.translated.page(params[:page])
+        @news_items = Refinery::News::Item.published.translated.page(params[:page])
       end
 
       def find_news_item
-        @news_item = Refinery::NewsItem.published.translated.find(params[:id])
+        @news_item = Refinery::News::Item.published.translated.find(params[:id])
       end
 
       def find_page

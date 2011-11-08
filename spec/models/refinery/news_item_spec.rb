@@ -8,7 +8,7 @@ module Refinery
 
     describe "validations" do
       subject do
-        news_item = Refinery::NewsItem.create! :title => "RefinyerCMS",
+        news_item = Refinery::News::Item.create! :title => "RefinyerCMS",
                                                :content => "Some random text ...",
                                                :publish_date => time_now
         news_item
@@ -30,7 +30,7 @@ module Refinery
       it "orders by publish date in DESC order" do
         news_item1 = Factory(:news_item, :publish_date => 1.hour.ago)
         news_item2 = Factory(:news_item, :publish_date => 2.hours.ago)
-        news_items = Refinery::NewsItem.all
+        news_items = Refinery::News::Item.all
         news_items.first.should == news_item1
         news_items.second.should == news_item2
       end
@@ -40,19 +40,19 @@ module Refinery
       let!(:news_item) { Factory(:news_item) }
 
       specify "expiration date not set" do
-        Refinery::NewsItem.not_expired.count.should == 1
+        Refinery::News::Item.not_expired.count.should == 1
       end
 
       specify "expiration date set in future" do
         news_item.expiration_date = Time.now + 1.hour
         news_item.save!
-        Refinery::NewsItem.not_expired.count.should == 1
+        Refinery::News::Item.not_expired.count.should == 1
       end
 
       specify "expiration date in past" do
         news_item.expiration_date = Time.now - 1.hour
         news_item.save!
-        Refinery::NewsItem.not_expired.count.should == 0
+        Refinery::News::Item.not_expired.count.should == 0
       end
     end
 
@@ -60,7 +60,7 @@ module Refinery
       it "returns only published news items" do
         Factory(:news_item)
         Factory(:news_item, :publish_date => Time.now + 1.hour)
-        Refinery::NewsItem.published.count.should == 1
+        Refinery::News::Item.published.count.should == 1
       end
     end
 
@@ -68,14 +68,14 @@ module Refinery
       it "returns 10 latest news items by default" do
         5.times { Factory(:news_item) }
         5.times { Factory(:news_item, :publish_date => Time.now + 1.hour) }
-        Refinery::NewsItem.latest.count.should == 5
+        Refinery::News::Item.latest.count.should == 5
         7.times { Factory(:news_item) }
-        Refinery::NewsItem.latest.length.should == 10
+        Refinery::News::Item.latest.length.should == 10
       end
 
       it "returns latest n news items" do
         4.times { Factory(:news_item) }
-        Refinery::NewsItem.latest(3).length.should == 3
+        Refinery::News::Item.latest(3).length.should == 3
       end
     end
 
