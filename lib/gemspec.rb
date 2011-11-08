@@ -1,15 +1,12 @@
 #!/usr/bin/env ruby
-require File.expand_path('../news.rb', __FILE__)
-version = ::Refinery::News.version
-raise "Could not get version so gemspec can not be built" if version.nil?
-files = Dir.glob("**/*").flatten.reject do |file|
-  file =~ /\.gem(spec)?$/
-end
+require File.expand_path('../refinery/news/version.rb', __FILE__)
+
+files = Dir.glob("**/*").flatten.reject { |file| file =~ /\.gem(spec)?$/ }
 
 gemspec = <<EOF
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
-  s.version           = %q{#{version}}
+  s.version           = %q{#{Refinery::News::VERSION}}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
   s.date              = %q{#{Time.now.strftime('%Y-%m-%d')}}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}

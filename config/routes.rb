@@ -1,5 +1,6 @@
-Refinery::News::Engine.routes.draw do
-  resources :news, :as => :items, :controller => :items, :only => [:show, :index], :path => ''
+Rails.application.routes.draw do
+  scope(:module => 'refinery') do
+    resources :news, :as => :news_items, :controller => :news_items, :only => [:show, :index], :path => ''
 end
 
 Refinery::Core::Engine.routes.append do
