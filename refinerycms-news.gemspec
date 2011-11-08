@@ -31,8 +31,6 @@ Gem::Specification.new do |s|
     'app/views/refinery/admin/news_items/edit.html.erb',
     'app/views/refinery/admin/news_items/index.html.erb',
     'app/views/refinery/admin/news_items/new.html.erb',
-    'app/views/refinery/news',
-    'app/views/refinery/news/items',
     'app/views/refinery/news_items',
     'app/views/refinery/news_items/_recent_posts.html.erb',
     'app/views/refinery/news_items/index.html.erb',
