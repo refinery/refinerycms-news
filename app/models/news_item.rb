@@ -8,7 +8,7 @@ class NewsItem < ActiveRecord::Base
 
   has_friendly_id :title, :use_slug => true
 
-  acts_as_indexed :fields => [:title, :body]
+  acts_as_indexed :fields => [:title, :body, :source]
 
   default_scope :order => "publish_date DESC"
 
