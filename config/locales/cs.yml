@@ -33,5 +33,6 @@ cs:
         title: Název
         body: Obsah
         publish_date: Datum zveřejnění
+        expiration_date: Datum vypršení platnosti
     models:
       refinery/news_item: Novinka
