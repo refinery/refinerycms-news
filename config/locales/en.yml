@@ -10,6 +10,7 @@ en:
         edit: "Edit this news item"
         delete: "Remove this news item forever"
         published: Published
+        source: Source
       index:
         actions: Actions
         create: "Add News Item"
@@ -20,6 +21,7 @@ en:
     show:
       back_to_index: "Back to all news"
       published: Published
+      source: Source
     recent_posts:
       recent_posts: Recent Posts
     index:
@@ -33,5 +35,6 @@ en:
         body: Body
         publish_date: Publish date
         expiration_date: Expiration date
+        source: Source
     models:
       news_item: News Item

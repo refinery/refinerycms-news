@@ -2,6 +2,9 @@
 <% content_for :body_content_left do %>
   <article class="news_item">
     <p>
+      <% if @news_item.source.present? %>
+        <small><%= t('.source') %> <%= @news_item.source %></small>
+      <% end %>
       <small><%= t('.published') %> <%= l(@news_item.publish_date, :format => :long) %></small>
     </p>
     <%= @news_item.body.html_safe %>

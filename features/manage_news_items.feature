@@ -22,6 +22,16 @@ Feature: Manage News Items
     And I press "Save"
     Then I should see "'News Items are a fun way to share what's going on' was successfully added."
     And I should have 1 news item
+    
+  Scenario: Create Valid News Item With Optional Fields
+    When I go to the list of news items
+    And I follow "Add News Item"
+    And I fill in "Title" with "News Items are a fun way to share what's going on"
+    And I fill in "Content" with "It really is the most exciting thing you could hear about today."
+    And I fill in "Source" with "Spiffy Magazine"
+    And I press "Save"
+    Then I should see "'News Items are a fun way to share what's going on' was successfully added."
+    And I should have 1 news item
 
   Scenario: Create Invalid News Item (without title)
     When I go to the list of news items
