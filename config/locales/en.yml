@@ -11,10 +11,8 @@ en:
         delete: "Remove this news item forever"
         published: Published
       index:
-        actions: Actions
         create: "Add News Item"
         news_item: News
-        no_items: "Sorry, no results found."
         no_items_yet: 'There are no news items yet. Click "Add News Item" to add your first news item.'
   news_items:
     show:
