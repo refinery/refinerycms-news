@@ -2,11 +2,13 @@
 <% content_for :body_content_left do %>
   <article class="news_item">
     <p>
-      <% if @news_item.source.present? %>
-        <small><%= t('.source') %> <%= @news_item.source %></small>
-      <% end %>
       <small><%= t('.published') %> <%= l(@news_item.publish_date, :format => :long) %></small>
     </p>
+    <% if @news_item.source.present? %>
+      <p>
+        <small><%= t('.source') %> <%= @news_item.source %></small>
+      </p>
+    <% end %>
     <%= @news_item.body.html_safe %>
     <p>
       <%= link_to t('.back_to_index'), news_items_url %>

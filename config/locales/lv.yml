@@ -7,8 +7,8 @@ lv:
     news_items:
       news_item:
         view_live_html: Apskatīt šo jaunumu <br/><em>Atvērsies jaunā logā</em>
-        delete: Dzēst šo jaunumu
         edit: Labot šo jaunumu
+        delete: Dzēst šo jaunumu
         published: Ievietots
       index:
         create: Izveidot Jaunumu
@@ -18,10 +18,12 @@ lv:
     show:
       back_to_index: Atgriezties pie visiem jaunumiem
       published: Ievietots
+      source: Avots
     recent_posts:
       recent_posts: Pēdējie jaunumi
     index:
       published: Ievietots
+      source: Avots
       read_more: Lasīt vairāk
       no_items_yet: Vēl nav neviena jaunuma.
   activerecord:
@@ -31,5 +33,6 @@ lv:
         body: Saturs
         publish_date: Publikācijas datums
         expiration_date: Publikācijas beigu datums
+        source: Avots
     models:
       news_item: jaunums

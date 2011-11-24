@@ -10,7 +10,6 @@ en:
         edit: "Edit this news item"
         delete: "Remove this news item forever"
         published: Published
-        source: Source
       index:
         actions: Actions
         create: "Add News Item"
@@ -26,6 +25,7 @@ en:
       recent_posts: Recent Posts
     index:
       published: Published
+      source: Source
       read_more: Read more
       no_items_yet: There are no news item entries yet.
   activerecord:
