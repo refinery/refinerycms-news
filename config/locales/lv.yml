@@ -34,6 +34,6 @@ lv:
         body: Saturs
         publish_date: Publikācijas datums
         expiration_date: Publikācijas beigu datums
-        source: Source
+        source: Avots
     models:
       refinery/news_item: jaunums
