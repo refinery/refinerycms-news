@@ -29,6 +29,7 @@ describe "manage news items" do
 
       fill_in "Title", :with => "My first news item"
       fill_in "Body", :with => "bla bla"
+      fill_in "Source", :with => "http://refinerycms.com"
       click_button "Save"
 
       page.should have_content("'My first news item' was successfully added.")

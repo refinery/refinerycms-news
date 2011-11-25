@@ -19,12 +19,14 @@ lv:
       show:
         back_to_index: Atgriezties pie visiem jaunumiem
         published: Ievietots
+        source: Avots
       recent_posts:
         recent_posts: Pēdējie jaunumi
       index:
         published: Ievietots
         read_more: Lasīt vairāk
         no_items_yet: Vēl nav neviena jaunuma.
+        source: Avots
   activerecord:
     attributes:
       refinery/news_item:
@@ -32,5 +34,6 @@ lv:
         body: Saturs
         publish_date: Publikācijas datums
         expiration_date: Publikācijas beigu datums
+        source: Source
     models:
       refinery/news_item: jaunums

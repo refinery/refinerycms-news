@@ -6,7 +6,7 @@ describe "visit news items" do
   before(:each) do
     Factory(:page, :link_url => "/")
     Factory(:page, :link_url => "/news", :title => "News")
-    Factory(:news_item, :title => "published")
+    Factory(:news_item, :title => "published", :source => "http://refinerycms.com")
     Factory(:news_item, :title => "unpublished", :publish_date => 1.day.from_now)
   end
 
@@ -24,6 +24,7 @@ describe "visit news items" do
 
     page.should have_content("published")
     page.should have_selector("a[href='/news/published']")
+    page.should have_content("Source http://refinerycms.com")
     page.should have_no_content("unpublished")
     page.should have_no_selector("a[href='/news/unpublished']")
   end

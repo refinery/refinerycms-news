@@ -12,21 +12,21 @@ en:
           delete: "Remove this news item forever"
           published: Published
         index:
-          actions: Actions
           create: "Add News Item"
           news_item: News
-          no_items: "Sorry, no results found."
           no_items_yet: 'There are no news items yet. Click "Add News Item" to add your first news item.'
     news_items:
       show:
         back_to_index: "Back to all news"
         published: Published
+        source: Source
       recent_posts:
         recent_posts: Recent Posts
       index:
         published: Published
         read_more: Read more
         no_items_yet: There are no news item entries yet.
+        source: Source
   activerecord:
     attributes:
       refinery/news_item:
@@ -34,5 +34,6 @@ en:
         body: Body
         publish_date: Publish date
         expiration_date: Expiration date
+        source: Source
     models:
       refinery/news_item: News Item
