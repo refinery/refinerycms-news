@@ -1,5 +1,5 @@
 <% content_for :body_content_left do %>
-  <%=raw @page.content_for(Refinery::Page.default_parts.first.to_sym) unless params[:page] %>
+  <%=raw @page.content_for(Refinery::Pages.config.default_parts.first.to_sym) unless params[:page] %>
 
   <% if @news_items.any? %>
     <% @news_items.each do |item| %>
