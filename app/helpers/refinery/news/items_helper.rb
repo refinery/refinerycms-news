@@ -2,8 +2,8 @@ module Refinery
   module News
     module ItemsHelper
       def item_archive_widget
-        posts = Refinery::News::Item.select('published_at').all_previous
-        return nil if posts.blank?
+        items = Refinery::News::Item.select('published_at').all_previous
+        return nil if items.blank?
 
         render :partial => "/refinery/news/items/widgets/news_archive", :locals => { :items => items }
       end
