@@ -1,0 +1,5 @@
+<% content_for :body_content_right do %>
+  <%= yield(:body_content_right_prepend) %>
+  <%= item_archive_widget %>
+  <%= yield(:body_content_right_append) %>
+<% end %>
