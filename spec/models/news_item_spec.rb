@@ -35,6 +35,14 @@ describe NewsItem do
       news_items.first.should == news_item1
       news_items.second.should == news_item2
     end
+    
+    it "orders by publish date in DESC order then created at in DESC order" do
+      news_item1 = Factory(:news_item, :publish_date => 1.hour.ago)
+      news_item2 = Factory(:news_item, :publish_date => 1.hour.ago)
+      news_item3 = Factory(:news_item, :publish_date => 2.hours.ago)
+
+      NewsItem.all.should == [news_item2, news_item1, news_item3]
+    end
   end
 
   describe ".not_expired" do
