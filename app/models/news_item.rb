@@ -1,6 +1,6 @@
 class NewsItem < ActiveRecord::Base
   translates :title, :body
-  
+
   attr_accessor :locale # to hold temporarily
 
   alias_attribute :content, :body
@@ -39,8 +39,11 @@ class NewsItem < ActiveRecord::Base
   end
 
   # for will_paginate
-  def self.per_page
-    20
+  class << self
+    attr_accessor :per_page
+    def per_page
+      @per_page ||= 20
+    end
   end
 
 end

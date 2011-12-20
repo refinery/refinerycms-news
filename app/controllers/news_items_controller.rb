@@ -20,7 +20,7 @@ protected
   def find_published_news_items
     @news_items = NewsItem.published.translated.paginate(
       :page => params[:page],
-      :per_page => RefinerySetting.find_or_set(:news_items_per_page, NewsItem.per_page)
+      :per_page => NewsItem.per_page
     )
   end
 
