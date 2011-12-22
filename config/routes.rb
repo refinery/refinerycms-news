@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   scope(:module => 'refinery') do
-    resources :news, :as => :news_items, :controller => :news_items, :only => [:show, :index], :path => ''
+    scope(:module => 'news') do
+      resources :items, :as => :items, :controller => :items_controller, :only => [:show, :index], :path => ''
+      get 'archive/:year(/:month)', :to => 'items#archive', :as => 'archive_news_items'
+    end
+  end
 end
 
 Refinery::Core::Engine.routes.append do
