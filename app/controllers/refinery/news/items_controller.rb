@@ -18,14 +18,14 @@ module Refinery
           date = "#{params[:month]}/#{params[:year]}"
           @archive_date = Time.parse(date)
           @date_title = @archive_date.strftime('%B %Y')
-          @items_posts = Refinery::News::Item.live.by_archive(@archive_date).page(params[:page])
+          @news_items = Refinery::News::Item.live.by_archive(@archive_date).page(params[:page])
         else
           date = "01/#{params[:year]}"
           @archive_date = Time.parse(date)
           @date_title = @archive_date.strftime('%Y')
-          @items_posts = Refinery::News::Item.live.by_year(@archive_date).page(params[:page])
+          @news_items = Refinery::News::Item.live.by_year(@archive_date).page(params[:page])
         end
-        respond_with (@items_posts)
+        respond_with (@news_items)
       end
 
       protected
