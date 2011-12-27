@@ -15,6 +15,16 @@ module Refinery
 
       default_scope :order => "publish_date DESC"
 
+      scope :by_archive, lambda { |archive_date|
+        where(['published_at between ? and ?', archive_date.beginning_of_month, archive_date.end_of_month])
+      }
+
+      scope :by_year, lambda { |archive_year|
+        where(['published_at between ? and ?', archive_year.beginning_of_year, archive_year.end_of_year])
+      }
+      `
+      scope :all_previous, lambda { where(['published_at <= ?', Time.now.beginning_of_month]) }
+
       # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
       # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)
       scope :not_expired, lambda {
