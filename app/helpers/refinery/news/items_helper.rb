@@ -1,8 +1,8 @@
 module Refinery
   module News
     module ItemsHelper
-      def item_archive_widget
-        items = Refinery::News::Item.select('published_at').all_previous
+      def news_archive_widget
+        items = Item.select('publish_date').all_previous
         return nil if items.blank?
 
         render :partial => "/refinery/news/items/widgets/news_archive", :locals => { :items => items }
@@ -14,7 +14,7 @@ module Refinery
       end
 
       def news_item_teaser_enabled?
-        Refinery::News::Item.teasers_enabled?
+        Item.teasers_enabled?
       end
 
       def news_item_teaser(item)
@@ -29,18 +29,18 @@ module Refinery
       end
 
       def archive_link(item)
-        if item.published_at >= Time.now.end_of_year.advance(:years => -3)
-          post_date = item.published_at.strftime('%m/%Y')
+        if item.publish_date >= Time.now.end_of_year.advance(:years => -3)
+          post_date = item.publish_date.strftime('%m/%Y')
           year = post_date.split('/')[1]
           month = post_date.split('/')[0]
-          count = News::Item.by_archive(Time.parse(post_date)).size
+          count = Item.by_archive(Time.parse(post_date)).size
           text = t("date.month_names")[month.to_i] + " #{year} (#{count})"
 
-          link_to(text, main_app.archive_news_items_path(:year => year, :month => month))
+          link_to(text, main_app.news_archive_news_items_path(:year => year, :month => month))
         else
-          post_date = post.published_at.strftime('01/%Y')
+          post_date = post.publish_date.strftime('01/%Y')
           year = post_date.split('/')[1]
-          count = Refinery::News::Item.by_year(Time.parse(post_date)).size
+          count = Item.by_year(Time.parse(post_date)).size
           text = "#{year} (#{count})"
 
           link_to(text, main_app.archive_news_items_path(:year => year))

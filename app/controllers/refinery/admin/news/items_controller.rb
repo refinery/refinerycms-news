@@ -1,6 +1,6 @@
 module Refinery
-  module Admin
-    module News
+  module News
+    module Admin
       class ItemsController < ::Refinery::AdminController
 
         crudify :'refinery/news_item', :order => "publish_date DESC"

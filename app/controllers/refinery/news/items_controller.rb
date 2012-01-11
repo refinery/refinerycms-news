@@ -25,7 +25,13 @@ module Refinery
           @date_title = @archive_date.strftime('%Y')
           @news_items = Refinery::News::Item.live.by_year(@archive_date).page(params[:page])
         end
-        respond_with (@news_items)
+        respond_to do |format|
+          format.html {
+            render :partial => 'refinery/news/items/widgets/news_archive', :locals => {
+              :items => @news_items
+            }
+          }
+        end
       end
 
       protected
