@@ -19,6 +19,8 @@ en:
             no_items: "Sorry, no results found."
             no_items_yet: 'There are no news items yet. Click "Add News Item" to add your first news item.'
     news:
+      shared: 
+        archives: Archives
       items:
         show:
           back_to_index: "Back to all news"
@@ -29,6 +31,9 @@ en:
           published: Published
           read_more: Read more
           no_items_yet: There are no news item entries yet.
+        archive:
+          news_archive_for: 'Archive for %{date}'
+          no_news_articles_posted: 'There are no news articles posted for %{date}. Stay tuned.'  
   activerecord:
     attributes:
       refinery/news_item:
