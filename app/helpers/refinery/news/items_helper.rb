@@ -36,7 +36,7 @@ module Refinery
           count = Item.by_archive(Time.parse(post_date)).size
           text = t("date.month_names")[month.to_i] + " #{year} (#{count})"
 
-          link_to(text, main_app.news_archive_news_items_path(:year => year, :month => month))
+          link_to(text, main_app.refinery_news_items_path(:year => year, :month => month))
         else
           post_date = post.publish_date.strftime('01/%Y')
           year = post_date.split('/')[1]
