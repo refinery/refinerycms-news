@@ -11,7 +11,7 @@ module Refinery
           plugin.pathname = root
           plugin.name = "refinerycms_news"
           plugin.menu_match = /refinery\/news(_items)?$/
-          plugin.url = {:controller => 'refinery/news/admin/items'}
+          plugin.url = {:controller => '/refinery/news/admin/items'}
           plugin.activity = {
             :class_name => 'Refinery::News::Item',
             :title => 'title',
