@@ -8,7 +8,7 @@ module Refinery
 
     describe "validations" do
       subject do
-        news_item = Refinery::News::Item.create! :title => "RefinyerCMS",
+        news_item = Refinery::News::Item.create! :title => "Refinery CMS",
                                                :content => "Some random text ...",
                                                :publish_date => time_now
         news_item
@@ -16,7 +16,7 @@ module Refinery
 
       it { should be_valid }
       its(:errors) { should be_empty }
-      its(:title) { should == "RefinyerCMS" }
+      its(:title) { should == "Refinery CMS" }
       its(:content) { should == "Some random text ..." }
       its(:publish_date) { should == time_now }
     end
