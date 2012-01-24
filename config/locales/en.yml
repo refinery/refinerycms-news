@@ -4,10 +4,10 @@ en:
       refinerycms_news:
         title: News
         description: Provides a simple news section
-    admin:
-      news:
+    news:
+      admin:
         items:
-          news_item:
+          item:
             view_live_html: "View this news item live <br/><em>(opens in a new window)</em>"
             edit: "Edit this news item"
             delete: "Remove this news item forever"
@@ -15,11 +15,10 @@ en:
           index:
             actions: Actions
             create: "Add News Item"
-            news_item: News
+            item: News
             no_items: "Sorry, no results found."
             no_items_yet: 'There are no news items yet. Click "Add News Item" to add your first news item.'
-    news:
-      shared: 
+      shared:
         archives: Archives
       items:
         show:
@@ -33,13 +32,13 @@ en:
           no_items_yet: There are no news item entries yet.
         archive:
           news_archive_for: 'Archive for %{date}'
-          no_news_articles_posted: 'There are no news articles posted for %{date}. Stay tuned.'  
+          no_news_articles_posted: 'There are no news articles posted for %{date}. Stay tuned.'
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Title
         body: Body
         publish_date: Publish date
         expiration_date: Expiration date
     models:
-      refinery/news_item: News Item
+      'refinery/news/item': News Item

@@ -4,9 +4,9 @@ cs:
       refinerycms_news:
         title: Novinky
         description: Poskytuje jednoduchou správu novinek
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Zobrazit novinku v novém okně"
           edit: "Editovať novinku"
           delete: "Smazat novinku"
@@ -14,10 +14,9 @@ cs:
         index:
           actions: Možnosti
           create: "Přidat novinku"
-          news_item: Novinka
+          item: Novinka
           no_items: "Litujeme, žádné výsledky nenalezeny."
           no_items_yet: 'Momentálně nejsou žádné novinky. Klikni na "Přidat novinku" pro vytvoření první.'
-    news_items:
       show:
         back_to_index: "Návrat na seznam novinek"
         published: Zveřejněné
@@ -29,9 +28,9 @@ cs:
         no_items_yet: Neexistují žádné záznamy novinek.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Název
         body: Obsah
         publish_date: Datum zveřejnění
     models:
-      refinery/news_item: Novinka
+      'refinery/news/item': Novinka

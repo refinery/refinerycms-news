@@ -4,9 +4,9 @@ de:
       refinerycms_news:
         title: News
         description: Bietet einen einfachen Newsbereich an
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Diesen News-Eintrag live anschauen <br/><em>(Öffnet sich in eine neuen Fenster)</em>"
           edit: "Diesen News-Eintrag editieren"
           delete: "Diesen News-Eintrag endgültig löschen"
@@ -14,10 +14,9 @@ de:
         index:
           actions: Actions
           create: "News-Eintrag hinzufügen"
-          news_item: News
+          item: News
           no_items: "Entschuldigung, es wurde nichts gefunden."
           no_items_yet: 'Es sind keine News-Einträge vorhanden. Klick auf "News-Eintrag hinzufügen" um den ersten Eintrag zu machen.'
-    news_items:
       show:
         back_to_index: "Zurück zur Übersicht"
         published: Veröffentlicht
@@ -29,9 +28,9 @@ de:
         no_items_yet: Zur Zeit gibt es keine News.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Titel
         body: Inhalt
         publish_date: Veröffentlichungsdatum
     models:
-      refinery/news_item: News-Eintrag
+      'refinery/news/item': News-Eintrag

@@ -1,7 +1,7 @@
-<%= form_for [main_app, :refinery, :admin, @news_item] do |f| %>
+<%= form_for [main_app, :refinery, :news, :admin, @item] do |f| %>
   <%= render :partial => "/refinery/admin/error_messages",
              :locals => {
-               :object => @news_item,
+               :object => @item,
                :include_object_name => true
              } %>
 
@@ -35,8 +35,8 @@
              :locals => {
                :f => f,
                :continue_editing => true,
-               :delete_title => t('admin.news_items.news_item.delete'),
-               :delete_confirmation => t('shared.admin.delete.message', :title => @news_item.title)
+               :delete_title => t('admin.news.items.item.delete'),
+               :delete_confirmation => t('shared.admin.delete.message', :title => @item.title)
              } %>
 
 <% end %>

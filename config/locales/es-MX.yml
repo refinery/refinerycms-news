@@ -3,19 +3,18 @@ es-MX:
     plugins:
       refinerycms_news:
         title: Noticias
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live: "View this news item live <br/><em>(opens in a new window)</em>"
           edit: "Modificar esta noticia"
           delete: "Eliminar esta noticia"
         index:
           actions: Acciones
           create: "Crear una noticia"
-          news_item: Noticias
+          item: Noticias
           no_items: "Lo sentimos no hay resultados."
           no_items_yet: 'Aun no hay noticias. Haga click en "Crear una noticia" para agregar la primera noticia.'
-    news_items:
       show:
         back_to_index: "Regresar a noticias"
         published: Publicada
@@ -27,9 +26,9 @@ es-MX:
         read_more: Leer mas
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Título
         body: Contenido
         publish_date: Fecha de publicación
     models:
-      refinery/news_item: Noticia
+      'refinery/news/item': Noticia

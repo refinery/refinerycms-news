@@ -4,10 +4,10 @@ sl:
       refinerycms_news:
         title: Novice
         description: Upravljanje z novicami v obliki blog-a
-    admin:
-      news:
+    news:
+      admin:
         items:
-          news_item:
+          item:
             view_live_html: "Poglej si to novico v živo <br/><em>(odpre se v novem oknu)</em>"
             edit: "Uredi novico"
             delete: "Odstrani novico"
@@ -15,10 +15,9 @@ sl:
           index:
             actions: Akcije
             create: "Ustvari novico"
-            news_item: Novica
+            item: Novica
             no_items: "Oprostite, rezultat iskanja ni vrnil zadetkov."
             no_items_yet: 'Trenutno še ni vpisane nobene novice. Ustvarite prvo novico s klikom na "Ustvari novico".'
-    news:
       items:
         show:
           back_to_index: "Nazaj na seznam novic"
@@ -31,9 +30,9 @@ sl:
           no_items_yet: Trenutno še ni vpisane nobene novice.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Naslov
         body: Opis
         publish_date: Datum objave
     models:
-      refinery/news_item: Novice
+      'refinery/news/item': Novice

@@ -1,10 +1,10 @@
-<% content_for :body_content_title, @news_item.title %>
+<% content_for :body_content_title, @item.title %>
 <% content_for :body_content_left do %>
   <article class="news_item">
     <p>
-      <small><%= t('.published') %> <%= l(@news_item.publish_date, :format => :long) %></small>
+      <small><%= t('.published') %> <%= l(@item.publish_date, :format => :long) %></small>
     </p>
-    <%= @news_item.body.html_safe %>
+    <%= @item.body.html_safe %>
     <p>
       <%= link_to t('.back_to_index'), main_app.news_items_path %>
     </p>

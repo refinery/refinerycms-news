@@ -88,7 +88,7 @@ Gem::Specification.new do |s|
     'spec',
     'spec/models',
     'spec/models/refinery',
-    'spec/models/refinery/news_item_spec.rb',
+    'spec/models/refinery/news/item_spec.rb',
     'spec/requests',
     'spec/requests/manage_news_items_spec.rb',
     'spec/requests/visit_news_items_spec.rb',
