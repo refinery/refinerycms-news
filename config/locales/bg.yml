@@ -4,9 +4,9 @@ bg:
       refinerycms_news:
         title: Новини
         description: Осигурява опростена секция за новини
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Преглед на тази новина <br/><em>(ще се отвори се в нов прозорец)</em>"
           edit: "Редакция на тази новина"
           delete: "Премахване на тази новина завинаги"
@@ -14,10 +14,9 @@ bg:
         index:
           actions: Действия
           create: "Добавяне на новина"
-          news_item: Новини
+          item: Новини
           no_items: "За съжаление нищо не бе намерено."
           no_items_yet: 'Все още няма новини. Натиснете "Добавяне на новина", за да въведете новина.'
-    news_items:
       show:
         back_to_index: "Обратно към всички новини"
         published: Публикувано на
@@ -29,10 +28,10 @@ bg:
         no_items_yet: Все още няма публикувани новини.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Заглавие
         body: Съдържание
         publish_date: Дата на публикуване
         expiration_date: Крайна дата
     models:
-      refinery/news_item: Новина
+      'refinery/news/item': Новина

@@ -1,7 +1,7 @@
 class CreateNewsItems < ActiveRecord::Migration
 
   def up
-    create_table ::Refinery::NewsItem.table_name do |t|
+    create_table ::Refinery::News::Item.table_name do |t|
       t.string :title
       t.text :body
       t.datetime :publish_date
@@ -9,7 +9,7 @@ class CreateNewsItems < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index ::Refinery::NewsItem.table_name, :id
+    add_index ::Refinery::News::Item.table_name, :id
   end
 
   def down
@@ -17,7 +17,7 @@ class CreateNewsItems < ActiveRecord::Migration
 
     ::Refinery::Page.delete_all :link_url => "/news"
 
-    drop_table ::Refinery::NewsItem.table_name
+    drop_table ::Refinery::News::Item.table_name
   end
 
 end

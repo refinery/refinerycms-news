@@ -1,10 +1,10 @@
 class TranslateNewsItems < ActiveRecord::Migration
 
   def self.up
-    ::Refinery::NewsItem.reset_column_information
+    ::Refinery::News::Item.reset_column_information
 
-    unless ::Refinery::NewsItem.respond_to?(:translation_class) && ::Refinery::NewsItem.translation_class.table_exists?
-      ::Refinery::NewsItem.create_translation_table!({
+    unless ::Refinery::News::Item.respond_to?(:translation_class) && ::Refinery::News::Item.translation_class.table_exists?
+      ::Refinery::News::Item.create_translation_table!({
         :title => :string,
         :body => :text
       }, {
@@ -16,9 +16,9 @@ class TranslateNewsItems < ActiveRecord::Migration
   end
 
   def self.down
-    ::Refinery::NewsItem.reset_column_information
+    ::Refinery::News::Item.reset_column_information
 
-    ::Refinery::NewsItem.drop_translation_table!
+    ::Refinery::News::Item.drop_translation_table!
   end
 
 end

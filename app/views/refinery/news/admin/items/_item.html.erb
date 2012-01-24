@@ -1,11 +1,11 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>'>
   <span class='title'>
-    <%= news_item.title %>
+    <%= item.title %>
     <span class="preview">
-      <%= t('.published') %> <%= l(news_item.publish_date, :format => :short) %>
+      <%= t('.published') %> <%= l(item.publish_date, :format => :short) %>
     </span>
     <% if defined?(::Refinery::I18n) and ::Refinery::I18n.frontend_locales.many? and
-          (locales = news_item.translations.collect{|t| t.locale}).present? %>
+          (locales = item.translations.collect{|t| t.locale}).present? %>
       <span class='preview'>
         <% locales.each do |locale| %>
           <%= refinery_icon_tag "flags/#{locale}.png", :size => '16x11' %>
@@ -14,15 +14,15 @@
     <% end %>
   </span>
   <span class='actions'>
-    <%= link_to refinery_icon_tag('application_go.png'), main_app.news_item_path(news_item),
+    <%= link_to refinery_icon_tag('application_go.png'), main_app.refinery_news_item_path(item),
                 :title => t('.view_live_html'),
                 :target => "_blank" %>
-    <%= link_to refinery_icon_tag('application_edit.png'), main_app.edit_refinery_admin_news_item_path(news_item),
+    <%= link_to refinery_icon_tag('application_edit.png'), main_app.edit_refinery_news_admin_item_path(item),
                 :title => t('.edit') %>
-    <%= link_to refinery_icon_tag('delete.png'), main_app.refinery_admin_news_item_path(news_item),
+    <%= link_to refinery_icon_tag('delete.png'), main_app.refinery_news_admin_item_path(item),
                 :class => "cancel confirm-delete",
                 :title => t('.delete'),
                 :method => :delete,
-                :confirm => t('shared.admin.delete.message', :title => news_item.title) %>
+                :confirm => t('shared.admin.delete.message', :title => item.title) %>
   </span>
 </li>

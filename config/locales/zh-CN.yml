@@ -4,9 +4,9 @@ zh-CN:
       refinerycms_news:
         title: 新闻
         description: 提供一个简单的新闻分类
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "查看这条新闻 <br/><em>(在新窗口打开)</em>"
           edit: "编辑这条新闻"
           delete: "永远删除这条新闻"
@@ -14,10 +14,9 @@ zh-CN:
         index:
           actions: 动作
           create: "添加一条新闻"
-          news_item: 新闻
+          item: 新闻
           no_items: "对不起，没有返回结果."
           no_items_yet: '目前没有新闻. 点击 "添加新闻" 来添加你的第一条新闻.'
-    news_items:
       show:
         back_to_index: "返回所有新闻"
         published: 已发布
@@ -29,10 +28,10 @@ zh-CN:
         no_items_yet: 目前没有新闻。
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: 标题
         body: 正文
         publish_date: 发布时间
         expiration_date: 过期时间
     models:
-      refinery/news_item: 新闻条目
+      'refinery/news/item': 新闻条目

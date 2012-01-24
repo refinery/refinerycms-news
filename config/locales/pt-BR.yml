@@ -3,9 +3,9 @@ pt-BR:
     plugins:
       refinerycms_news:
         title: Notícias
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
           edit: "Alterar esta notícia"
           delete: "Remover esta notícia para sempre"
@@ -13,11 +13,10 @@ pt-BR:
         index:
           actions: Ações
           create: "Criar Notícia"
-          news_item: Notícia
+          item: Notícia
           no_items: 'Não há notícias cadastradas.'
           no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
           read_more: Leia mais
-    news_items:
       show:
         back_to_index: "Voltar para todas as notícias"
         published: Publicado
@@ -27,9 +26,9 @@ pt-BR:
        published: Publicado
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Título
         body: Contéudo
         publish_date: Data de publicação
     models:
-      refinery/news_item: Notícia
+      'refinery/news/item': Notícia

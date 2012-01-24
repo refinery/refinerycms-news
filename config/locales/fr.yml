@@ -4,9 +4,9 @@ fr:
       refinerycms_news:
         title: Actualités
         description: 'Fournit une rubrique "Actualités"'
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Visualiser cette nouvelle <br/><em>(ouvre une nouvelle fenêtre)</em>"
           edit: "Modifier cette actualité"
           delete: "Détruire cette actualité à tout jamais"
@@ -14,10 +14,9 @@ fr:
         index:
           actions: Actions
           create: "Créer une actualité"
-          news_item: Actualité
+          item: Actualité
           no_items: "Désolé, aucun résultat."
           no_items_yet: 'Aucune actualité. Cliquer sur "Créer une actualité" pour créer votre première actualité.'
-    news_items:
       show:
         back_to_index: "Retour à la liste des actualités"
         published: Publiée le
@@ -29,9 +28,9 @@ fr:
         no_items_yet: Aucune actualité pour le moment.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Titre
         body: Texte
         publish_date: Date de publication
     models:
-      refinery/news_item: Nouvelle
+      'refinery/news/item': Nouvelle

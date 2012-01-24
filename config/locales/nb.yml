@@ -4,9 +4,9 @@ nb:
       refinerycms_news:
         title: Nyheter
         description: Legger til en seksjon for nyheter
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Se hvordan nyheten ser ut for dine besøkende akkurat nå <br/><em>(åpnes i et nytt vindu)</em>"
           edit: "Rediger denne nyheten"
           delete: "Fjern denne nyheten permanent"
@@ -14,10 +14,9 @@ nb:
         index:
           actions: Handlinger
           create: "Legg til Nyhet"
-          news_item: Nyhet
+          item: Nyhet
           no_items: "Beklager, fant ingen resultater."
           no_items_yet: 'Det er ikke lagt til noen nyheter enda. Klikk "Legg til Nyhet" for å legge inn din første nyhet.'
-    news_items:
       show:
         back_to_index: "Tilbake til nyhetsoversikt"
         published: Publisert
@@ -29,9 +28,9 @@ nb:
         no_items_yet: Det er ingen nyheter enda.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Tittel
         body: Tekst
         publish_date: Publiseringsdato
     models:
-      refinery/news_item: Nyhet
+      'refinery/news/item': Nyhet

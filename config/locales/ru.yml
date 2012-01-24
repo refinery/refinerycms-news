@@ -3,9 +3,9 @@ ru:
     plugins:
       refinerycms_news:
         title: "Новости"
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Просмотреть новость <br/><em>(будет открыто в новом окне)</em>"
           edit: "Редактировать новость"
           delete: "Удалить новость"
@@ -13,10 +13,9 @@ ru:
         index:
           actions: "Действия"
           create: "Создать новость"
-          news_item: "Новости"
+          item: "Новости"
           no_items: "Ничего не найдено."
           no_items_yet: 'Новостей пока нет.'
-    news_items:
       show:
         back_to_index: "Вернуться к новостям"
         published: "Опубликована"
@@ -27,9 +26,9 @@ ru:
         read_more: "Читать далее"
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: "Заголовок"
         body: "Публикация"
         publish_date: "Дата публикации"
     models:
-      refinery/news_item: "Новость"
+      'refinery/news/item': "Новость"

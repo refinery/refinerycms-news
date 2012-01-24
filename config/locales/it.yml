@@ -4,9 +4,9 @@ it:
       refinerycms_news:
         title: Notizie
         description: Fornisce una sezione notizie in stile blog
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: "Visualzza questa notizia live <br/><em>(si apre in una nuova finestra)</em>"
           edit: "Modifica questa notizia"
           delete: "Rimuovi questa notizia per sempre"
@@ -14,10 +14,9 @@ it:
         index:
           actions: Azioni
           create: "Crea Notizia"
-          news_item: Notizia
+          item: Notizia
           no_items: "Spiacente, nessun risultato trovato."
           no_items_yet: 'Non ci sono ancora notizie. Fare clic su "Crea Notizia" per aggiungere la prima notizie.'
-    news_items:
       show:
         back_to_index: "Torna a tutte le notizie"
         published: Pubblicata
@@ -29,9 +28,9 @@ it:
         no_items_yet: Non ci sono ancora notizie.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Titolo
         body: Corpo
         publish_date: Data di pubblicazione
     models:
-      refinery/news_item: Notizia
+      'refinery/news/item': Notizia

@@ -13,7 +13,7 @@ xml.rss :version => "2.0", "xmlns:atom" => "http://www.w3.org/2005/Atom" do
     xml.link              main_app.news_items_url(:format => 'rss')
 
     # News items.
-    @news_items.each do |news_item|
+    @items.each do |news_item|
       xml.item do
         xml.title         news_item.title
         xml.link          main_app.news_item_url(news_item)

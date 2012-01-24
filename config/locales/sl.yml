@@ -4,34 +4,35 @@ sl:
       refinerycms_news:
         title: Novice
         description: Upravljanje z novicami v obliki blog-a
-    admin:
-      news_items:
-        news_item:
-          view_live_html: "Poglej si to novico v živo <br/><em>(odpre se v novem oknu)</em>"
-          edit: "Uredi novico"
-          delete: "Odstrani novico"
+    news:
+      admin:
+        items:
+          item:
+            view_live_html: "Poglej si to novico v živo <br/><em>(odpre se v novem oknu)</em>"
+            edit: "Uredi novico"
+            delete: "Odstrani novico"
+            published: Objavljeno
+          index:
+            actions: Akcije
+            create: "Ustvari novico"
+            item: Novica
+            no_items: "Oprostite, rezultat iskanja ni vrnil zadetkov."
+            no_items_yet: 'Trenutno še ni vpisane nobene novice. Ustvarite prvo novico s klikom na "Ustvari novico".'
+      items:
+        show:
+          back_to_index: "Nazaj na seznam novic"
           published: Objavljeno
+        recent_posts:
+          recent_posts: Zadnji vnosi
         index:
-          actions: Akcije
-          create: "Ustvari novico"
-          news_item: Novica
-          no_items: "Oprostite, rezultat iskanja ni vrnil zadetkov."
-          no_items_yet: 'Trenutno še ni vpisane nobene novice. Ustvarite prvo novico s klikom na "Ustvari novico".'
-    news_items:
-      show:
-        back_to_index: "Nazaj na seznam novic"
-        published: Objavljeno
-      recent_posts:
-        recent_posts: Zadnji vnosi
-      index:
-        published: Objavljeno
-        read_more: Preberi več
-        no_items_yet: Trenutno še ni vpisane nobene novice.
+          published: Objavljeno
+          read_more: Preberi več
+          no_items_yet: Trenutno še ni vpisane nobene novice.
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Naslov
         body: Opis
         publish_date: Datum objave
     models:
-      refinery/news_item: Novice
+      'refinery/news/item': Novice

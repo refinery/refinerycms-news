@@ -3,17 +3,19 @@ module Refinery
     class Engine < Rails::Engine
       include Refinery::Engine
 
-      isolate_namespace Refinery
+      isolate_namespace Refinery::News
       engine_name :refinery_news
 
-      initializer "register refinerycms_news plugin", :after => :set_routes_reloader do |app|
+      initializer "init plugin", :after => :set_routes_reloader do |app|
         Refinery::Plugin.register do |plugin|
           plugin.pathname = root
           plugin.name = "refinerycms_news"
-          plugin.url = app.routes.url_helpers.refinery_admin_news_items_path
           plugin.menu_match = /refinery\/news(_items)?$/
+          plugin.url = {:controller => 'refinery/news/admin/items'}
           plugin.activity = {
-            :class_name => :'refinery/news_item'
+            :class_name => 'Refinery::News::Item',
+            :title => 'title',
+            :url_prefix => 'edit'
           }
         end
       end

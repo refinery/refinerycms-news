@@ -4,18 +4,17 @@ lv:
       refinerycms_news:
         title: Jaunumi
         description: Piedāvā blogveidīgu jaunumu sadaļu
-    admin:
-      news_items:
-        news_item:
+    news:
+      admin:
+        item:
           view_live_html: Apskatīt šo jaunumu <br/><em>Atvērsies jaunā logā</em>
           delete: Dzēst šo jaunumu
           edit: Labot šo jaunumu
           published: Ievietots
         index:
           create: Izveidot Jaunumu
-          news_item: Jaunumi
+          item: Jaunumi
           no_items_yet: Vēl nav neviena jaunuma. Spied "Izveidot Jaunumu", lai izveidotu pirmo jaunumu.
-    news_items:
       show:
         back_to_index: Atgriezties pie visiem jaunumiem
         published: Ievietots
@@ -29,11 +28,11 @@ lv:
         source: Avots
   activerecord:
     attributes:
-      refinery/news_item:
+      'refinery/news/item':
         title: Virsraksts
         body: Saturs
         publish_date: Publikācijas datums
         expiration_date: Publikācijas beigu datums
         source: Avots
     models:
-      refinery/news_item: jaunums
+      'refinery/news/item': jaunums

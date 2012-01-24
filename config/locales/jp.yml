@@ -3,9 +3,9 @@ jp:
     refinerycms_news:
       title: ニュース
       description: 簡単にニュース掲載
-  admin:
-    news_items:
-      news_item:
+  news:
+    admin:
+      item:
         view_live_html: "この記事を見る<br/><em>(新規ウインドウに開かれます)</em>"
         edit: "この記事を編集"
         delete: "この記事を削除"
@@ -13,10 +13,9 @@ jp:
       index:
         actions: 機能
         create: "新規掲載"
-        news_item: ニュース
+        item: ニュース
         no_items: "何も掲載されていません。"
         no_items_yet: 'まだ何も掲載されていません。「新規掲載」をクリックし記事を追加して下さい。'
-  news_items:
     show:
       back_to_index: "全てのニュースに戻る"
       published: 掲載時刻
@@ -28,10 +27,10 @@ jp:
       no_items_yet: まだ記事が掲載されていません。
   activerecord:
     attributes:
-      news_item:
+      item:
         title: 題名
         body: 本文
         publish_date: 掲載時刻
         expiration_date: 掲載期限
     models:
-      news_item: ニュース
+      item: ニュース
