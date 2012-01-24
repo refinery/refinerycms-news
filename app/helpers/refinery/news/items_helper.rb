@@ -19,11 +19,11 @@ module Refinery
 
       def news_item_teaser(item)
         if item.respond_to?(:custom_teaser) && item.custom_teaser.present?
-         item.custom_teaser.html_safe
+          item.custom_teaser.html_safe
         else
-         truncate(item.body, {
-           :length => Refinery::Setting.find_or_set(:news_item_teaser_length, 250),
-           :preserve_html_tags => true
+          truncate(item.body, {
+            :length => Refinery::Setting.find_or_set(:news_item_teaser_length, 250),
+            :preserve_html_tags => true
           }).html_safe
         end
       end

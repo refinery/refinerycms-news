@@ -16,7 +16,7 @@ describe "manage news items" do
 
       within "#actions" do
         page.should have_content("Add News Item")
-        page.should have_selector("a[href='/refinery/news/new']")
+        page.should have_selector("a[href='/refinery/news/items/new']")
       end
     end
   end
@@ -34,9 +34,9 @@ describe "manage news items" do
       page.should have_content("'My first news item' was successfully added.")
       page.body.should =~ /Remove this news item forever/
       page.body.should =~ /Edit this news item/
-      page.body.should =~ /\/refinery\/news\/my-first-news-item\/edit/
+      page.body.should =~ %r{/refinery/news/items/my-first-news-item/edit}
       page.body.should =~ /View this news item live/
-      page.body.should =~ /\/news\/my-first-news-item/
+      page.body.should =~ %r{/news/my-first-news-item}
 
       Refinery::News::Item.count.should == 1
     end
