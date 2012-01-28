@@ -7,7 +7,7 @@ module Refinery
 
         render :partial => "/refinery/news/items/widgets/news_archive", :locals => { :items => items }
       end
-      alias_method :news_archive_list, :news_archive_widget
+      alias_method :news_archive_list, :news_item_archive_widget
 
       def next_or_previous?(item)
         item.next.present? or item.prev.present?
