@@ -1,7 +1,7 @@
 module Refinery
   module News
     module ItemsHelper
-      def news_archive_widget
+      def news_item_archive_widget
         items = Item.select('publish_date').all_previous
         return nil if items.blank?
 
@@ -28,7 +28,7 @@ module Refinery
         end
       end
 
-      def archive_link(item)
+      def news_item_archive_link(item)
         if item.publish_date >= Time.now.end_of_year.advance(:years => -3)
           post_date = item.publish_date.strftime('%m/%Y')
           year = post_date.split('/')[1]
