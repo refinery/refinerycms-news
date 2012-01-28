@@ -1,0 +1,17 @@
+<% content_for :title, "#{t('.news_item_archive_for', :date => @archive_date.strftime('%B %Y'))}" %>
+
+<% content_for :body_content_left do %>
+  <h1><%= t('.news_item_archive_for', :date => @archive_date.strftime('%B %Y')) %></h1>
+  <% if @items.any? %>
+    <section id="news_items">
+      <%= render :partial => "/refinery/news/shared/item", :collection => @items %>
+    </section>
+  <% else %>
+    <p><%= t('.no_news_item_articles_posted', :date => @archive_date.strftime('%B %Y')) %></p>
+  <% end %>
+<% end %>
+
+<%= render :partial => '/refinery/blog/shared/body_content_right' %>
+
+<%= render :partial => "/refinery/content_page" %>
+<% content_for :stylesheets, stylesheet_link_tag('refinery/news/frontend') %>
