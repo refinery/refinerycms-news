@@ -1,0 +1,25 @@
+<% if item.live? %>
+  <article class="item_post" id="<%= dom_id(post) %>">
+    <header>
+      <h1><%= link_to item.title, main_app.news_item_path(item) %></h1>
+      <section class='details'>
+        <time datetime="<%=l item.published_at.to_date, :format => :default %>" class='posted_at'>
+          <%= t('created_at', :scope => 'refinery.news.shared.items', :when => l(item.published_at.to_date, :format => :short)) %>
+        </time>
+        <%= "#{t('by', :scope => 'refinery.news.items.show')} #{item.author.username}" if item.author.present? %>.
+      </section>
+    </header>
+    <section class='clearfix'>
+      <% if news_item_teaser_enabled? %>
+        <%= news_item_teaser(item) %>
+      <% else %>
+        <%= item.body.html_safe %>
+      <% end %>
+    </section>
+    <footer>
+      <p>
+        <%= link_to t('read_more', :scope => 'refinery.news.shared.items'), main_app.news_item_path(item) if news_item_teaser_enabled? %>
+      </p>
+    </footer>
+  </article>
+<% end %>
