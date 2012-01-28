@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{2.0.0}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2012-01-24}
+  s.date              = %q{2012-01-28}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -41,15 +41,15 @@ Gem::Specification.new do |s|
     'app/views/refinery/news/admin/items/new.html.erb',
     'app/views/refinery/news/items',
     'app/views/refinery/news/items/_recent_posts.html.erb',
+    'app/views/refinery/news/items/archive.html.erb',
     'app/views/refinery/news/items/index.html.erb',
     'app/views/refinery/news/items/index.rss.builder',
-    'app/views/refinery/news/items/shared',
-    'app/views/refinery/news/items/shared/_body_content_right.html.erb',
     'app/views/refinery/news/items/show.html.erb',
     'app/views/refinery/news/items/widgets',
     'app/views/refinery/news/items/widgets/_news_archive.html.erb',
-    'app/views/refinery/news_items',
-    'app/views/refinery/news_items/index.html.erb',
+    'app/views/refinery/news/shared',
+    'app/views/refinery/news/shared/_body_content_right.html.erb',
+    'app/views/refinery/news/shared/_item.html.erb',
     'config',
     'config/locales',
     'config/locales/bg.yml',
