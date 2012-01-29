@@ -53,10 +53,6 @@ module Refinery
         publish_date > Time.now
       end
 
-      def live?
-        !draft and published_at <= Time.now
-      end
-
       def next
         self.class.next(self).first
       end
