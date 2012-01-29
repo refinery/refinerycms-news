@@ -53,6 +53,35 @@ module Refinery
         publish_date > Time.now
       end
 
+      def live?
+        !draft and published_at <= Time.now
+      end
+
+      def next
+        self.class.next(self).first
+      end
+
+      def prev
+        self.class.previous(self).first
+      end
+
+      class << self
+        def next(current_record)
+          self.send(:with_exclusive_scope) do
+            where(["published_at > ? and draft = ?", current_record.published_at, false]).order("published_at ASC")
+          end
+        end
+
+        def teasers_enabled?
+          Refinery::Setting.find_or_set(:teasers_enabled, true, :scoping => 'blog')
+        end
+
+        def teaser_enabled_toggle!
+          currently = Refinery::Setting.find_or_set(:teasers_enabled, true, :scoping => 'blog')
+          Refinery::Setting.set(:teasers_enabled, :value => !currently, :scoping => 'blog')
+        end
+      end
+
     end
   end
 end
