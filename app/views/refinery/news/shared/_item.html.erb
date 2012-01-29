@@ -1,11 +1,10 @@
-<article class="item_post" id="<%= dom_id(post) %>">
+<article class="item_post" id="<%= dom_id(item) %>">
   <header>
     <h1><%= link_to item.title, main_app.refinery_news_item_path(item) %></h1>
     <section class='details'>
-      <time datetime="<%=l item.published_at.to_date, :format => :default %>" class='posted_at'>
-        <%= t('created_at', :scope => 'refinery.news.shared.items', :when => l(item.published_at.to_date, :format => :short)) %>
+      <time datetime="<%=l item.publish_date.to_date, :format => :default %>" class='posted_at'>
+        <%= t('created_at', :scope => 'refinery.news.shared.items', :when => l(item.publish_date.to_date, :format => :short)) %>
       </time>
-      <%= "#{t('by', :scope => 'refinery.news.items.show')} #{item.author.username}" if item.author.present? %>.
     </section>
   </header>
   <section class='clearfix'>
