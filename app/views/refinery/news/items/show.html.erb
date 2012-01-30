@@ -6,7 +6,7 @@
     </p>
     <% if @item.source.present? %>
       <p>
-        <small><%= t('.source') %> <%= @news_item.source %></small>
+        <small><%= t('.source') %> <%= @item.source %></small>
       </p>
     <% end %>
     <%= @item.body.html_safe %>

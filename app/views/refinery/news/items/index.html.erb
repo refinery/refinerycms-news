@@ -23,6 +23,6 @@
 <% content_for :body_content_right_prepend do -%>
   <%= raw @page.content_for(::Refinery::Pages.config.default_parts.second.to_sym) %>
 <% end if ::Refinery::Pages.config.default_parts.many? -%>
-<%= render :partial => '/refinery/news/items/shared/body_content_right' %>
+<%= render :partial => '/refinery/news/shared/body_content_right' %>
 
 <%= render :partial => "/refinery/content_page" %>
