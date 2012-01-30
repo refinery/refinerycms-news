@@ -5,6 +5,7 @@ module Refinery
       translates :title, :body
 
       attr_accessor :locale # to hold temporarily
+
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
@@ -23,6 +24,8 @@ module Refinery
       }
 
       scope :all_previous, lambda { where(['publish_date <= ?', Time.now.beginning_of_month]) }
+
+      scope :previous, lambda { |i| where("publish_date < ?", i.publish_date).limit(1) }
 
       # If you're using a named scope that includes a changing variable you need to wrap it in a lambda
       # This avoids the query being cached thus becoming unaffected by changes (i.e. Time.now is constant)
@@ -63,7 +66,7 @@ module Refinery
       class << self
         def next(current_record)
           self.send(:with_exclusive_scope) do
-            where(["published_at > ? and draft = ?", current_record.published_at, false]).order("published_at ASC")
+            where("publish_date > ?", current_record.publish_date).order("publish_date ASC")
           end
         end
 
