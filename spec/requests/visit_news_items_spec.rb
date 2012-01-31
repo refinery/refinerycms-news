@@ -4,10 +4,10 @@ describe "visit news items" do
   login_refinery_user
 
   before(:each) do
-    Factory(:page, :link_url => "/")
-    Factory(:page, :link_url => "/news", :title => "News")
-    Factory(:news_item, :title => "published", :source => "http://refinerycms.com")
-    Factory(:news_item, :title => "unpublished", :publish_date => 1.day.from_now)
+    Factory.create(:page, :link_url => "/")
+    Factory.create(:page, :link_url => "/news", :title => "News")
+    Factory.create(:news_item, :title => "published", :source => "http://refinerycms.com")
+    Factory.create(:news_item, :title => "unpublished", :publish_date => 1.day.from_now)
   end
 
   it "shows news link in menu" do

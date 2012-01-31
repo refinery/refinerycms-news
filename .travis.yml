@@ -1,0 +1,19 @@
+before_script:
+  - "bundle exec rake refinery:testing:dummy_app"
+script: "bundle exec rspec ./spec"
+notifications:
+  email:
+    - parndt@gmail.com
+    - ugis.ozolss@gmail.com
+    - heinleng@gmail.com
+env:
+  - DB=postgres
+  - DB=mysql
+  - DB=sqlite3
+rvm:
+  - 1.8.7
+  - ree
+  - 1.9.2
+  - 1.9.3
+  - rbx
+  - jruby
