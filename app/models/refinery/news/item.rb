@@ -47,12 +47,11 @@ module Refinery
         end
 
         def previous(item)
-          where("publish_date > ?", item.publish_date).first
+          where("publish_date > ?", item.publish_date)
         end
 
         def not_expired
-          news_items = Arel::Table.new(self.table_name)
-          where(news_items[:expiration_date].eq(nil).or(news_items[:expiration_date].gt(Time.now)))
+          where(arel_table[:expiration_date].eq(nil).or(arel_table[:expiration_date].gt(Time.now)))
         end
 
         def published
