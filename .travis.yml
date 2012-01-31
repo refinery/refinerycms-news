@@ -1,5 +1,5 @@
 before_script:
-  - "bundle exec rake refinery:testing:dummy_app"
+  - "bundle exec rake refinery:testing:dummy_app > /dev/null"
 script: "bundle exec rspec ./spec"
 notifications:
   email:
