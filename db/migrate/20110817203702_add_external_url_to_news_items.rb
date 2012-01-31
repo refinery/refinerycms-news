@@ -1,4 +1,4 @@
-class AddExternalUrlToNews::Items < ActiveRecord::Migration
+class AddExternalUrlToNewsItems < ActiveRecord::Migration
 
   def up
     unless ::Refinery::News::Item.column_names.map(&:to_sym).include?(:external_url)

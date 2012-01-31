@@ -1,4 +1,4 @@
-class TranslateNews::Items < ActiveRecord::Migration
+class TranslateNewsItems < ActiveRecord::Migration
 
   def up
     ::Refinery::News::Item.reset_column_information
@@ -10,8 +10,6 @@ class TranslateNews::Items < ActiveRecord::Migration
         :migrate_data => true
       })
     end
-
-    load(Rails.root.join('db', 'seeds', 'refinerycms_news.rb').to_s)
   end
 
   def down
