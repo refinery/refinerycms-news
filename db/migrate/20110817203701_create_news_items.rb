@@ -1,4 +1,4 @@
-class CreateNewsItems < ActiveRecord::Migration
+class CreateNews::Items < ActiveRecord::Migration
 
   def up
     create_table ::Refinery::News::Item.table_name do |t|

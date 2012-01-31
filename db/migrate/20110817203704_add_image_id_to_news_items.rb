@@ -1,4 +1,4 @@
-class AddImageIdToNewsItems < ActiveRecord::Migration
+class AddImageIdToNews::Items < ActiveRecord::Migration
 
   def up
     unless ::Refinery::News::Item.column_names.map(&:to_sym).include?(:image_id)

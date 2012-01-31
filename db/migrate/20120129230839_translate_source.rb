@@ -1,3 +1,4 @@
+# This migration comes from refinery_news (originally 8)
 class TranslateSource < ActiveRecord::Migration
 
   def up
