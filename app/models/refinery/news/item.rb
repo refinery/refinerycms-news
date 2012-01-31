@@ -42,12 +42,12 @@ module Refinery
 
         def next(item)
           self.send(:with_exclusive_scope) do
-            where("publish_date < ?", item.publish_date).order("publish_date ASC")
+            where("publish_date > ?", item.publish_date).order("publish_date ASC")
           end
         end
 
         def previous(item)
-          where("publish_date > ?", item.publish_date)
+          where("publish_date < ?", item.publish_date)
         end
 
         def not_expired
