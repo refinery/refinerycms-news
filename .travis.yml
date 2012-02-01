@@ -7,7 +7,7 @@ notifications:
     - ugis.ozolss@gmail.com
     - heinleng@gmail.com
 env:
-  - DB=postgres
+  - DB=postgresql
   - DB=mysql
   - DB=sqlite3
 rvm:
