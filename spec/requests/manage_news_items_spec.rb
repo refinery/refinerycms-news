@@ -37,7 +37,7 @@ describe "manage news items" do
       page.body.should =~ /Edit this news item/
       page.body.should =~ %r{/refinery/news/items/my-first-news-item/edit}
       page.body.should =~ /View this news item live/
-      page.body.should =~ %r{/news/my-first-news-item}
+      page.body.should =~ %r{/news/items/my-first-news-item}
 
       Refinery::News::Item.count.should == 1
     end
