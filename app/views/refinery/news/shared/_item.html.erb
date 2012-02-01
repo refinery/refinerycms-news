@@ -1,9 +1,9 @@
 <article class="item_post" id="<%= dom_id(item) %>">
   <header>
-    <h1><%= link_to item.title, refinery.news_item_path(item) %></h1>
+    <h1><%= link_to item.title, main_app.refinery_news_item_path(item) %></h1>
     <section class='details'>
       <time datetime="<%=l item.publish_date.to_date, :format => :default %>" class='posted_at'>
-        <%= t('created_at', :scope => 'refinery.news.shared.items', :when => l(item.publish_date.to_date, :format => :short)) %>
+        <%= t('created_at', :scope => 'main_app.news.shared.items', :when => l(item.publish_date.to_date, :format => :short)) %>
       </time>
     </section>
   </header>
@@ -16,7 +16,7 @@
   </section>
   <footer>
     <p>
-      <%= link_to t('read_more', :scope => 'refinery.news.shared.items'), refinery.news_item_path(item) if news_item_teaser_enabled? %>
+      <%= link_to t('read_more', :scope => 'main_app.news.shared.items'), main_app.refinery_news_item_path(item) if news_item_teaser_enabled? %>
     </p>
   </footer>
 </article>

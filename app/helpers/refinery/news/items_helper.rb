@@ -36,14 +36,14 @@ module Refinery
           count = News::Item.by_archive(Time.parse(post_date)).size
           text = t("date.month_names")[month.to_i] + " #{year} (#{count})"
 
-          link_to(text, refinery.news_items_archive_path(:year => year, :month => month))
+          link_to(text, main_app.refinery_news_items_archive_path(:year => year, :month => month))
         else
           post_date = post.publish_date.strftime('01/%Y')
           year = post_date.split('/')[1]
           count = Refinery::News::Item.by_year(Time.parse(post_date)).size
           text = "#{year} (#{count})"
 
-          link_to(text, refinery.news_items_archive_path(:year => year))
+          link_to(text, main_app.refinery_news_items_archive_path(:year => year))
         end
       end
     end

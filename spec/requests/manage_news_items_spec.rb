@@ -1,90 +1,94 @@
 require "spec_helper"
 
-describe "manage news items" do
-  login_refinery_user
+module Refinery
+  module Admin
+    describe "manage news items" do
+      login_refinery_user
 
-  context "when no news items" do
-    it "invites to create one" do
-      visit refinery.news_admin_items_path
-      page.should have_content("There are no news items yet. Click \"Add News Item\" to add your first news item.")
-    end
-  end
-
-  describe "action links" do
-    it "shows add news item link" do
-      visit refinery.news_admin_items_path
-
-      within "#actions" do
-        page.should have_content("Add News Item")
-        page.should have_selector("a[href='/refinery/news/items/new']")
+      context "when no news items" do
+        it "invites to create one" do
+          visit refinery_news_admin_items_path
+          page.should have_content("There are no news items yet. Click \"Add News Item\" to add your first news item.")
+        end
       end
-    end
-  end
 
-  describe "new/create" do
-    it "allows to create news item" do
-      visit refinery.news_admin_items_path
+      describe "action links" do
+        it "shows add news item link" do
+          visit refinery_news_admin_items_path
 
-      click_link "Add News Item"
+          within "#actions" do
+            page.should have_content("Add News Item")
+            page.should have_selector("a[href='/refinery/news/items/new']")
+          end
+        end
+      end
 
-      fill_in "Title", :with => "My first news item"
-      fill_in "Body", :with => "bla bla"
-      fill_in "Source", :with => "http://refinerycms.com"
-      click_button "Save"
+      describe "new/create" do
+        it "allows to create news item" do
+          visit refinery_news_admin_items_path
 
-      page.should have_content("'My first news item' was successfully added.")
-      page.body.should =~ /Remove this news item forever/
-      page.body.should =~ /Edit this news item/
-      page.body.should =~ %r{/refinery/news/items/my-first-news-item/edit}
-      page.body.should =~ /View this news item live/
-      page.body.should =~ %r{/news/items/my-first-news-item}
+          click_link "Add News Item"
 
-      Refinery::News::Item.count.should == 1
-    end
-  end
+          fill_in "Title", :with => "My first news item"
+          fill_in "Body", :with => "bla bla"
+          fill_in "Source", :with => "http://refinerycms.com"
+          click_button "Save"
 
-  describe "edit/update" do
-    before(:each) { Factory(:news_item, :title => "Update me") }
+          page.should have_content("'My first news item' was successfully added.")
+          page.body.should =~ /Remove this news item forever/
+          page.body.should =~ /Edit this news item/
+          page.body.should =~ %r{/refinery/news/items/my-first-news-item/edit}
+          page.body.should =~ /View this news item live/
+          page.body.should =~ %r{/news/items/my-first-news-item}
 
-    it "updates news item" do
-      visit refinery.news_admin_items_path
+          Refinery::News::Item.count.should == 1
+        end
+      end
 
-      page.should have_content("Update me")
+      describe "edit/update" do
+        before(:each) { Factory(:news_item, :title => "Update me") }
 
-      click_link "Edit this news item"
+        it "updates news item" do
+          visit refinery_news_admin_items_path
 
-      fill_in "Title", :with => "Updated"
-      click_button "Save"
+          page.should have_content("Update me")
 
-      page.should have_content("'Updated' was successfully updated.")
-    end
-  end
+          click_link "Edit this news item"
 
-  describe "destroy" do
-    before(:each) { Factory(:news_item, :title => "Delete me") }
+          fill_in "Title", :with => "Updated"
+          click_button "Save"
 
-    it "removes news item" do
-      visit refinery.news_admin_items_path
+          page.should have_content("'Updated' was successfully updated.")
+        end
+      end
 
-      click_link "Remove this news item forever"
+      describe "destroy" do
+        before(:each) { Factory(:news_item, :title => "Delete me") }
 
-      page.should have_content("'Delete me' was successfully removed.")
+        it "removes news item" do
+          visit refinery_news_admin_items_path
 
-      Refinery::News::Item.count.should == 0
-    end
-  end
+          click_link "Remove this news item forever"
 
-  context "duplicate news item titles" do
-    before(:each) { Factory(:news_item, :title => "I was here first") }
+          page.should have_content("'Delete me' was successfully removed.")
 
-    it "isn't a problem" do
-      visit refinery.new_news_admin_item_path
+          Refinery::News::Item.count.should == 0
+        end
+      end
 
-      fill_in "Title", :with => "I was here first"
-      fill_in "Body", :with => "Doesn't matter"
-      click_button "Save"
+      context "duplicate news item titles" do
+        before(:each) { Factory(:news_item, :title => "I was here first") }
 
-      Refinery::News::Item.count.should == 2
+        it "isn't a problem" do
+          visit new_refinery_news_admin_item_path
+
+          fill_in "Title", :with => "I was here first"
+          fill_in "Body", :with => "Doesn't matter"
+          click_button "Save"
+
+          Refinery::News::Item.count.should == 2
+        end
+      end
     end
   end
 end
