@@ -20,7 +20,7 @@ describe "visit news items" do
   end
 
   it "shows news item" do
-    visit refinery_news_items_path
+    visit refinery.news_items_path
 
     page.should have_content("published")
     page.should have_selector("a[href='/news/published']")

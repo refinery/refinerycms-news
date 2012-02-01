@@ -3,7 +3,7 @@
   <ul>
     <% @items.each do |item| %>
       <li>
-        <%= link_to item.title, main_app.refinery_news_item_path(item) %>
+        <%= link_to item.title, refinery.news_item_path(item) %>
       </li>
     <% end %>
   </ul>

@@ -1,10 +1,10 @@
 <div id='actions'>
   <ul>
     <li>
-      <%= render :partial => "/refinery/admin/search", :locals => {:url => main_app.refinery_news_admin_items_path} %>
+      <%= render :partial => "/refinery/admin/search", :locals => {:url => refinery.news_admin_items_path} %>
     </li>
     <li>
-      <%= link_to t('.create'), main_app.new_refinery_news_admin_item_path, :class => "add_icon" %>
+      <%= link_to t('.create'), refinery.new_news_admin_item_path, :class => "add_icon" %>
     </li>
   </ul>
 </div>

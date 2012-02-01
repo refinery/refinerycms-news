@@ -5,14 +5,14 @@ describe "manage news items" do
 
   context "when no news items" do
     it "invites to create one" do
-      visit refinery_news_admin_items_path
+      visit refinery.news_admin_items_path
       page.should have_content("There are no news items yet. Click \"Add News Item\" to add your first news item.")
     end
   end
 
   describe "action links" do
     it "shows add news item link" do
-      visit refinery_news_admin_items_path
+      visit refinery.news_admin_items_path
 
       within "#actions" do
         page.should have_content("Add News Item")
@@ -23,7 +23,7 @@ describe "manage news items" do
 
   describe "new/create" do
     it "allows to create news item" do
-      visit refinery_news_admin_items_path
+      visit refinery.news_admin_items_path
 
       click_link "Add News Item"
 
@@ -47,7 +47,7 @@ describe "manage news items" do
     before(:each) { Factory(:news_item, :title => "Update me") }
 
     it "updates news item" do
-      visit refinery_news_admin_items_path
+      visit refinery.news_admin_items_path
 
       page.should have_content("Update me")
 
@@ -64,7 +64,7 @@ describe "manage news items" do
     before(:each) { Factory(:news_item, :title => "Delete me") }
 
     it "removes news item" do
-      visit refinery_news_admin_items_path
+      visit refinery.news_admin_items_path
 
       click_link "Remove this news item forever"
 
@@ -78,7 +78,7 @@ describe "manage news items" do
     before(:each) { Factory(:news_item, :title => "I was here first") }
 
     it "isn't a problem" do
-      visit new_refinery_news_admin_item_path
+      visit refinery.new_news_admin_item_path
 
       fill_in "Title", :with => "I was here first"
       fill_in "Body", :with => "Doesn't matter"

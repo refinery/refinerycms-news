@@ -22,3 +22,11 @@ if defined?(::Refinery::Page)
     end
   end
 end
+# Refinery seeds
+Dir[Rails.root.join('db', 'seeds', '*.rb').to_s].each do |file|
+  puts "Loading db/seeds/#{file.split(File::SEPARATOR).last}"
+  load(file)
+end
+
+# Added by RefineryCMS Pages engine
+Refinery::Pages::Engine.load_seed
