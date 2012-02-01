@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require File.expand_path('../refinery/news/version.rb', __FILE__)
 
-files = Dir.glob("**/*").flatten.reject { |file| file =~ /\.gem(spec)?$/ }
+files = Dir.glob("**/*").flatten.reject { |file| file =~ %r{(\.gem(spec)?|spec/dummy(.+?)?|Gemfile.lock)$} }
 
 gemspec = <<EOF
 Gem::Specification.new do |s|

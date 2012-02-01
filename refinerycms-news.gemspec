@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{2.0.0}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2012-01-28}
+  s.date              = %q{2012-02-01}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -74,15 +74,16 @@ Gem::Specification.new do |s|
     'config/routes.rb',
     'db',
     'db/migrate',
-    'db/migrate/1_create_news_items.rb',
-    'db/migrate/2_add_external_url_to_news_items.rb',
-    'db/migrate/3_translate_news_items.rb',
-    'db/migrate/4_add_image_id_to_news_items.rb',
-    'db/migrate/5_add_expiration_date_to_news_items.rb',
-    'db/migrate/6_remove_image_id_and_external_url_from_news.rb',
-    'db/migrate/7_add_source_to_news_items.rb',
-    'db/migrate/8_translate_source.rb',
+    'db/migrate/20110817203701_create_news_items.rb',
+    'db/migrate/20110817203702_add_external_url_to_news_items.rb',
+    'db/migrate/20110817203703_translate_news_items.rb',
+    'db/migrate/20110817203704_add_image_id_to_news_items.rb',
+    'db/migrate/20110817203705_add_expiration_date_to_news_items.rb',
+    'db/migrate/20110817203706_remove_image_id_and_external_url_from_news.rb',
+    'db/migrate/20120129230838_add_source_to_news_items.rb',
+    'db/migrate/20120129230839_translate_source.rb',
     'db/seeds.rb',
+    'Gemfile',
     'lib',
     'lib/gemspec.rb',
     'lib/generators',
@@ -95,6 +96,7 @@ Gem::Specification.new do |s|
     'lib/refinery/news.rb',
     'lib/refinerycms-news.rb',
     'license.md',
+    'Rakefile',
     'readme.md',
     'spec',
     'spec/models',
@@ -105,8 +107,11 @@ Gem::Specification.new do |s|
     'spec/requests/manage_news_items_spec.rb',
     'spec/requests/news_archive.rb',
     'spec/requests/visit_news_items_spec.rb',
+    'spec/spec_helper.rb',
     'spec/support',
     'spec/support/refinery',
-    'spec/support/refinery/factories.rb'
+    'spec/support/refinery/factories.rb',
+    'tasks',
+    'tasks/rspec.rake'
   ]
 end
