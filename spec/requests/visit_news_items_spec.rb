@@ -22,7 +22,7 @@ module Refinery
       end
 
       it "shows news item" do
-        visit news_items_path
+        visit refinery_news_items_path
 
         page.should have_content("published")
         page.should have_selector("a[href='/news/published']")
@@ -32,7 +32,7 @@ module Refinery
       end
 
       it "has a source on the news item" do
-        visit news_item_path(@published_news_item)
+        visit refinery_news_item_path(@published_news_item)
 
         page.should have_content("Source http://refinerycms.com")
       end

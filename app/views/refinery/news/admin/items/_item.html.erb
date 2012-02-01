@@ -14,7 +14,7 @@
     <% end %>
   </span>
   <span class='actions'>
-    <%= link_to refinery_icon_tag('application_go.png'), main_app.news_item_path(item),
+    <%= link_to refinery_icon_tag('application_go.png'), main_app.refinery_news_item_path(item),
                 :title => t('.view_live_html'),
                 :target => "_blank" %>
     <%= link_to refinery_icon_tag('application_edit.png'), main_app.edit_refinery_news_admin_item_path(item),
