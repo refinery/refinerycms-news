@@ -1,16 +1,16 @@
 <div id='actions'>
   <ul>
     <li>
-      <%= render :partial => "/refinery/admin/search", :locals => {:url => refinery.news_admin_items_path} %>
+      <%= render :partial => "/refinery/admin/search", :locals => {:url => main_app.refinery_news_admin_items_path} %>
     </li>
     <li>
-      <%= link_to t('.create'), refinery.new_news_admin_item_path, :class => "add_icon" %>
+      <%= link_to t('.create'), main_app.new_refinery_news_admin_item_path, :class => "add_icon" %>
     </li>
   </ul>
 </div>
 <div id='records'>
   <% if searching? %>
-    <h2><%= t('refinery.admin.search.results_for', :query => params[:search]) %></h2>
+    <h2><%= t('main_app.admin.search.results_for', :query => params[:search]) %></h2>
   <% end %>
   <% if @items.any? %>
     <%= will_paginate @items %>
@@ -23,7 +23,7 @@
       <% unless searching? %>
         <strong><%= t('.no_items_yet') %></strong>
       <% else %>
-        <%= t('refinery.admin.search.no_results') %>
+        <%= t('main_app.admin.search.no_results') %>
       <% end %>
     </p>
   <% end %>
