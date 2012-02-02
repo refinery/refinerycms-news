@@ -5,17 +5,13 @@ module Refinery
 
       isolate_namespace Refinery::News
 
-      initializer "init plugin", :after => :set_routes_reloader do |app|
+      initializer "init plugin" do
         Refinery::Plugin.register do |plugin|
           plugin.pathname = root
           plugin.name = "refinerycms_news"
           plugin.menu_match = /refinery\/news(_items)?$/
           plugin.url = {:controller => '/refinery/news/admin/items'}
-          plugin.activity = {
-            :class_name => 'Refinery::News::Item',
-            :title => 'title',
-            :url_prefix => 'edit'
-          }
+          plugin.activity = { :class_name => 'Refinery::News::Item' }
         end
       end
 
