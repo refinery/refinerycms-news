@@ -4,7 +4,6 @@ module Refinery
       include Refinery::Engine
 
       isolate_namespace Refinery::News
-      engine_name :refinery_news
 
       initializer "init plugin", :after => :set_routes_reloader do |app|
         Refinery::Plugin.register do |plugin|
