@@ -31,13 +31,14 @@ Then type the following at command line inside your Refinery CMS application's r
 
 Type this command at your project root to override the default front end views:
 
-    $ rake refinery:override view=news_items/*
-    Copied view template file to app/views/news_items/_recent_posts.html.erb
-    Copied view template file to app/views/news_items/index.html.erb
-    Copied view template file to app/views/news_items/show.html.erb
+    $ rake refinery:override view=refinery/news/items/*
+    Copied view template file to app/views/refinery/news/items/_recent_posts.html.erb
+    Copied view template file to app/views/refinery/news/items/index.html.erb
+    Copied view template file to app/views/refinery/news/items/show.html.erb
+    etc.
 
 ## RSS (Really Simple Syndication)
 
 To get RSS for your entire site, insert this into the head section of your layout after installing:
 
-    <%= auto_discovery_link_tag(:rss, news_items_url(:format => 'rss')) %>
+    <%= auto_discovery_link_tag(:rss, refinery.news_items_url(:format => 'rss')) %>
