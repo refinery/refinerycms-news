@@ -37,9 +37,10 @@ describe NewsItem do
     end
     
     it "orders by publish date in DESC order then created at in DESC order" do
-      news_item1 = Factory(:news_item, :publish_date => 1.hour.ago)
-      news_item2 = Factory(:news_item, :publish_date => 1.hour.ago)
-      news_item3 = Factory(:news_item, :publish_date => 2.hours.ago)
+      published_at = 1.hour.ago
+      news_item1 = Factory(:news_item, :publish_date => published_at, :created_at => published_at)
+      news_item2 = Factory(:news_item, :publish_date => published_at, :created_at => published_at + 1.hour)
+      news_item3 = Factory(:news_item, :publish_date => 3.hours.ago)
 
       NewsItem.all.should == [news_item2, news_item1, news_item3]
     end
