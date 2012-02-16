@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
     'app/models/refinery',
     'app/models/refinery/news',
     'app/models/refinery/news/item.rb',
-    'app/models/refinery/news_item.rb',
+    'app/models/refinery/item.rb',
     'app/views',
     'app/views/refinery',
     'app/views/refinery/news',
