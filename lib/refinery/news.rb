@@ -14,7 +14,7 @@ module Refinery
       end
 
       def factory_paths
-        @factory_paths ||= [ root.join("spec/factories").to_s ]
+        @factory_paths ||= [ root.join("spec/support/refinery/").to_s ]
       end
     end
   end
