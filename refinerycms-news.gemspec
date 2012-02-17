@@ -98,6 +98,8 @@ Gem::Specification.new do |s|
     'Rakefile',
     'readme.md',
     'spec',
+    'spec/factories',
+    'spec/factories/news.rb',
     'spec/models',
     'spec/models/refinery',
     'spec/models/refinery/news',
@@ -107,9 +109,6 @@ Gem::Specification.new do |s|
     'spec/requests/news_archive.rb',
     'spec/requests/visit_news_items_spec.rb',
     'spec/spec_helper.rb',
-    'spec/support',
-    'spec/support/refinery',
-    'spec/support/refinery/factories.rb',
     'tasks',
     'tasks/rspec.rake'
   ]
