@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{2.0.0}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with RefineryCMS.}
-  s.date              = %q{2012-02-01}
+  s.date              = %q{2012-02-17}
   s.summary           = %q{Ruby on Rails news engine for RefineryCMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
     'app/models/refinery',
     'app/models/refinery/news',
     'app/models/refinery/news/item.rb',
-    'app/models/refinery/news_item.rb',
     'app/views',
     'app/views/refinery',
     'app/views/refinery/news',
