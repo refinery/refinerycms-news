@@ -1,6 +1,6 @@
 module Refinery
   module News
-    class Item < ActiveRecord::Base
+    class Item < Refinery::Core::BaseModel
 
       translates :title, :body
 
