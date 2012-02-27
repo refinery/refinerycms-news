@@ -10,7 +10,7 @@ module Refinery
       append_file 'db/seeds.rb', :verbose => true do
         <<-EOH
 
-# Added by RefineryCMS News engine
+# Added by Refinery CMS News engine
 Refinery::News::Engine.load_seed
         EOH
       end

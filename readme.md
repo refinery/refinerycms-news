@@ -13,7 +13,7 @@ Key features:
 
 ## Requirements
 
-[RefineryCMS](http://refinerycms.com) "core" engine version 2.0.0 or later.
+[Refinery CMS](http://refinerycms.com) "core" engine version 2.0.0 or later.
 
 ### Gem Installation using Bundler (The very best way)
 
