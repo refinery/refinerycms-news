@@ -77,12 +77,12 @@ module Refinery
         end
 
         def teasers_enabled?
-          Refinery::Setting.find_or_set(:teasers_enabled, true, :scoping => 'blog')
+          Refinery::Setting.find_or_set(:teasers_enabled, true, :scoping => 'news')
         end
 
         def teaser_enabled_toggle!
-          currently = Refinery::Setting.find_or_set(:teasers_enabled, true, :scoping => 'blog')
-          Refinery::Setting.set(:teasers_enabled, :value => !currently, :scoping => 'blog')
+          currently = Refinery::Setting.find_or_set(:teasers_enabled, true, :scoping => 'news')
+          Refinery::Setting.set(:teasers_enabled, :value => !currently, :scoping => 'news')
         end
       end
 
