@@ -70,7 +70,7 @@ module Refinery
         # rejects any page that has not been translated to the current locale.
         def translated
           includes(:translations).where(
-            translation_class.arel_table[:locale].eq(Globalize.locale)
+            translation_class.arel_table[:locale].eq(::Globalize.locale)
           ).where(
             arel_table[:id].eq(translation_class.arel_table[:refinery_news_item_id])
           )
