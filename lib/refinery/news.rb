@@ -4,7 +4,7 @@ module Refinery
   autoload :NewsGenerator, 'generators/refinery/news_generator'
 
   module News
-    require 'refinery/news/engine' if defined?(Rails)
+    require 'refinery/news/engine'
 
     class << self
       attr_writer :root
