@@ -15,7 +15,7 @@ if defined?(::Refinery::Page)
       :menu_match => "^/news.*$"
     )
 
-    ::Refinery::Pages.config.default_parts.each do |default_page_part|
+    ::Refinery::Pages.default_parts.each do |default_page_part|
       page.parts.create(:title => default_page_part, :body => nil)
     end
   end
