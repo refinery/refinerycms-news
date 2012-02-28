@@ -1,6 +1,7 @@
 module Refinery
   module News
     class Item < Refinery::Core::BaseModel
+      extend FriendlyId
 
       translates :title, :body
 
@@ -9,7 +10,7 @@ module Refinery
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
-      has_friendly_id :title, :use_slug => true
+      friendly_id :title, :use => [:slugged]
 
       acts_as_indexed :fields => [:title, :body]
 
