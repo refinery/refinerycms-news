@@ -2,20 +2,12 @@ source 'http://rubygems.org'
 
 gemspec
 
-gem 'friendly_id', :git => 'git://github.com/norman/friendly_id.git'
-
-git 'git://github.com/resolve/refinerycms.git' do
-  gem 'refinerycms'
-
-  group :development, :test do
-    gem 'refinerycms-testing'
-  end
-end
-
-gem 'refinerycms-settings', :git => 'git://github.com/parndt/refinerycms-settings.git'
+gem 'refinerycms', '~> 2.0.0'
 
 group :development, :test do
   require 'rbconfig'
+
+  gem 'refinerycms-testing', '~> 2.0.0'
 
   platforms :jruby do
     gem 'activerecord-jdbcsqlite3-adapter'
