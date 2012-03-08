@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2005-2011 [Resolve Digital Ltd.](http://www.resolvedigital.co.nz)
+Copyright (c) 2005-2012 [Resolve Digital Ltd.](http://www.resolvedigital.co.nz)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
