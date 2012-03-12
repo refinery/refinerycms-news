@@ -26,6 +26,7 @@ Then type the following at command line inside your Refinery CMS application's r
     bundle install
     rails generate refinery:news
     rake db:migrate
+    rake db:seed
 
 ## Customising the views
 
