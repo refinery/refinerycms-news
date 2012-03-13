@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gemspec
 
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms', '~> 2.0.1'
 
 group :development, :test do
   gem 'refinerycms-testing', '~> 2.0.0'
