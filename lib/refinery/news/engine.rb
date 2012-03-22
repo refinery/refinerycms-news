@@ -9,9 +9,9 @@ module Refinery
         Refinery::Plugin.register do |plugin|
           plugin.pathname = root
           plugin.name = "refinerycms_news"
-          plugin.menu_match = /refinery\/news(_items)?$/
-          plugin.url = {:controller => '/refinery/news/admin/items'}
+          plugin.menu_match = /refinery\/news(\/items)?$/
           plugin.activity = { :class_name => 'Refinery::News::Item' }
+          plugin.url = proc { Refinery::Core::Engine.routes.url_helpers.news_admin_items_path }
         end
       end
 
