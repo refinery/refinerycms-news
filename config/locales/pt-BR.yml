@@ -3,32 +3,45 @@ pt-BR:
     plugins:
       refinerycms_news:
         title: Notícias
+        description: Disponibiliza uma simples sessão de notícias
     news:
       admin:
-        item:
-          view_live: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
-          edit: "Alterar esta notícia"
-          delete: "Remover esta notícia para sempre"
+        items:
+          item:
+            view_live_html: "Ver esta notícia no site<br/><em>(abrirá em uma nova janela)</em>"
+            edit: "Alterar esta notícia"
+            delete: "Remover esta notícia para sempre"
+            published: Publicado
+          index:
+            create: "Criar Notícia"
+            item: Notícia
+            no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
+      shared:
+        items: 
+          created_at: 'Criado em %{when}'
+        archives: Arquivos
+      items:
+        show:
+          back_to_index: "Voltar para todas as notícias"
           published: Publicado
+          source: Fonte
+        recent_posts:
+          recent_posts: Notícias recentes
         index:
-          actions: Ações
-          create: "Criar Notícia"
-          item: Notícia
-          no_items: 'Não há notícias cadastradas.'
-          no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
+          published: Publicado
           read_more: Leia mais
-      show:
-        back_to_index: "Voltar para todas as notícias"
-        published: Publicado
-      recent_posts:
-        recent_posts: Notícias recentes
-      index:
-       published: Publicado
+          no_items_yet: Não há notícias cadastradas.
+          source: Fonte
+        archive:
+          news_item_archive_for: 'Arquivo do dia: %{date}'
+          no_news_articles_posted: 'Não existe nenhuma notícia postada em %{date}.'
   activerecord:
     attributes:
       'refinery/news/item':
         title: Título
-        body: Contéudo
+        body: Conteúdo
         publish_date: Data de publicação
+        expiration_date: Data de expiração
+        source: Fonte
     models:
       'refinery/news/item': Notícia
