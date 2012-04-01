@@ -6,7 +6,10 @@ module Refinery
       translates :title, :body
 
       attr_accessor :locale # to hold temporarily
-      attr_accessible :title, :body, :source, :publish_date, :expiration_date
+      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
+      class Translation
+        attr_accessible :locale
+      end
 
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true

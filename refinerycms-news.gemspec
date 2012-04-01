@@ -1,3 +1,5 @@
+# Encoding: UTF-8
+
 Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{2.1.0.dev}
@@ -6,7 +8,7 @@ Gem::Specification.new do |s|
   s.summary           = %q{Ruby on Rails news engine for Refinery CMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
-  s.authors           = %w(Resolve\ Digital)
+  s.authors           = ["Philip Arndt", "Uģis Ozols"]
   s.require_paths     = %w(lib)
 
   s.files             = `git ls-files`.split("\n")
@@ -14,5 +16,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency    'refinerycms-core',     '~> 2.1.0.dev'
   s.add_dependency    'refinerycms-settings', '~> 2.1.0.dev'
-  s.add_dependency    'friendly_id',          '~> 4.0.1'
+  s.add_dependency    'friendly_id',          '~> 4.0.4'
 end
