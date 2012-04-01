@@ -7,11 +7,9 @@ module Refinery
 
       attr_accessor :locale # to hold temporarily
 
-      attr_accessible :title, :body, :source, :publish_date, :expiration_date
-      if defined?(Refinery::News::Item::Translation)
-        Refinery::News::Item::Translation.module_eval do
-          attr_accessible :locale
-        end
+      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
+      class Translation
+        attr_accessible :locale
       end
 
       alias_attribute :content, :body
