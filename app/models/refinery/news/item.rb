@@ -6,7 +6,13 @@ module Refinery
       translates :title, :body
 
       attr_accessor :locale # to hold temporarily
+
       attr_accessible :title, :body, :source, :publish_date, :expiration_date
+      if defined?(Refinery::News::Item::Translation)
+        Refinery::News::Item::Translation.module_eval do
+          attr_accessible :locale
+        end
+      end
 
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
