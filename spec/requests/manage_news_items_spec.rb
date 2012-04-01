@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "manage news items" do
-  login_refinery_user
+  refinery_login_with :refinery_user
 
   context "when no news items" do
     it "invites to create one" do

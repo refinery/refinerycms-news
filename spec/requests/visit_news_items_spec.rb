@@ -1,8 +1,6 @@
 require "spec_helper"
 
 describe "visit news items" do
-  login_refinery_user
-
   before(:each) do
     Factory.create(:page, :link_url => "/")
     Factory.create(:page, :link_url => "/news", :title => "News")
