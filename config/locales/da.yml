@@ -1,0 +1,47 @@
+da:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Nyheder
+        description: Giver en simpel nyhedssektion
+    news:
+      admin:
+        items:
+          item:
+            view_live_html: "Se denne nyhed live <br /><em>(åbner i et nyt vindue)</em>"
+            edit: "Rediger denne nyhed"
+            delete: "Fjern denne nyhed for evigt"
+            published: Offentliggjort
+          index:
+            create: "Tilføj nyhed"
+            item: Nyheder
+            no_items_yet: 'Der er ingen nyheder endnu. Klik "Tilføj nyhed" for at tilføje din første nyhed.'
+      shared:
+        items: 
+          created_at: 'Oprettet %{when}'
+        archives: Arkiver
+      items:
+        show:
+          back_to_index: "Tilbage til nyheder"
+          published: Offentliggjort
+          source: Kilde
+        recent_posts:
+          recent_posts: "Nylige indlæg"
+        index:
+          published: Offentliggjort
+          read_more: "Læs mere"
+          no_items_yet: "Der er ingen nyheder endnu."
+          source: Kilde
+        archive:
+          news_item_archive_for: 'Arkiv for %{date}'
+          no_news_articles_posted: 'Der er ingen nyhedsartikler oprettet for %{date}.'
+  activerecord:
+    attributes:
+      'refinery/news/item':
+        title: Titel
+        body: Krop
+        publish_date: Offentliggørelsesdato
+        expiration_date: Udløbsdato
+        source: Kilde
+    models:
+      'refinery/news/item': Nyhed
