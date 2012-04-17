@@ -17,7 +17,8 @@ en:
             item: News
             no_items_yet: 'There are no news items yet. Click "Add News Item" to add your first news item.'
       shared:
-        items: 
+        items:
+          read_more: Read more
           created_at: 'Created at %{when}'
         archives: Archives
       items:
