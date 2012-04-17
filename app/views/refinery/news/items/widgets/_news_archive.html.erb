@@ -1,10 +1,6 @@
 <section id="news_archive_widget">
   <h2><%= t('archives', :scope => 'refinery.news.shared') %></h2>
   <nav>
-    <ul>
-      <% items.each do |item| %>
-      <li><%= news_item_archive_link(item) %></li>
-      <% end %>
-    </ul>
+    <%= news_item_archive_links %>
   </nav>
 </section> 
