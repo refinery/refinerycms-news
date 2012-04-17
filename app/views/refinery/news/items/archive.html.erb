@@ -1,6 +1,6 @@
 <% content_for :title, "#{t('.news_item_archive_for', :date => l(@archive_date, :format => '%B %Y'))}" %>
 
-<% content_for :body_content_left do %>
+<% content_for :body do %>
   <h1><%= t('.news_item_archive_for', :date => l(@archive_date, :format => '%B %Y')) %></h1>
   <% if @items.any? %>
     <section id="news_items">
