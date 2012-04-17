@@ -28,23 +28,16 @@ module Refinery
         end
       end
 
-      def news_item_archive_link(item)
-        if item.publish_date >= Time.now.end_of_year.advance(:years => -3)
-          post_date = item.publish_date.strftime('%m/%Y')
-          year = post_date.split('/')[1]
-          month = post_date.split('/')[0]
-          count = News::Item.by_archive(Time.parse(post_date)).size
-          text = t("date.month_names")[month.to_i] + " #{year} (#{count})"
-
-          link_to(text, refinery.news_items_archive_path(:year => year, :month => month))
-        else
-          post_date = post.publish_date.strftime('01/%Y')
-          year = post_date.split('/')[1]
-          count = Refinery::News::Item.by_year(Time.parse(post_date)).size
-          text = "#{year} (#{count})"
-
-          link_to(text, refinery.news_items_archive_path(:year => year))
+      def news_item_archive_links
+        html = ''
+        @item_months = ::Refinery::News::Item.published.group_by {|i| i.publish_date.beginning_of_month}
+        @item_months.each do |month, items|
+          if items.present?
+            text = "#{t("date.month_names")[month.month]} #{month.year} (#{items.count})"
+            html += "<li>#{link_to(text, refinery.news_items_archive_path(:year => month.year, :month => month.month))}</li>"
+          end
         end
+        content_tag('ul', raw(html))
       end
     end
   end
