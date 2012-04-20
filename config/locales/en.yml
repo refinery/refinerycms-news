@@ -35,7 +35,7 @@ en:
           source: Source
         archive:
           news_item_archive_for: 'Archive for %{date}'
-          no_news_articles_posted: 'There are no news articles posted for %{date}. Stay tuned.'
+          no_news_item_articles_posted: 'There are no news articles posted for %{date}. Stay tuned.'
   activerecord:
     attributes:
       'refinery/news/item':
