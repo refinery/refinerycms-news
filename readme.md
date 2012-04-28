@@ -43,3 +43,9 @@ Type this command at your project root to override the default front end views:
 To get RSS for your entire site, insert this into the head section of your layout after installing:
 
     <%= auto_discovery_link_tag(:rss, refinery.news_items_url(:format => 'rss')) %>
+    
+## More Information
+* Check out our [Website](http://refinerycms.com/)
+* Refinery Documentation is available in the [guides](http://refinerycms.com/guides)
+* Questions can be asked on our [Google Group](http://group.refinerycms.org)
+* Questions can also be asked in our IRC room, [#refinerycms on freenode](irc://irc.freenode.net/refinerycms)
