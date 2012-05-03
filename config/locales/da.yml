@@ -8,14 +8,14 @@ da:
       admin:
         items:
           item:
-            view_live_html: "Se denne nyhed live <br /><em>(åbner i et nyt vindue)</em>"
-            edit: "Rediger denne nyhed"
-            delete: "Fjern denne nyhed for evigt"
+            view_live_html: "Vis nyheden live <br /><em>(åbner i et nyt vindue)</em>" 
+            edit: "Redigér nyheden"
+            delete: "Slet nyheden permanent"
             published: Offentliggjort
           index:
             create: "Tilføj nyhed"
             item: Nyheder
-            no_items_yet: 'Der er ingen nyheder endnu. Klik "Tilføj nyhed" for at tilføje din første nyhed.'
+            no_items_yet: 'Der er ingen nyheder endnu. Klik "Tilføj nyhed" for at oprette den første.' 
       shared:
         items: 
           created_at: 'Oprettet %{when}'
@@ -26,7 +26,7 @@ da:
           published: Offentliggjort
           source: Kilde
         recent_posts:
-          recent_posts: "Nylige indlæg"
+          recent_posts: "Seneste indlæg"
         index:
           published: Offentliggjort
           read_more: "Læs mere"
