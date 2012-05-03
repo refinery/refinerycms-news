@@ -30,8 +30,8 @@ module Refinery
 
       def news_item_archive_links
         html = ''
-        @item_months = ::Refinery::News::Item.published.group_by {|i| i.publish_date.beginning_of_month}
-        @item_months.each do |month, items|
+        item_months = ::Refinery::News::Item.published.group_by {|i| i.publish_date.beginning_of_month}
+        item_months.each do |month, items|
           if items.present?
             text = "#{t("date.month_names")[month.month]} #{month.year} (#{items.count})"
             html += "<li>#{link_to(text, refinery.news_items_archive_path(:year => month.year, :month => month.month))}</li>"
