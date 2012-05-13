@@ -33,6 +33,10 @@ module Refinery
         self.class.previous(self).first
       end
 
+      def url
+        "/news/#{slug}"
+      end
+
       class << self
         def by_archive(archive_date)
           where(['publish_date between ? and ?', archive_date.beginning_of_month, archive_date.end_of_month])
