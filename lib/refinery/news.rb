@@ -1,5 +1,6 @@
 require 'refinerycms-core'
 require 'refinerycms-settings'
+require 'acts_as_indexed'
 
 module Refinery
   autoload :NewsGenerator, 'generators/refinery/news_generator'
