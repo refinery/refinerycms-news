@@ -5,7 +5,7 @@ module Refinery
         items = Refinery::News::Item.select('publish_date').all_previous
         return nil if items.blank?
 
-        render :partial => "/refinery/news/items/widgets/news_archive", :locals => { :items => items }
+        render "/refinery/news/items/widgets/news_archive", :items => items
       end
       alias_method :news_archive_list, :news_item_archive_widget
 
