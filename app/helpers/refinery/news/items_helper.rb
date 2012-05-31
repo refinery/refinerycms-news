@@ -28,6 +28,11 @@ module Refinery
         end
       end
 
+      def news_item_archive_link(*args)
+        Refinery.deprecate("news_item_archive_link", :when => "2.1.0", :replacement => "news_item_archive_links")
+        news_item_archive_links
+      end
+
       def news_item_archive_links
         html = ''
         item_months = ::Refinery::News::Item.published.group_by {|i| i.publish_date.beginning_of_month}
