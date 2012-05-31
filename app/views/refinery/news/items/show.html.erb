@@ -1,5 +1,5 @@
 <% content_for :body_content_title, @item.title %>
-<% content_for :body_content_left do %>
+<% content_for :body do %>
   <article class="news_item">
     <p>
       <small><%= t('.published') %> <%= l(@item.publish_date, :format => :long) %></small>
@@ -15,6 +15,6 @@
     </p>
   </article>
 <% end %>
-<% content_for :body_content_right, render(:partial => 'recent_posts') %>
+<% content_for :side_body, render(:partial => 'recent_posts') %>
 
 <%= render "/refinery/content_page" %>
