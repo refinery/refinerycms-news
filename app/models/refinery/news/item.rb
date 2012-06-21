@@ -34,11 +34,11 @@ module Refinery
 
       class << self
         def by_archive(archive_date)
-          where(['publish_date between ? and ?', archive_date.beginning_of_month, archive_date.end_of_month])
+          where(:publish_date => archive_date.beginning_of_month..archive_date.end_of_month)
         end
 
         def by_year(archive_year)
-          where(['publish_date between ? and ?', archive_year.beginning_of_year, archive_year.end_of_year])
+          where(:publish_date => archive_year.beginning_of_year..archive_year.end_of_year)
         end
 
         def all_previous
