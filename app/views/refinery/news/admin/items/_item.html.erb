@@ -23,6 +23,8 @@
                 :class => "cancel confirm-delete",
                 :title => t('.delete'),
                 :method => :delete,
-                :confirm => t('refinery.admin.delete.message', :title => item.title) %>
+                :data => {
+                  :confirm => t('refinery.admin.delete.message', :title => item.title)
+                } %>
   </span>
 </li>
