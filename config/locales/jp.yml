@@ -1,36 +1,37 @@
 jp:
-  plugins:
-    refinerycms_news:
-      title: ニュース
-      description: 簡単にニュース掲載
-  news:
-    admin:
-      item:
-        view_live_html: "この記事を見る<br/><em>(新規ウインドウに開かれます)</em>"
-        edit: "この記事を編集"
-        delete: "この記事を削除"
-        published: 掲載時刻
-      index:
-        actions: 機能
-        create: "新規掲載"
-        item: ニュース
-        no_items: "何も掲載されていません。"
-        no_items_yet: 'まだ何も掲載されていません。「新規掲載」をクリックし記事を追加して下さい。'
-    show:
-      back_to_index: "全てのニュースに戻る"
-      published: 掲載時刻
-    recent_posts:
-      recent_posts: 最近の記事
-    index:
-      published: 掲載時刻
-      read_more: もっと読む
-      no_items_yet: まだ記事が掲載されていません。
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: ニュース
+        description: 簡単にニュース掲載
+    news:
+      admin:
+        items:
+          item:
+            view_live_html: "この記事を見る<br/><em>(新規ウインドウに開かれます)</em>"
+            edit: "この記事を編集"
+            delete: "この記事を削除"
+            published: 掲載時刻
+          index:
+            create: "新規掲載"
+            item: ニュース
+            no_items_yet: 'まだ何も掲載されていません。「新規掲載」をクリックし記事を追加して下さい。'
+      items:
+        show:
+          back_to_index: "全てのニュースに戻る"
+          published: 掲載時刻
+        recent_posts:
+          recent_posts: 最近の記事
+        index:
+          published: 掲載時刻
+          read_more: もっと読む
+          no_items_yet: まだ記事が掲載されていません。
   activerecord:
     attributes:
-      item:
+      'refinery/items/item':
         title: 題名
         body: 本文
         publish_date: 掲載時刻
         expiration_date: 掲載期限
     models:
-      item: ニュース
+      'refinery/news/item': ニュース

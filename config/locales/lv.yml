@@ -6,26 +6,28 @@ lv:
         description: Piedāvā blogveidīgu jaunumu sadaļu
     news:
       admin:
-        item:
-          view_live_html: Apskatīt šo jaunumu <br/><em>Atvērsies jaunā logā</em>
-          delete: Dzēst šo jaunumu
-          edit: Labot šo jaunumu
+        items:
+          item:
+            view_live_html: Apskatīt šo jaunumu <br/><em>Atvērsies jaunā logā</em>
+            delete: Dzēst šo jaunumu
+            edit: Labot šo jaunumu
+            published: Ievietots
+          index:
+            create: Izveidot Jaunumu
+            item: Jaunumi
+            no_items_yet: Vēl nav neviena jaunuma. Spied "Izveidot Jaunumu", lai izveidotu pirmo jaunumu.
+      items:
+        show:
+          back_to_index: Atgriezties pie visiem jaunumiem
           published: Ievietots
+          source: Avots
+        recent_posts:
+          recent_posts: Pēdējie jaunumi
         index:
-          create: Izveidot Jaunumu
-          item: Jaunumi
-          no_items_yet: Vēl nav neviena jaunuma. Spied "Izveidot Jaunumu", lai izveidotu pirmo jaunumu.
-      show:
-        back_to_index: Atgriezties pie visiem jaunumiem
-        published: Ievietots
-        source: Avots
-      recent_posts:
-        recent_posts: Pēdējie jaunumi
-      index:
-        published: Ievietots
-        read_more: Lasīt vairāk
-        no_items_yet: Vēl nav neviena jaunuma.
-        source: Avots
+          published: Ievietots
+          read_more: Lasīt vairāk
+          no_items_yet: Vēl nav neviena jaunuma.
+          source: Avots
   activerecord:
     attributes:
       'refinery/news/item':

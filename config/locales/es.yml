@@ -6,26 +6,26 @@ es:
         description: Proporciona una seccion de noticias similar a un blog
     news:
       admin:
-        item:
-          view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
-          edit: "Editar esta noticia"
-          delete: "Borrar completament esta noticia"
+        items:
+          item:
+            view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
+            edit: "Editar esta noticia"
+            delete: "Borrar completament esta noticia"
+            published: Publicada
+          index:
+            create: "Crear noticia"
+            item: Noticia
+            no_items_yet: 'Aún no hay noticias. Haz click en "Crear noticia" para añadir la primera.'
+      items:
+        show:
+          back_to_index: "Volver al listado de noticias"
           published: Publicada
+        recent_posts:
+          recent_posts: Posts recientes
         index:
-          actions: Acciones
-          create: "Crear noticia"
-          item: Noticia
-          no_items: "Lo sentimos, no se ha encontrado ningún resultado"
-          no_items_yet: 'Aún no hay noticias. Haz click en "Crear noticia" para añadir la primera.'
-      show:
-        back_to_index: "Volver al listado de noticias"
-        published: Publicada
-      recent_posts:
-        recent_posts: Posts recientes
-      index:
-        published: Publicada
-        read_more: Leer mas
-        no_items_yet: Aún no hay ninguna noticia.
+          published: Publicada
+          read_more: Leer mas
+          no_items_yet: Aún no hay ninguna noticia.
   activerecord:
     attributes:
       'refinery/news/item':

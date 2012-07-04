@@ -5,25 +5,25 @@ ru:
         title: "Новости"
     news:
       admin:
-        item:
-          view_live_html: "Просмотреть новость <br/><em>(будет открыто в новом окне)</em>"
-          edit: "Редактировать новость"
-          delete: "Удалить новость"
-          published: Опубликовано
+        items:
+          item:
+            view_live_html: "Просмотреть новость <br/><em>(будет открыто в новом окне)</em>"
+            edit: "Редактировать новость"
+            delete: "Удалить новость"
+            published: Опубликовано
+          index:
+            create: "Создать новость"
+            item: "Новости"
+            no_items_yet: 'Новостей пока нет.'
+      items:
+        show:
+          back_to_index: "Вернуться к новостям"
+          published: "Опубликована"
+        recent_posts:
+          recent_posts: "Последние публикации"
         index:
-          actions: "Действия"
-          create: "Создать новость"
-          item: "Новости"
-          no_items: "Ничего не найдено."
-          no_items_yet: 'Новостей пока нет.'
-      show:
-        back_to_index: "Вернуться к новостям"
-        published: "Опубликована"
-      recent_posts:
-        recent_posts: "Последние публикации"
-      index:
-        published: "Опубликовано"
-        read_more: "Читать далее"
+          published: "Опубликовано"
+          read_more: "Читать далее"
   activerecord:
     attributes:
       'refinery/news/item':
