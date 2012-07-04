@@ -16,21 +16,33 @@ sk:
             create: "Pridať novinku"
             item: Novinka
             no_items_yet: 'Momentálne nie sú žiadne novinky. Klikni na "Pridať novinku" pre vytvorenie prvej.'
+      shared:
+        items:
+          read_more: Čítaj viac
+          created_at: 'Vytvorené %{when}'
+        archives: Archív
       items:
         show:
           back_to_index: "Návrat na zoznam noviniek"
           published: Zverejnené
+          source: "Zdroj:"
         recent_posts:
           recent_posts: Posledné príspevky
         index:
           published: Zverejnené
           read_more: Čítať viac
           no_items_yet: Neexistujú žiadne záznamy noviniek.
+          source: 'Zdroj:'
+        archive:
+          news_item_archive_for: 'Archív pre %{date}'
+          no_news_item_articles_posted: 'Nenašli sa novinky vyhovujúce dátumu %{date}.'
   activerecord:
     attributes:
       'refinery/news/item':
         title: Názov
         body: Obsah
         publish_date: Dátum zverejnenia
+        expiration_date: Dátum expirácie
+        source: Zdroj
     models:
       'refinery/news/item': Novinka
