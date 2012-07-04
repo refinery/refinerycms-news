@@ -6,26 +6,26 @@ de:
         description: Bietet einen einfachen Newsbereich an
     news:
       admin:
-        item:
-          view_live_html: "Diesen News-Eintrag live anschauen <br/><em>(Öffnet sich in eine neuen Fenster)</em>"
-          edit: "Diesen News-Eintrag editieren"
-          delete: "Diesen News-Eintrag endgültig löschen"
+        items:
+          item:
+            view_live_html: "Diesen News-Eintrag live anschauen <br/><em>(Öffnet sich in eine neuen Fenster)</em>"
+            edit: "Diesen News-Eintrag editieren"
+            delete: "Diesen News-Eintrag endgültig löschen"
+            published: Veröffentlicht
+          index:
+            create: "News-Eintrag hinzufügen"
+            item: News
+            no_items_yet: 'Es sind keine News-Einträge vorhanden. Klick auf "News-Eintrag hinzufügen" um den ersten Eintrag zu machen.'
+      items:
+        show:
+          back_to_index: "Zurück zur Übersicht"
           published: Veröffentlicht
+        recent_posts:
+          recent_posts: Aktuelle Einträge
         index:
-          actions: Actions
-          create: "News-Eintrag hinzufügen"
-          item: News
-          no_items: "Entschuldigung, es wurde nichts gefunden."
-          no_items_yet: 'Es sind keine News-Einträge vorhanden. Klick auf "News-Eintrag hinzufügen" um den ersten Eintrag zu machen.'
-      show:
-        back_to_index: "Zurück zur Übersicht"
-        published: Veröffentlicht
-      recent_posts:
-        recent_posts: Aktuelle Einträge
-      index:
-        published: Veröffentlicht
-        read_more: Weiterlesen
-        no_items_yet: Zur Zeit gibt es keine News.
+          published: Veröffentlicht
+          read_more: Weiterlesen
+          no_items_yet: Zur Zeit gibt es keine News.
   activerecord:
     attributes:
       'refinery/news/item':

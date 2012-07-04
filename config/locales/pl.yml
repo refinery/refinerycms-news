@@ -6,26 +6,26 @@ pl:
         description: Aktualności i wydarzenia
     news:
       admin:
-        item:
-          view_live_html: "Zobacz podgląd <br/><em>(otwiera nowe okno)</em>"
-          edit: "Edytuj wiadomość"
-          delete: "Skasuj wiadomość na zawsze"
+        items:
+          item:
+            view_live_html: "Zobacz podgląd <br/><em>(otwiera nowe okno)</em>"
+            edit: "Edytuj wiadomość"
+            delete: "Skasuj wiadomość na zawsze"
+            published: Opublikowano
+          index:
+            create: "Dodaj nową aktualizację"
+            item: Aktualizacja
+            no_items_yet: 'W bazie nie ma żadnych rezultatów, dodaj nową aktualizację.'
+      items:
+        show:
+          back_to_index: "Powrót do wszystkich aktualności"
           published: Opublikowano
+        recent_posts:
+          recent_posts: Ostatnie aktualności
         index:
-          actions: Akcje
-          create: "Dodaj nową aktualizację"
-          item: Aktualizacja
-          no_items: "Przepraszamy, brak rezultatów."
-          no_items_yet: 'W bazie nie ma żadnych rezultatów, dodaj nową aktualizację.'
-      show:
-        back_to_index: "Powrót do wszystkich aktualności"
-        published: Opublikowano
-      recent_posts:
-        recent_posts: Ostatnie aktualności
-      index:
-        published: Opublikowano
-        read_more: Czytaj więcej
-        no_items_yet: "Przepraszamy, brak rezultatów."
+          published: Opublikowano
+          read_more: Czytaj więcej
+          no_items_yet: "Przepraszamy, brak rezultatów."
   activerecord:
     attributes:
       'refinery/news/item':

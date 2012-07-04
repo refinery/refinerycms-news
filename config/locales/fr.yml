@@ -6,26 +6,26 @@ fr:
         description: 'Fournit une rubrique "Actualités"'
     news:
       admin:
-        item:
-          view_live_html: "Visualiser cette nouvelle <br/><em>(ouvre une nouvelle fenêtre)</em>"
-          edit: "Modifier cette actualité"
-          delete: "Détruire cette actualité à tout jamais"
-          published: Publiée
+        items:
+          item:
+            view_live_html: "Visualiser cette nouvelle <br/><em>(ouvre une nouvelle fenêtre)</em>"
+            edit: "Modifier cette actualité"
+            delete: "Détruire cette actualité à tout jamais"
+            published: Publiée
+          index:
+            create: "Créer une actualité"
+            item: Actualité
+            no_items_yet: 'Aucune actualité. Cliquer sur "Créer une actualité" pour créer votre première actualité.'
+      items:
+        show:
+          back_to_index: "Retour à la liste des actualités"
+          published: Publiée le
+        recent_posts:
+          recent_posts: Dernières actualités
         index:
-          actions: Actions
-          create: "Créer une actualité"
-          item: Actualité
-          no_items: "Désolé, aucun résultat."
-          no_items_yet: 'Aucune actualité. Cliquer sur "Créer une actualité" pour créer votre première actualité.'
-      show:
-        back_to_index: "Retour à la liste des actualités"
-        published: Publiée le
-      recent_posts:
-        recent_posts: Dernières actualités
-      index:
-        published: Publiée le
-        read_more: Plus
-        no_items_yet: Aucune actualité pour le moment.
+          published: Publiée le
+          read_more: Plus
+          no_items_yet: Aucune actualité pour le moment.
   activerecord:
     attributes:
       'refinery/news/item':
