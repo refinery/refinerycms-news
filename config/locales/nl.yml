@@ -16,21 +16,33 @@ nl:
             create: "Maak een nieuw nieuwsbericht"
             item: Nieuws
             no_items_yet: 'Er zijn nog geen nieuwsberichten. Klik op "Maak een nieuw niewsbericht" om het eerste bericht te maken.'
+      shared:
+        items:
+          read_more: Lees meer
+          created_at: 'Aangemaakt op %{when}'
+        archives: Archief
       items:
         show:
           back_to_index: "Terug naar de andere berichten"
           published: Gepubliceerd op
+          source: Bron
         recent_posts:
           recent_posts: Laatste nieuws item
         index:
           published: Gepubliceerd op
           read_more: Lees meer
           no_items_yet: "Sorry, er zijn nog geen nieuwsberichten geplaatst."
+          source: Bron
+        archive:
+          news_item_archive_for: 'Archief voor %{date}'
+          no_news_item_articles_posted: 'Er zijn nog geen nieuwsberichten voor %{date}.'          
   activerecord:
     attributes:
       'refinery/news/item':
         title: Titel
         body: Inhoud
         publish_date: Publiceer datum
+        expiration_date: Verval datum
+        source: Bron
     models:
       'refinery/news/item': Nieuws Item
