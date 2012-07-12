@@ -16,7 +16,7 @@ module Refinery
           5.times { Factory(:news_item, :publish_date => publish_date) }
           5.times { Factory(:news_item, :publish_date => future_date) }
 
-          Refinery::News::Item.by_archive(archive_range).length.should == 5
+          Refinery::News::Item.by_archive(archive_range).count.should == 5
         end
       end
 
@@ -84,12 +84,12 @@ module Refinery
           5.times { Factory(:news_item, :publish_date => Time.now + 1.hour) }
           Refinery::News::Item.latest.count.should == 5
           7.times { Factory(:news_item) }
-          Refinery::News::Item.latest.length.should == 10
+          Refinery::News::Item.latest.count.should == 10
         end
 
         it "returns latest n news items" do
           4.times { Factory(:news_item) }
-          Refinery::News::Item.latest(3).length.should == 3
+          Refinery::News::Item.latest(3).count.should == 3
         end
       end
 
