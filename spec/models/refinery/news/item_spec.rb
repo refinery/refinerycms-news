@@ -7,6 +7,19 @@ module Refinery
       let(:time_now) { Time.now }
       let(:news_item) { Factory(:news_item) }
 
+      describe "#archive" do
+        let(:publish_date) { Time.new(2012,1,15) }
+        let(:future_date) { Time.new(2012,2,15) }
+        let(:archive_range) { Time.parse("01/12") }
+
+        it "should show 5 news items with publish dates in same month" do
+          5.times { Factory(:news_item, :publish_date => publish_date) }
+          5.times { Factory(:news_item, :publish_date => future_date) }
+
+          Refinery::News::Item.by_archive(archive_range).length.should == 5
+        end
+      end
+
       describe "validations" do
         subject do
           news_item = Refinery::News::Item.create! :title => "Refinery CMS",
