@@ -68,7 +68,7 @@ module Refinery
         end
 
         def live
-          not_expired.where( "publish_date <= ?", Time.now)
+          not_expired.where("publish_date <= ?", Time.now)
         end
 
         # rejects any page that has not been translated to the current locale.
