@@ -27,6 +27,17 @@ Then type the following at command line inside your Refinery CMS application's r
     rails generate refinery:news
     rake db:migrate
     rake db:seed
+    
+## How to display a news feed on the homepage:
+
+Assuming you've already overridden the homepage view:
+
+    $ rake refinery:override view=refinery/pages/home
+    
+You can render the `recent_posts` partial. However, you will need to set the recent News items manually, since this is normally handled in the News::Items controller:
+
+    <% @items = Refinery::News::Item.latest(5) %>
+    <%= render :partial => '/refinery/news/items/recent_posts' %>
 
 ## Customising the views
 
