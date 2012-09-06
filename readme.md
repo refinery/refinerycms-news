@@ -19,7 +19,9 @@ Key features:
 
 Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
 
-    gem "refinerycms-news", '~> 2.0.0'
+```ruby
+gem "refinerycms-news", '~> 2.0.0'
+```
 
 Then type the following at command line inside your Refinery CMS application's root directory:
 
@@ -36,8 +38,10 @@ Assuming you've already overridden the homepage view:
     
 You can render the `recent_posts` partial. However, you will need to set the recent News items manually, since this is normally handled in the News::Items controller:
 
-    <% @items = Refinery::News::Item.latest(5) %>
-    <%= render :partial => '/refinery/news/items/recent_posts' %>
+```erb
+<% @items = Refinery::News::Item.latest(5) %>
+<%= render :partial => '/refinery/news/items/recent_posts' %>
+```
 
 ## Customising the views
 
@@ -53,7 +57,9 @@ Type this command at your project root to override the default front end views:
 
 To get RSS for your entire site, insert this into the head section of your layout after installing:
 
-    <%= auto_discovery_link_tag(:rss, refinery.news_items_url(:format => 'rss')) %>
+```erb
+<%= auto_discovery_link_tag(:rss, refinery.news_items_url(:format => 'rss')) %>
+```
     
 ## More Information
 * Check out our [Website](http://refinerycms.com/)
