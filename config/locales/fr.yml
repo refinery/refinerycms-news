@@ -33,6 +33,9 @@ fr:
           read_more: Plus
           no_items_yet: Aucune actualité pour le moment.
           source: Source
+        archive:
+          news_item_archive_for: 'À archiver le %{date}'
+          no_news_item_articles_posted: "Aucune actualité en date du %{date}. Restez à l'écoute !"
   activerecord:
     attributes:
       'refinery/news/item':
