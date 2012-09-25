@@ -16,21 +16,30 @@ fr:
             create: "Créer une actualité"
             item: Actualité
             no_items_yet: 'Aucune actualité. Cliquer sur "Créer une actualité" pour créer votre première actualité.'
+      shared:
+        items:
+          read_more: Lire la suite
+          created_at: 'Créée le %{when}'
+        archives: Archives
       items:
         show:
           back_to_index: "Retour à la liste des actualités"
           published: Publiée le
+          source: Source
         recent_posts:
           recent_posts: Dernières actualités
         index:
           published: Publiée le
           read_more: Plus
           no_items_yet: Aucune actualité pour le moment.
+          source: Source
   activerecord:
     attributes:
       'refinery/news/item':
         title: Titre
         body: Texte
         publish_date: Date de publication
+        expiration_date: Date d'expiration
+        source: Source
     models:
       'refinery/news/item': Nouvelle
