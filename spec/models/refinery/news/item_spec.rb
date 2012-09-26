@@ -8,13 +8,13 @@ module Refinery
       let(:news_item) { Factory(:news_item) }
 
       describe "#archive" do
-        let(:publish_date) { Time.new(2012,1,15) }
-        let(:future_date) { Time.new(2012,2,15) }
+        let(:publish_date) { Time.utc(2012,1,15) }
+        let(:future_date) { Time.utc(2012,2,15) }
         let(:archive_range) { Time.parse("01/12") }
 
         it "should show 5 news items with publish dates in same month" do
           5.times { Factory(:news_item, :publish_date => publish_date) }
-          5.times { Factory(:news_item, :publish_date => future_date) }
+          2.times { Factory(:news_item, :publish_date => future_date) }
 
           Refinery::News::Item.by_archive(archive_range).count.should == 5
         end
