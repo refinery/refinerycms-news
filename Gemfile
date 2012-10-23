@@ -30,9 +30,6 @@ group :development, :test do
   end
 
   platforms :ruby do
-    gem 'spork', '~> 0.9.0.rc'
-    gem 'guard-spork'
-
     unless ENV['TRAVIS']
       require 'rbconfig'
       if RbConfig::CONFIG['target_os'] =~ /darwin/i
