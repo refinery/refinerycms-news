@@ -1,7 +1,7 @@
 Refinery::Core::Engine.routes.draw do
   namespace :news do
     root :to => "items#index"
-    get 'archive/:year(/:month)', :to => 'items#archive', :as => 'items_archive'
+    get 'archive/:year(/:month)', :to => 'items#archive', :as => 'items_archive', :constraints => { :year => /\d{4}/, :month => /\d{1,2}/ }
     resources :items, :only => [:show, :index], :path => ''
   end
 
