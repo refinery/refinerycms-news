@@ -10,7 +10,7 @@ es:
           item:
             view_live_html: "Ver este elemento en tu web <br/><em>(abre una nueva ventana)</em>"
             edit: "Editar esta noticia"
-            delete: "Borrar completament esta noticia"
+            delete: "Borrar completamente esta noticia"
             published: Publicada
           index:
             create: "Crear noticia"
@@ -21,10 +21,10 @@ es:
           back_to_index: "Volver al listado de noticias"
           published: Publicada
         recent_posts:
-          recent_posts: Posts recientes
+          recent_posts: Artículos recientes
         index:
           published: Publicada
-          read_more: Leer mas
+          read_more: Leer más
           no_items_yet: Aún no hay ninguna noticia.
   activerecord:
     attributes:
@@ -33,6 +33,6 @@ es:
         body: Contenido
         content: Contenido
         publish_date: Fecha de publicación
-        expiration_date: Expiration date
+        expiration_date: Fecha de expiración
     models:
       'refinery/news/item': Noticia
