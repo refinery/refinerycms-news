@@ -10,7 +10,7 @@ module Refinery
       describe "#archive" do
         let(:publish_date) { Time.utc(2012,1,15) }
         let(:future_date) { Time.utc(2012,2,15) }
-        let(:archive_range) { Time.parse("01/12") }
+        let(:archive_range) { Time.parse("17/1/2012") }
 
         it "should show 5 news items with publish dates in same month" do
           5.times { Factory(:news_item, :publish_date => publish_date) }
