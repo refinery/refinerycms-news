@@ -16,10 +16,10 @@ module Refinery
       def archive
         if params[:month].present?
           @archive_date = Time.parse("#{params[:month]}/#{params[:year]}")
-          @items = Refinery::News::Item.live.by_archive(@archive_date).page(params[:page])
+          @items = Refinery::News::Item.live.translated.by_archive(@archive_date).page(params[:page])
         else
           @archive_date = Time.parse("01/#{params[:year]}")
-          @items = Refinery::News::Item.live.by_year(@archive_date).page(params[:page])
+          @items = Refinery::News::Item.live.translated.by_year(@archive_date).page(params[:page])
         end
       end
 
