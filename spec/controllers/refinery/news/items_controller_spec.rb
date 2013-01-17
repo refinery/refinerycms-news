@@ -35,7 +35,7 @@ module Refinery
       describe "#archive" do
         context "when month is present" do
           it "assigns archive_date and items" do
-            Refinery::News::Item.stub_chain(:live, :by_archive, :page).and_return(item)
+            Refinery::News::Item.stub_chain(:live, :translated, :by_archive, :page).and_return(item)
             get :archive, :month => 05, :year => 1999
             assigns(:archive_date).should eq(Time.parse("05/1999"))
             assigns(:items).should eq(item)
@@ -44,7 +44,7 @@ module Refinery
 
         context "when month isnt present" do
           it "assigns archive_date and items" do
-            Refinery::News::Item.stub_chain(:live, :by_year, :page).and_return(item)
+            Refinery::News::Item.stub_chain(:live, :translated, :by_year, :page).and_return(item)
             get :archive, :year => 1999
             assigns(:archive_date).should eq(Time.parse("01/1999"))
             assigns(:items).should eq(item)
