@@ -28,6 +28,32 @@ Then type the following at command line inside your Refinery CMS application's r
     rake db:migrate
     rake db:seed
 
+## Configuring the number of items per page
+
+To modify the number of items per page for the news items index without
+affecting the archive page you must override the method in the controller that
+sets `@items` for the index: `find_published_news_items`.
+
+Currently the method body is:
+```ruby
+@items = Item.published.translated.page(params[:page])
+```
+
+The `page` convenience method needs to be replaced with `paginate` and
+`per_page` passed as an option.  Add a decorator for the items controller with
+the following contents:
+
+```ruby
+module Refinery::News
+  ItemsController.class_eval do
+    def find_published_news_items
+      @items = Item.published.translated.paginate :page => params[:page],
+                                                  :per_page => 8
+    end
+  end
+end
+```
+
 ## Customising the views
 
 Type this command at your project root to override the default front end views:
@@ -42,8 +68,10 @@ Type this command at your project root to override the default front end views:
 
 To get RSS for your entire site, insert this into the head section of your layout after installing:
 
-    <%= auto_discovery_link_tag(:rss, refinery.news_items_url(:format => 'rss')) %>
-    
+```erb
+<%= auto_discovery_link_tag(:rss, refinery.news_items_url(:format => 'rss')) %>
+```
+
 ## More Information
 * Check out our [Website](http://refinerycms.com/)
 * Refinery Documentation is available in the [guides](http://refinerycms.com/guides)

@@ -16,25 +16,25 @@ module Refinery
       def archive
         if params[:month].present?
           @archive_date = Time.parse("#{params[:month]}/#{params[:year]}")
-          @items = Refinery::News::Item.live.translated.by_archive(@archive_date).page(params[:page])
+          @items = Item.live.translated.by_archive(@archive_date).page(params[:page])
         else
           @archive_date = Time.parse("01/#{params[:year]}")
-          @items = Refinery::News::Item.live.translated.by_year(@archive_date).page(params[:page])
+          @items = Item.live.translated.by_year(@archive_date).page(params[:page])
         end
       end
 
       protected
 
       def find_latest_news_items
-        @items = Refinery::News::Item.latest.translated
+        @items = Item.latest.translated
       end
 
       def find_published_news_items
-        @items = Refinery::News::Item.published.translated.page(params[:page])
+        @items = Item.published.translated.page(params[:page])
       end
 
       def find_news_item
-        @item = Refinery::News::Item.published.translated.find(params[:id])
+        @item = Item.published.translated.find(params[:id])
       end
 
       def find_page
