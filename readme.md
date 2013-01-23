@@ -62,8 +62,8 @@ the following contents:
 module Refinery::News
   ItemsController.class_eval do
     def find_published_news_items
-      @items = Item.published.translated.paginate page: params[:page],
-                                                  per_page: 8
+      @items = Item.published.translated.paginate :page => params[:page],
+                                                  :per_page => 8
     end
   end
 end
