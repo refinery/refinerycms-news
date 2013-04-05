@@ -4,7 +4,6 @@ Gem::Specification.new do |s|
   s.name              = %q{refinerycms-news}
   s.version           = %q{2.1.0.dev}
   s.description       = %q{A really straightforward open source Ruby on Rails news engine designed for integration with Refinery CMS.}
-  s.date              = "#{Date.today.strftime("%Y-%m-%d")}"
   s.summary           = %q{Ruby on Rails news engine for Refinery CMS.}
   s.email             = %q{info@refinerycms.com}
   s.homepage          = %q{http://refinerycms.com}
@@ -16,5 +15,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency    'refinerycms-core',     '~> 2.1.0.dev'
   s.add_dependency    'refinerycms-settings', '~> 2.1.0.dev'
-  s.add_dependency    'friendly_id',          '~> 4.0.4'
+  s.add_dependency    'friendly_id',          '~> 4.0.9'
 end
