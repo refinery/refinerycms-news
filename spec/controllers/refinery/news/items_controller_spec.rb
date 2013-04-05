@@ -4,13 +4,13 @@ module Refinery
   module News
     describe ItemsController do
       let!(:item) { FactoryGirl.create(:news_item) }
-      let(:page) { Refinery::Page.where(:link_url => "/news").first }
+      let(:refinery_page) { Refinery::Page.where(:link_url => "/news").first }
 
       describe "#index" do
         it "assigns items and page" do
           get :index
           assigns(:items).first.should eq(item)
-          assigns(:page).should eq(page)
+          assigns(:page).should eq(refinery_page)
         end
 
         it "renders 'index' template" do
@@ -23,7 +23,7 @@ module Refinery
         it "assigns item and page" do
           get :show, :id => item.id
           assigns(:item).should eq(item)
-          assigns(:page).should eq(page)
+          assigns(:page).should eq(refinery_page)
         end
 
         it "renders 'show' template" do
@@ -58,7 +58,7 @@ module Refinery
 
         it "assigns page" do
           get :archive, :year => 1999
-          assigns(:page).should eq(page)
+          assigns(:page).should eq(refinery_page)
         end
       end
     end
