@@ -8,7 +8,8 @@
           (locales = item.translations.collect{|t| t.locale}).present? %>
       <span class='preview'>
         <% locales.each do |locale| %>
-          <%= refinery_icon_tag "flags/#{locale}.png", :size => '16x11' %>
+          <%= link_to refinery_icon_tag("flags/#{locale}.png", :size => '16x11'), refinery.edit_news_admin_item_path(item, :switch_locale => locale),
+                      :class => "locale" %>
         <% end %>
       </span>
     <% end %>
