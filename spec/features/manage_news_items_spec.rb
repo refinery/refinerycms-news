@@ -44,7 +44,7 @@ describe "manage news items" do
   end
 
   describe "edit/update" do
-    before(:each) { Factory(:news_item, :title => "Update me") }
+    before { FactoryGirl.create(:news_item, :title => "Update me") }
 
     it "updates news item" do
       visit refinery.news_admin_items_path
@@ -61,7 +61,7 @@ describe "manage news items" do
   end
 
   describe "destroy" do
-    before(:each) { Factory(:news_item, :title => "Delete me") }
+    before { FactoryGirl.create(:news_item, :title => "Delete me") }
 
     it "removes news item" do
       visit refinery.news_admin_items_path
@@ -75,7 +75,7 @@ describe "manage news items" do
   end
 
   context "duplicate news item titles" do
-    before(:each) { Factory(:news_item, :title => "I was here first") }
+    before { FactoryGirl.create(:news_item, :title => "I was here first") }
 
     it "isn't a problem" do
       visit refinery.new_news_admin_item_path

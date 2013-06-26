@@ -1,11 +1,11 @@
 require "spec_helper"
 
 describe "visit news items" do
-  before(:each) do
-    Factory.create(:page, :link_url => "/")
-    Factory.create(:page, :link_url => "/news", :title => "News")
-    @published_news_item = Factory.create(:news_item, :title => "published", :source => "http://refinerycms.com", :publish_date => 1.hour.ago)
-    @unpublished_news_item = Factory.create(:news_item, :title => "unpublished", :publish_date => 1.day.from_now)
+  before do
+    FactoryGirl.create(:page, :link_url => "/")
+    FactoryGirl.create(:page, :link_url => "/news", :title => "News")
+    FactoryGirl.create(:news_item, :title => "unpublished", :publish_date => 1.day.from_now)
+    @published_news_item = FactoryGirl.create(:news_item, :title => "published", :source => "http://refinerycms.com", :publish_date => 1.hour.ago)
   end
 
   it "shows news link in menu" do
