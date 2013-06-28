@@ -1,0 +1,48 @@
+ja:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: 'ニュース'
+        description: '簡単なニュースを投稿出来るプラグイン'
+    news:
+      admin:
+        items:
+          item:
+            view_live_html: 'このニュースを見る<br/><em>(新規ウインドウで開かれます)</em>'
+            edit: 'このニュースを編集'
+            delete: 'このニュースを削除'
+            published: '公開日時'
+          index:
+            create: '新規ニュースを追加'
+            item: 'ニュース'
+            no_items_yet: 'まだニュースが何もありません。「新規ニュースを追加」をクリックしてニュースを追加して下さい。'
+      shared:
+        items:
+          read_more: '続きを読む'
+          created_at: '作成日時：%{when}'
+        archives: 記録
+      items:
+        show:
+          back_to_index: 'ニュース一覧に戻る'
+          published: '公開日時'
+          source: '参照元'
+        recent_posts:
+          recent_posts: '最近のニュース'
+        index:
+          published: '公開日時'
+          read_more: '続きを読む'
+          no_items_yet: 'まだニュースが何もありません。'
+          source: '参照元'
+        archive:
+          news_item_archive_for: '記録日時 %{date}'
+          no_news_item_articles_posted: '%{date}からニュースが追加されていません。'
+  activerecord:
+    attributes:
+      'refinery/news/item':
+        title: '題名'
+        body: '本文'
+        publish_date: '公開日時'
+        expiration_date: '公開終了日時'
+        source: '参照元'
+    models:
+      'refinery/news/item': 'ニュース'
