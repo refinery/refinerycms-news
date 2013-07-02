@@ -15,7 +15,7 @@ it:
           index:
             create: "Crea Notizia"
             item: Notizia
-            no_items_yet: 'Non ci sono ancora notizie. Fare clic su "Crea Notizia" per aggiungere la prima notizie.'
+            no_items_yet: 'Non ci sono ancora notizie. Fare clic su "Crea Notizia" per aggiungere la prima notizia.'
       items:
         show:
           back_to_index: "Torna a tutte le notizie"
