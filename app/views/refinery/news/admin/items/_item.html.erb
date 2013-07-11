@@ -4,7 +4,7 @@
     <span class="preview">
       <%= t('.published') %> <%= l(item.publish_date, :format => :short) %>
     </span>
-    <% if defined?(::Refinery::I18n) and ::Refinery::I18n.frontend_locales.many? and
+    <% if Refinery::I18n.frontend_locales.many? and
           (locales = item.translations.collect{|t| t.locale}).present? %>
       <span class='preview'>
         <% locales.each do |locale| %>
