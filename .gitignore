@@ -2,3 +2,6 @@
 Gemfile.lock
 spec/dummy
 .idea
+
+# Local Gemfile for developing without sharing dependencies
+.gemfile
