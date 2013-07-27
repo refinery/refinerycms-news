@@ -16,16 +16,26 @@ pl:
             create: "Dodaj nową aktualizację"
             item: Aktualizacja
             no_items_yet: 'W bazie nie ma żadnych rezultatów, dodaj nową aktualizację.'
+      shared:
+        items:
+          read_more: Czytaj więcej
+          created_at: 'Utworzono %{when}'
+        archives: Archiwum
       items:
         show:
           back_to_index: "Powrót do wszystkich aktualności"
           published: Opublikowano
+          source: Źródło
         recent_posts:
           recent_posts: Ostatnie aktualności
         index:
           published: Opublikowano
           read_more: Czytaj więcej
           no_items_yet: "Przepraszamy, brak rezultatów."
+          source: Źródło
+        archive:
+          news_item_archive_for: 'Archiwum dla %{date}'
+          no_news_item_articles_posted: 'Nie ma artykułów opublikowanych w %{date}.'
   activerecord:
     attributes:
       'refinery/news/item':
@@ -33,5 +43,6 @@ pl:
         body: Treść
         publish_date: Data opublikowania
         expiration_date: Data wygaśnięcia
+        source: Źródło
     models:
       'refinery/news/item': Aktualnośći
