@@ -2,8 +2,7 @@ source 'http://rubygems.org'
 
 gemspec
 
-gem 'refinerycms', :github => 'refinery/refinerycms'
-gem 'refinerycms-i18n', '~> 2.1.0'
+gem 'refinerycms', '~> 2.1.0'
 gem 'refinerycms-settings', :github => 'refinery/refinerycms-settings'
 gem 'refinerycms-testing', '~> 2.1.0', :group => :test
 
