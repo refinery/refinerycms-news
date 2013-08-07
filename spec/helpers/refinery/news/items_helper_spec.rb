@@ -14,6 +14,20 @@ module Refinery
           helper.news_item_archive_links.should eq(expected)
         end
       end
+
+      describe "#archive_date_format" do
+        context "when date_for_month is true" do
+          it "returns month and year" do
+            expect(helper.archive_date_format(true)).to eq("%B %Y")
+          end
+        end
+
+        context "when date_for_month is nil" do
+          it "returns year" do
+            expect(helper.archive_date_format(nil)).to eq("%Y")
+          end
+        end
+      end
     end
   end
 end

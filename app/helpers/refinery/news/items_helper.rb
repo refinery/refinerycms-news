@@ -30,7 +30,7 @@ module Refinery
 
       def news_item_archive_links
         html = ''
-        item_months = ::Refinery::News::Item.published.group_by {|i| i.publish_date.beginning_of_month}
+        item_months = ::Refinery::News::Item.archived.group_by {|i| i.publish_date.beginning_of_month}
         item_months.each do |month, items|
           if items.present?
             text = "#{t("date.month_names")[month.month]} #{month.year} (#{items.count})"
@@ -38,6 +38,10 @@ module Refinery
           end
         end
         content_tag('ul', raw(html))
+      end
+
+      def archive_date_format(date_for_month)
+        date_for_month ? "%B %Y" : "%Y"
       end
     end
   end

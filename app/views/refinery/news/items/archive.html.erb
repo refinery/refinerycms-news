@@ -1,7 +1,7 @@
-<% content_for :title, "#{t('.news_item_archive_for', :date => l(@archive_date, :format => '%B %Y'))}" %>
+<% content_for :title, "#{t('.news_item_archive_for', :date => l(@archive_date, :format => archive_date_format(@archive_for_month)))}" %>
 
 <% content_for :body do %>
-  <h1><%= t('.news_item_archive_for', :date => l(@archive_date, :format => '%B %Y')) %></h1>
+  <h1><%= t('.news_item_archive_for', :date => l(@archive_date, :format => archive_date_format(@archive_for_month))) %></h1>
   <% if @items.any? %>
     <section id="news_items">
       <%= render :partial => "/refinery/news/shared/item", :collection => @items %>

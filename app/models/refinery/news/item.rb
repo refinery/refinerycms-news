@@ -73,6 +73,10 @@ module Refinery
           not_expired.where("publish_date <= ?", Time.now)
         end
 
+        def archived
+          where("publish_date <= ?", Time.now)
+        end
+
         # rejects any page that has not been translated to the current locale.
         def translated
           includes(:translations).where(
