@@ -99,6 +99,17 @@ module Refinery
           news_item.not_published?.should be_true
         end
       end
+
+      describe ".archived" do
+        it "returns all published/expired news items" do
+          expired = FactoryGirl.create(:news_item, :publish_date => Time.now - 2.months, :expiration_date => Time.now - 1.months)
+          published = FactoryGirl.create(:news_item, :publish_date => Time.now - 1.month)
+          not_published = FactoryGirl.create(:news_item, :publish_date => Time.now + 1.month)
+          expect(Refinery::News::Item.archived).to include(expired)
+          expect(Refinery::News::Item.archived).to include(published)
+          expect(Refinery::News::Item.archived).to_not include(not_published)
+        end
+      end
     end
   end
 end
