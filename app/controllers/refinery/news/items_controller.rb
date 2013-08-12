@@ -15,11 +15,12 @@ module Refinery
 
       def archive
         if params[:month].present?
+          @archive_for_month = true
           @archive_date = Time.parse("#{params[:month]}/#{params[:year]}")
-          @items = Item.live.translated.by_archive(@archive_date).page(params[:page])
+          @items = Item.archived.translated.by_archive(@archive_date).page(params[:page])
         else
           @archive_date = Time.parse("01/#{params[:year]}")
-          @items = Item.live.translated.by_year(@archive_date).page(params[:page])
+          @items = Item.archived.translated.by_year(@archive_date).page(params[:page])
         end
       end
 
