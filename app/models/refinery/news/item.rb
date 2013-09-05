@@ -7,7 +7,7 @@ module Refinery
 
       attr_accessor :locale # to hold temporarily
 
-      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
+      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date, :category
       class Translation
         attr_accessible :locale
       end
@@ -64,8 +64,8 @@ module Refinery
           not_expired.where("publish_date < ?", Time.now)
         end
 
-        def latest(limit = 10)
-          published.limit(limit)
+        def latest(limit = 10, category = 0)
+          published.where("category = ?", category).limit(limit)
         end
 
         def live
