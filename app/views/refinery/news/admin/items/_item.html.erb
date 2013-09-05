@@ -2,7 +2,8 @@
   <span class='title'>
     <%= item.title %>
     <span class="preview">
-      <%= t('.published') %> <%= l(item.publish_date, :format => :short) %>
+      <%= t('.published') %> <%= l(item.publish_date, :format => :short) %>,
+      <%= t('.category') %> <%= item.category %>
     </span>
     <% if defined?(::Refinery::I18n) and ::Refinery::I18n.frontend_locales.many? and
           (locales = item.translations.collect{|t| t.locale}).present? %>

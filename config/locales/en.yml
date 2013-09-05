@@ -12,6 +12,7 @@ en:
             edit: "Edit this news item"
             delete: "Remove this news item forever"
             published: Published
+            category: Category
           index:
             create: "Add News Item"
             item: News
