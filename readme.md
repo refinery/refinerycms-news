@@ -20,7 +20,7 @@ Key features:
 Include the latest [gem](http://rubygems.org/gems/refinerycms-news) into your Refinery CMS application's Gemfile:
 
 ```ruby
-gem "refinerycms-news", '~> 2.0.0'
+gem "refinerycms-news", '~> 2.1.0'
 ```
 
 Then type the following at command line inside your Refinery CMS application's root directory:
