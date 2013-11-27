@@ -7,21 +7,15 @@ class MoveSlugToNewsItemTranslations < ActiveRecord::Migration
     # Add the column
     add_column Refinery::News::Item.translation_class.table_name, :slug, :string
 
-    # Ensure the slug is moved across.
+    # Ensure the slug is translated.
     Refinery::News::Item.reset_column_information
     Refinery::News::Item.find_each do |item|
       item.slug = item.slug
       item.save
     end
-
-    # Remove the column from the news item table
-    remove_column Refinery::News::Item.table_name, :slug
   end
 
   def down
-    # Bring back the column!
-    add_column Refinery::News::Item.table_name, :slug, :string
-
     # Move the slug back to the news item table
     Refinery::News::Item.reset_column_information
     Refinery::News::Item.find_each do |item|
