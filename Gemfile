@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gemspec
 
 gem 'refinerycms', '~> 2.1.0'
-gem 'refinerycms-settings', :github => 'refinery/refinerycms-settings'
 gem 'refinerycms-testing', '~> 2.1.0', :group => :test
 
 # Database Configuration

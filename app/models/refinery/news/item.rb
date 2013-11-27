@@ -5,18 +5,14 @@ module Refinery
     class Item < Refinery::Core::BaseModel
       extend FriendlyId
 
-      translates :title, :body
+      translates :title, :body, :slug
 
-      attr_accessor :locale # to hold temporarily
       attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
-      class Translation
-        attr_accessible :locale
-      end
 
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
-      friendly_id :title, :use => [:slugged]
+      friendly_id :title, :use => [:globalize]
 
       acts_as_indexed :fields => [:title, :body]
 
