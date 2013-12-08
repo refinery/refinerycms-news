@@ -1,9 +1,19 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
 gemspec
 
-gem 'refinerycms', '~> 2.1.0'
-gem 'refinerycms-testing', '~> 2.1.0', :group => :test
+git 'https://github.com/refinery/refinerycms.git', branch: 'master' do
+  gem 'refinerycms-authentication'
+  gem 'refinerycms-dashboard'
+  gem 'refinerycms-pages'
+  gem 'refinerycms-images'
+  gem 'refinerycms-testing', group: :test
+end
+gem 'refinerycms-settings', github: 'refinery/refinerycms-settings', branch: 'master'
+gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: 'master'
+gem 'protected_attributes'
+gem 'globalize', github: 'globalize/globalize', branch: 'master'
+gem 'seo_meta', github: 'parndt/seo_meta', branch: 'master'
 
 # Database Configuration
 unless ENV['TRAVIS']
@@ -21,8 +31,6 @@ if !ENV['TRAVIS'] || ENV['DB'] == 'postgresql'
   gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
   gem 'pg', :platform => :ruby
 end
-
-gem 'jruby-openssl', :platform => :jruby
 
 # Refinery/rails should pull in the proper versions of these
 group :assets do

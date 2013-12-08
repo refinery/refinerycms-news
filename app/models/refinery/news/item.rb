@@ -1,4 +1,5 @@
 require 'acts_as_indexed'
+require 'globalize'
 
 module Refinery
   module News
@@ -6,6 +7,11 @@ module Refinery
       extend FriendlyId
 
       translates :title, :body, :slug
+
+      before_save do |m|
+        m.translation.globalized_model = self
+        m.translation.save if m.translation.new_record?
+      end
 
       attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
 
@@ -16,7 +22,7 @@ module Refinery
 
       acts_as_indexed :fields => [:title, :body]
 
-      default_scope :order => "publish_date DESC"
+      default_scope proc { order "publish_date DESC" }
 
       def not_published? # has the published date not yet arrived?
         publish_date > Time.now
