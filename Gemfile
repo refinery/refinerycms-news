@@ -43,3 +43,5 @@ end
 if File.exist? local_gemfile = File.expand_path('../.gemfile', __FILE__)
   eval File.read(local_gemfile)
 end
+
+gem 'mime-types', '= 1.25.1'

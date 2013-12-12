@@ -7,10 +7,8 @@ module Refinery
       extend FriendlyId
 
       translates :title, :body, :slug
-
-      before_save do |m|
-        m.translation.globalized_model = self
-        m.translation.save if m.translation.new_record?
+      class Translation
+        attr_accessible :locale
       end
 
       attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
