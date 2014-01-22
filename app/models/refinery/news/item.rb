@@ -13,8 +13,6 @@ module Refinery
         m.translation.save if m.translation.new_record?
       end
 
-      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
-
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
