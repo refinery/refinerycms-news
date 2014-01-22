@@ -83,7 +83,7 @@ module Refinery
             translation_class.arel_table[:locale].eq(::Globalize.locale)
           ).where(
             arel_table[:id].eq(translation_class.arel_table[:refinery_news_item_id])
-          )
+          ).references(:translations)
         end
 
         def teasers_enabled?
