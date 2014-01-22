@@ -2,18 +2,16 @@ source "http://rubygems.org"
 
 gemspec
 
-git 'https://github.com/refinery/refinerycms.git', branch: 'master' do
-  gem 'refinerycms-authentication'
-  gem 'refinerycms-dashboard'
-  gem 'refinerycms-pages'
-  gem 'refinerycms-images'
-  gem 'refinerycms-testing', group: :test
-end
-gem 'refinerycms-settings', github: 'refinery/refinerycms-settings', branch: 'master'
-gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: 'master'
+gem 'refinerycms', github: 'refinery/refinerycms'
+gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n'
+gem 'refinerycms-settings', github: 'refinery/refinerycms-settings'
 
-gem 'globalize', github: 'globalize/globalize', branch: 'master'
-gem 'seo_meta', github: 'parndt/seo_meta', branch: 'master'
+gem "mime-types", "~> 1.25"
+
+group :test do
+  gem 'refinerycms-testing', github: 'refinery/refinerycms'
+  gem 'poltergeist'
+end
 
 # Database Configuration
 unless ENV['TRAVIS']
@@ -36,7 +34,6 @@ end
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'uglifier'
 end
 
 # Load local gems according to Refinery developer preference.
