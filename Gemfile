@@ -11,7 +11,7 @@ git 'https://github.com/refinery/refinerycms.git', branch: 'master' do
 end
 gem 'refinerycms-settings', github: 'refinery/refinerycms-settings', branch: 'master'
 gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n', branch: 'master'
-gem 'protected_attributes'
+
 gem 'globalize', github: 'globalize/globalize', branch: 'master'
 gem 'seo_meta', github: 'parndt/seo_meta', branch: 'master'
 

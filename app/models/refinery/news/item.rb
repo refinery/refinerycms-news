@@ -8,17 +8,15 @@ module Refinery
 
       translates :title, :body, :slug
 
-      before_save do |m|
+      after_save do |m|
         m.translation.globalized_model = self
         m.translation.save if m.translation.new_record?
       end
 
-      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
-
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
-      friendly_id :title, :use => [:globalize]
+      friendly_id :title, :use => [:slugged, :globalize]
 
       acts_as_indexed :fields => [:title, :body]
 
