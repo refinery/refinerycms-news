@@ -1,9 +1,17 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
 gemspec
 
-gem 'refinerycms', '~> 2.1.0'
-gem 'refinerycms-testing', '~> 2.1.0', :group => :test
+gem 'refinerycms', github: 'refinery/refinerycms'
+gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n'
+gem 'refinerycms-settings', github: 'refinery/refinerycms-settings'
+
+gem "mime-types", "~> 1.25"
+
+group :test do
+  gem 'refinerycms-testing', github: 'refinery/refinerycms'
+  gem 'poltergeist'
+end
 
 # Database Configuration
 unless ENV['TRAVIS']
@@ -22,13 +30,10 @@ if !ENV['TRAVIS'] || ENV['DB'] == 'postgresql'
   gem 'pg', :platform => :ruby
 end
 
-gem 'jruby-openssl', :platform => :jruby
-
 # Refinery/rails should pull in the proper versions of these
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
-  gem 'uglifier'
 end
 
 # Load local gems according to Refinery developer preference.

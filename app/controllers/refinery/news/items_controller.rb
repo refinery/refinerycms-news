@@ -35,7 +35,7 @@ module Refinery
       end
 
       def find_news_item
-        @item = Item.published.translated.find(params[:id])
+        @item = Item.published.translated.friendly.find(params[:id])
       end
 
       def find_page

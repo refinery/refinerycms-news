@@ -1,4 +1,5 @@
 require 'acts_as_indexed'
+require 'globalize'
 
 module Refinery
   module News
@@ -7,16 +8,19 @@ module Refinery
 
       translates :title, :body, :slug
 
-      attr_accessible :title, :body, :content, :source, :publish_date, :expiration_date
+      after_save do |m|
+        m.translation.globalized_model = self
+        m.translation.save if m.translation.new_record?
+      end
 
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
-      friendly_id :title, :use => [:globalize]
+      friendly_id :title, :use => [:slugged, :globalize]
 
       acts_as_indexed :fields => [:title, :body]
 
-      default_scope :order => "publish_date DESC"
+      default_scope proc { order "publish_date DESC" }
 
       def not_published? # has the published date not yet arrived?
         publish_date > Time.now
@@ -79,7 +83,7 @@ module Refinery
             translation_class.arel_table[:locale].eq(::Globalize.locale)
           ).where(
             arel_table[:id].eq(translation_class.arel_table[:refinery_news_item_id])
-          )
+          ).references(:translations)
         end
 
         def teasers_enabled?
