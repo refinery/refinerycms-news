@@ -8,11 +8,6 @@ module Refinery
 
       translates :title, :body, :slug
 
-      after_save do |m|
-        m.translation.globalized_model = self
-        m.translation.save if m.translation.new_record?
-      end
-
       alias_attribute :content, :body
       validates :title, :content, :publish_date, :presence => true
 
