@@ -9,13 +9,19 @@ module Refinery
       translates :title, :body, :slug
 
       alias_attribute :content, :body
-      validates :title, :content, :publish_date, :presence => true
 
-      friendly_id :title, :use => [:slugged, :globalize]
+      validates :title, :content, :publish_date, :presence => true
 
       acts_as_indexed :fields => [:title, :body]
 
       default_scope proc { order "publish_date DESC" }
+
+      friendly_id :title, :use => [:slugged, :globalize]
+
+      # If title changes tell friendly_id to regenerate slug when saving record
+      def should_generate_new_friendly_id?
+        title_changed?
+      end
 
       def not_published? # has the published date not yet arrived?
         publish_date > Time.now

@@ -110,6 +110,19 @@ module Refinery
           expect(Refinery::News::Item.archived).to_not include(not_published)
         end
       end
+
+      describe "#should_generate_new_friendly_id?" do
+        context "when title changes" do
+          it "regenerates slug upon save" do
+            news_item = FactoryGirl.create(:news_item, :title => "Test Title")
+
+            news_item.title = "Test Title 2"
+            news_item.save!
+
+            expect(news_item.slug).to eq("test-title-2")
+          end
+        end
+      end
     end
   end
 end
