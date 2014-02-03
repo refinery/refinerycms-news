@@ -20,11 +20,6 @@ notifications:
 env:
   - DB=postgresql
   - DB=mysql
-matrix:
-  allow_failures:
-    - rvm: rbx-19mode
 rvm:
+  - 2.1.0
   - 2.0.0
-  - 1.9.3
-  - rbx-19mode
-  - jruby-19mode
