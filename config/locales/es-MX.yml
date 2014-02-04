@@ -7,7 +7,7 @@ es-MX:
       admin:
         items:
           item:
-            view_live: "View this news item live <br/><em>(opens in a new window)</em>"
+            view_live_html: "View this news item live <br/><em>(opens in a new window)</em>"
             edit: "Modificar esta noticia"
             delete: "Eliminar esta noticia"
           index:
@@ -18,12 +18,12 @@ es-MX:
         show:
           back_to_index: "Regresar a noticias"
           published: Publicada
-          no_items: "Lo sentimos, aun no ha publicado noticias."
         recent_posts:
           recent_posts: Publicaciones recientes
         index:
           published: Publicada
           read_more: Leer mas
+          no_items_yet: "Lo sentimos, aun no ha publicado noticias."
   activerecord:
     attributes:
       'refinery/news/item':

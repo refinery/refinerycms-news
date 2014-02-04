@@ -17,7 +17,7 @@ pt-BR:
             item: Notícia
             no_items_yet: 'Não há notícias cadastradas. Clique em "Criar Notícia" para cadastrar sua primeira notícia.'
       shared:
-        items: 
+        items:
           created_at: 'Criado em %{when}'
         archives: Arquivos
       items:
@@ -34,7 +34,7 @@ pt-BR:
           source: Fonte
         archive:
           news_item_archive_for: 'Arquivo do dia: %{date}'
-          no_news_articles_posted: 'Não existe nenhuma notícia postada em %{date}.'
+          no_news_item_articles_posted: 'Não existe nenhuma notícia postada em %{date}.'
   activerecord:
     attributes:
       'refinery/news/item':

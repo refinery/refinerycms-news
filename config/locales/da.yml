@@ -8,16 +8,16 @@ da:
       admin:
         items:
           item:
-            view_live_html: "Vis nyheden live <br /><em>(åbner i et nyt vindue)</em>" 
+            view_live_html: "Vis nyheden live <br /><em>(åbner i et nyt vindue)</em>"
             edit: "Redigér nyheden"
             delete: "Slet nyheden permanent"
             published: Offentliggjort
           index:
             create: "Tilføj nyhed"
             item: Nyheder
-            no_items_yet: 'Der er ingen nyheder endnu. Klik "Tilføj nyhed" for at oprette den første.' 
+            no_items_yet: 'Der er ingen nyheder endnu. Klik "Tilføj nyhed" for at oprette den første.'
       shared:
-        items: 
+        items:
           created_at: 'Oprettet %{when}'
         archives: Arkiver
       items:
@@ -34,7 +34,7 @@ da:
           source: Kilde
         archive:
           news_item_archive_for: 'Arkiv for %{date}'
-          no_news_articles_posted: 'Der er ingen nyhedsartikler oprettet for %{date}.'
+          no_news_item_articles_posted: 'Der er ingen nyhedsartikler oprettet for %{date}.'
   activerecord:
     attributes:
       'refinery/news/item':

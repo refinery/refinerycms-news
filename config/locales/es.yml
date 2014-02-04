@@ -31,7 +31,6 @@ es:
       'refinery/news/item':
         title: Título
         body: Contenido
-        content: Contenido
         publish_date: Fecha de publicación
         expiration_date: Fecha de expiración
     models:
