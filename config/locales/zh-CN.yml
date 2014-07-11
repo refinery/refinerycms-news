@@ -16,10 +16,16 @@ zh-CN:
             create: "添加一条新闻"
             item: 新闻
             no_items_yet: '目前没有新闻. 点击 "添加新闻" 来添加你的第一条新闻.'
+      shared:
+        items:
+          read_more: 阅读更多
+          created_at: '创建于%{when}'
+        archives: 归档
       items:
         show:
           back_to_index: "返回所有新闻"
           published: 已发布
+          source: 来源
         recent_posts:
           recent_posts: 最近新闻
         index:
