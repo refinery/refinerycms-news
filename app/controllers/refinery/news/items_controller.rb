@@ -39,7 +39,7 @@ module Refinery
       end
 
       def find_page
-        @page = ::Refinery::Page.all.where(link_url: '/teachings/dammapada-reflections').first if defined?(::Refinery::Page)
+        @page = ::Refinery::Page.all.where(link_url: '/teachings/dhammapada-reflections').first if defined?(::Refinery::Page)
       end
 
     end
