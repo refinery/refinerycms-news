@@ -1,12 +1,12 @@
 require "spec_helper"
 
-describe "manage news items" do
+describe "manage news items", :type => :feature do
   refinery_login_with :refinery_user
 
   context "when no news items" do
     it "invites to create one" do
       visit refinery.news_admin_items_path
-      page.should have_content("There are no news items yet. Click \"Add News Item\" to add your first news item.")
+      expect(page).to have_content("There are no news items yet. Click \"Add News Item\" to add your first news item.")
     end
   end
 
@@ -15,8 +15,8 @@ describe "manage news items" do
       visit refinery.news_admin_items_path
 
       within "#actions" do
-        page.should have_content("Add News Item")
-        page.should have_selector("a[href='/#{Refinery::Core.backend_route}/news/items/new']")
+        expect(page).to have_content("Add News Item")
+        expect(page).to have_selector("a[href='/#{Refinery::Core.backend_route}/news/items/new']")
       end
     end
   end
@@ -32,14 +32,14 @@ describe "manage news items" do
       fill_in "Source", :with => "http://refinerycms.com"
       click_button "Save"
 
-      page.should have_content("'My first news item' was successfully added.")
-      page.body.should =~ /Remove this news item forever/
-      page.body.should =~ /Edit this news item/
-      page.body.should =~ %r{/#{Refinery::Core.backend_route}/news/items/my-first-news-item/edit}
-      page.body.should =~ /View this news item live/
-      page.body.should =~ %r{/news/items/my-first-news-item}
+      expect(page).to have_content("'My first news item' was successfully added.")
+      expect(page.body).to match(/Remove this news item forever/)
+      expect(page.body).to match(/Edit this news item/)
+      expect(page.body).to match(%r{/#{Refinery::Core.backend_route}/news/items/my-first-news-item/edit})
+      expect(page.body).to match(/View this news item live/)
+      expect(page.body).to match(%r{/news/items/my-first-news-item})
 
-      Refinery::News::Item.count.should == 1
+      expect(Refinery::News::Item.count).to eq(1)
     end
   end
 
@@ -49,14 +49,14 @@ describe "manage news items" do
     it "updates news item" do
       visit refinery.news_admin_items_path
 
-      page.should have_content("Update me")
+      expect(page).to have_content("Update me")
 
       click_link "Edit this news item"
 
       fill_in "Title", :with => "Updated"
       click_button "Save"
 
-      page.should have_content("'Updated' was successfully updated.")
+      expect(page).to have_content("'Updated' was successfully updated.")
     end
   end
 
@@ -68,9 +68,9 @@ describe "manage news items" do
 
       click_link "Remove this news item forever"
 
-      page.should have_content("'Delete me' was successfully removed.")
+      expect(page).to have_content("'Delete me' was successfully removed.")
 
-      Refinery::News::Item.count.should == 0
+      expect(Refinery::News::Item.count).to eq(0)
     end
   end
 
@@ -84,7 +84,7 @@ describe "manage news items" do
       fill_in "Body", :with => "Doesn't matter"
       click_button "Save"
 
-      Refinery::News::Item.count.should == 2
+      expect(Refinery::News::Item.count).to eq(2)
     end
   end
 end

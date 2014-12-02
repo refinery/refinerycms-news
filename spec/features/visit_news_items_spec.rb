@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "visit news items" do
+describe "visit news items", :type => :feature do
   before do
     FactoryGirl.create(:page, :link_url => "/")
     FactoryGirl.create(:page, :link_url => "/news", :title => "News")
@@ -12,24 +12,24 @@ describe "visit news items" do
     visit "/"
 
     within "#menu" do
-      page.should have_content("News")
-      page.should have_selector("a[href='/news']")
+      expect(page).to have_content("News")
+      expect(page).to have_selector("a[href='/news']")
     end
   end
 
   it "shows news item" do
     visit refinery.news_items_path
 
-    page.should have_content("published")
-    page.should have_selector("a[href='/news/published']")
+    expect(page).to have_content("published")
+    expect(page).to have_selector("a[href='/news/published']")
 
-    page.should have_no_content("unpublished")
-    page.should have_no_selector("a[href='/news/unpublished']")
+    expect(page).to have_no_content("unpublished")
+    expect(page).to have_no_selector("a[href='/news/unpublished']")
   end
 
   it "has a source on the news item" do
     visit refinery.news_item_path(@published_news_item)
 
-    page.should have_content("Source http://refinerycms.com")
+    expect(page).to have_content("Source http://refinerycms.com")
   end
 end

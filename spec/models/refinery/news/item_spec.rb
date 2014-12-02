@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Refinery
   module News
-    describe Item do
+    describe Item, :type => :model do
 
       let(:time_now) { Time.now }
       let(:news_item) { FactoryGirl.create(:news_item) }
@@ -16,7 +16,7 @@ module Refinery
           5.times { FactoryGirl.create(:news_item, :publish_date => publish_date) }
           2.times { FactoryGirl.create(:news_item, :publish_date => future_date) }
 
-          Refinery::News::Item.by_archive(archive_range).count.should == 5
+          expect(Refinery::News::Item.by_archive(archive_range).count).to eq(5)
         end
       end
 
@@ -28,16 +28,36 @@ module Refinery
           news_item
         end
 
-        it { should be_valid }
-        its(:errors) { should be_empty }
-        its(:title) { should == "Refinery CMS" }
-        its(:content) { should == "Some random text ..." }
-        its(:publish_date) { should == time_now }
+        it { is_expected.to be_valid }
+
+        describe '#errors' do
+          subject { super().errors }
+          it { is_expected.to be_empty }
+        end
+
+        describe '#title' do
+          subject { super().title }
+          it { is_expected.to eq("Refinery CMS") }
+        end
+
+        describe '#content' do
+          subject { super().content }
+          it { is_expected.to eq("Some random text ...") }
+        end
+
+        describe '#publish_date' do
+          subject { super().publish_date }
+          it { is_expected.to eq(time_now) }
+        end
       end
 
       describe "attribute aliasing" do
         subject { news_item }
-        its(:content) { should == news_item.body }
+
+        describe '#content' do
+          subject { super().content }
+          it { is_expected.to eq(news_item.body) }
+        end
       end
 
       describe "default scope" do
@@ -45,8 +65,8 @@ module Refinery
           news_item1 = FactoryGirl.create(:news_item, :publish_date => 1.hour.ago)
           news_item2 = FactoryGirl.create(:news_item, :publish_date => 2.hours.ago)
           news_items = Refinery::News::Item.all
-          news_items.first.should == news_item1
-          news_items.second.should == news_item2
+          expect(news_items.first).to eq(news_item1)
+          expect(news_items.second).to eq(news_item2)
         end
       end
 
@@ -54,19 +74,19 @@ module Refinery
         let!(:news_item) { FactoryGirl.create(:news_item) }
 
         specify "expiration date not set" do
-          Refinery::News::Item.not_expired.count.should == 1
+          expect(Refinery::News::Item.not_expired.count).to eq(1)
         end
 
         specify "expiration date set in future" do
           news_item.expiration_date = Time.now + 1.hour
           news_item.save!
-          Refinery::News::Item.not_expired.count.should == 1
+          expect(Refinery::News::Item.not_expired.count).to eq(1)
         end
 
         specify "expiration date in past" do
           news_item.expiration_date = Time.now - 1.hour
           news_item.save!
-          Refinery::News::Item.not_expired.count.should == 0
+          expect(Refinery::News::Item.not_expired.count).to eq(0)
         end
       end
 
@@ -74,7 +94,7 @@ module Refinery
         it "returns only published news items" do
           FactoryGirl.create(:news_item)
           FactoryGirl.create(:news_item, :publish_date => Time.now + 1.hour)
-          Refinery::News::Item.published.count.should == 1
+          expect(Refinery::News::Item.published.count).to eq(1)
         end
       end
 
@@ -82,21 +102,21 @@ module Refinery
         it "returns 10 latest news items by default" do
           5.times { FactoryGirl.create(:news_item) }
           5.times { FactoryGirl.create(:news_item, :publish_date => Time.now + 1.hour) }
-          Refinery::News::Item.latest.count.should == 5
+          expect(Refinery::News::Item.latest.count).to eq(5)
           7.times { FactoryGirl.create(:news_item) }
-          Refinery::News::Item.latest.count.should == 10
+          expect(Refinery::News::Item.latest.count).to eq(10)
         end
 
         it "returns latest n news items" do
           4.times { FactoryGirl.create(:news_item) }
-          Refinery::News::Item.latest(3).count.should == 3
+          expect(Refinery::News::Item.latest(3).count).to eq(3)
         end
       end
 
       describe ".not_published?" do
         it "returns not published news items" do
           news_item = FactoryGirl.create(:news_item, :publish_date => Time.now + 1.hour)
-          news_item.not_published?.should be_true
+          expect(news_item.not_published?).to be_truthy
         end
       end
 
