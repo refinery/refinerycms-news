@@ -7,7 +7,7 @@ Refinery::Core::Engine.routes.draw do
 
   namespace :news, :path => '' do
     namespace :admin, :path => Refinery::Core.backend_route do
-      scope :path => 'news' do
+      scope :path => 'reflections' do
         root :to => "items#index"
         resources :items, :except => :show
       end
