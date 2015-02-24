@@ -19,8 +19,8 @@ zh-CN:
       shared:
         items:
           read_more: 阅读更多
-          created_at: '创建于%{when}'
-        archives: 归档
+          created_at: '%{when}发表'
+        archives: 存档
       items:
         show:
           back_to_index: "返回所有新闻"

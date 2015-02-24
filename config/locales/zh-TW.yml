@@ -15,7 +15,12 @@ zh-TW:
           index:
             create: "新增新聞"
             item: 新聞
-            no_items_yet: '目前沒有新聞. 點選 "新增新聞" 來新增你的第一條新聞.'
+            no_items_yet: '目前沒有新聞. 點選 "新增新聞" 來新增你的第一條新聞 .'
+      shared:
+        items:
+          read_more: 閱讀更多
+          created_at: '%{when}發表'
+        archives: 存檔
       items:
         show:
           back_to_index: "回到新聞清單"

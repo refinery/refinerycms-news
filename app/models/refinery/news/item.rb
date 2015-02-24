@@ -12,6 +12,8 @@ module Refinery
 
       validates :title, :content, :publish_date, :presence => true
 
+      validates :source, length: {maximum: 255}, allow_blank: true
+
       acts_as_indexed :fields => [:title, :body]
 
       default_scope proc { order "publish_date DESC" }
