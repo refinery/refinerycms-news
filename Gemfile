@@ -1,16 +1,19 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 gemspec
 
-gem 'refinerycms', github: 'refinery/refinerycms'
-gem 'refinerycms-i18n', github: 'refinery/refinerycms-i18n'
-gem 'refinerycms-settings', github: 'refinery/refinerycms-settings'
+git "https://github.com/refinery/refinerycms", branch: "master" do
+  gem 'refinerycms'
 
-gem "mime-types", "~> 1.25"
+  group :development, :test do
+    gem 'refinerycms-testing'
+  end
+end
 
 group :test do
-  gem 'refinerycms-testing', github: 'refinery/refinerycms'
-  gem 'poltergeist'
+  gem 'pry'
+  gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 # Database Configuration

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 module Refinery
   module News
-    describe ItemsHelper do
+    describe ItemsHelper, :type => :helper do
       describe '#news_item_archive_links' do
         before do
           2.times { FactoryGirl.create(:news_item, :publish_date => Time.utc(2012, 05)) }
@@ -11,7 +11,7 @@ module Refinery
 
         it 'returns list of links to archives' do
           expected = '<ul><li><a href="/news/archive/2012/5">May 2012 (2)</a></li><li><a href="/news/archive/2012/4">April 2012 (3)</a></li></ul>'
-          helper.news_item_archive_links.should eq(expected)
+          expect(helper.news_item_archive_links).to eq(expected)
         end
       end
 
