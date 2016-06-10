@@ -16,7 +16,7 @@ if defined?(::Refinery::Page)
     )
 
     ::Refinery::Pages.default_parts.each do |default_page_part|
-      page.parts.create(title: default_page_part[:title], slug: default_page_part[:slig], body: nil)
+      page.parts.create(title: default_page_part[:title], slug: default_page_part[:slug], body: nil)
     end
   end
 end
