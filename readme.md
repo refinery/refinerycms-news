@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/refinery/refinerycms-news.svg?branch=master)](https://travis-ci.org/refinery/refinerycms-news)
 
-![Refinery News](http://refinerycms.com/system/images/0000/0876/news.png)
-
 ## About
 
 __Refinery's news engine allows you to post updates to the news section of your website.__
