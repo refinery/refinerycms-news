@@ -2,12 +2,10 @@ source "https://rubygems.org"
 
 gemspec
 
-git "https://github.com/refinery/refinerycms", branch: "master" do
-  gem 'refinerycms'
+gem 'refinerycms', '~> 4.0.3'
 
-  group :development, :test do
-    gem 'refinerycms-testing'
-  end
+group :development, :test do
+  gem 'refinerycms-testing', '~> 4.0.3'
 end
 
 group :test do
@@ -40,6 +38,6 @@ group :assets do
 end
 
 # Load local gems according to Refinery developer preference.
-if File.exist? local_gemfile = File.expand_path('../.gemfile', __FILE__)
-  eval File.read(local_gemfile)
+if File.exist?(local_gemfile = File.expand_path('../.gemfile', __FILE__))
+  eval_gemfile local_gemfile
 end
