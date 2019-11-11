@@ -15,6 +15,12 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+# Add support for refinerycms-acts-as-indexed
+gem 'refinerycms-acts-as-indexed', ['~> 3.0', '>= 3.0.0']
+
+# Add the default visual editor, for now.
+gem 'refinerycms-wymeditor', ['~> 2.2', '>= 2.2.0']
+
 # Database Configuration
 unless ENV['TRAVIS']
   gem 'activerecord-jdbcsqlite3-adapter', :platform => :jruby
