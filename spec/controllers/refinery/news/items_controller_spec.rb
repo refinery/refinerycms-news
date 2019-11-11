@@ -3,7 +3,7 @@ require "spec_helper"
 module Refinery
   module News
     describe ItemsController, :type => :controller do
-      let!(:item) { FactoryGirl.create(:news_item) }
+      let!(:item) { FactoryBot.create(:news_item) }
       let(:refinery_page) { Refinery::Page.where(:link_url => "/news").first }
 
       describe "#index" do
