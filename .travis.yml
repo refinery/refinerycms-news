@@ -5,23 +5,15 @@ bundler_args: --without development
 before_script: "bin/rake refinery:testing:dummy_app"
 script: "bin/rspec spec"
 notifications:
-  email: true
   irc:
     use_notice: true
     skip_join: true
     channels:
       - "irc.freenode.org#refinerycms"
-  campfire:
-    on_success: always
-    on_failure: always
-    rooms:
-      - secure: "JaX+Ckvdd2wqL2bD6t8PHvMDBHxWBlCrkBKPcDKxV0t0DOwzzzwxMryVqcRi\nPsmM/zvmWFATDyRmivhNOpu4lRg9RytSroxZ9nkmbLDqjCyEAZ6tv4yZXME/\nPaxPwmfwgS9g8TKjj3lSWS7rEpqqg0D5S0XIfIHrj6KB6LUmFHc="
   webhooks:
     - https://webhooks.gitter.im/e/b5d48907cdc89864b874
 env:
   - DB=postgresql
   - DB=mysql
 rvm:
-  - 2.2
-  - 2.1
-  - 2.0.0
+  - 2.6
