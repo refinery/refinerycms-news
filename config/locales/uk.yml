@@ -1,0 +1,48 @@
+uk:
+  refinery:
+    plugins:
+      refinerycms_news:
+        title: Новини
+        description: Надає просту секцію новин
+    news:
+      admin:
+        items:
+          item:
+            view_live_html: "Проглядати цю новину наживо <br/><em>(відкриється у новому вікні)</em>"
+            edit: "Редагувати цю новину"
+            delete: "Видалити цю новину назавжди"
+            published: Опубліковано
+          index:
+            create: "Додати новину"
+            item: Новина
+            no_items_yet: 'Новин ще немає. Натисніть "Додати новину" що додати свою першу новину.'
+      shared:
+        items:
+          read_more: Читати повністю
+          created_at: 'Створено %{when}'
+        archives: Архіви
+      items:
+        show:
+          back_to_index: "Назад до всіх новин"
+          published: Опубліковано
+          source: Джерело
+        recent_posts:
+          recent_posts: Останні повідомлення
+        index:
+          published: Опубліковано
+          read_more: Читати повністю
+          no_items_yet: Новин ще немає.
+          source: Джерело
+        archive:
+          news_item_archive_for: 'Архів за %{date}'
+          no_news_item_articles_posted: 'Жодної новини не опубліковано %{date}. Залишайтеся на зв’язку'
+  activerecord:
+    attributes:
+      'refinery/news/item':
+        title: Назва новини
+        body: Новина
+        publish_date: Дата публікації
+        expiration_date: Термін придатності
+        source: Джерело
+    models:
+      'refinery/news/item': Новина
