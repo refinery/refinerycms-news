@@ -1,6 +1,10 @@
 language: ruby
 cache: bundler
 sudo: false
+addons:
+  postgresql: '10'
+services:
+  - mysql
 bundler_args: --without development
 before_script: "bin/rake refinery:testing:dummy_app"
 script: "bin/rspec spec"
