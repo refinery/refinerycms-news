@@ -4,8 +4,8 @@ module Refinery
   module News
     describe Item, :type => :model do
 
-      let(:time_now) { Time.now }
       let(:news_item) { FactoryBot.create(:news_item) }
+      let(:publish_date) { Date.current }
 
       describe "#archive" do
         let(:publish_date) { Time.utc(2012,1,15) }
@@ -22,10 +22,11 @@ module Refinery
 
       describe "validations" do
         subject do
-          news_item = Refinery::News::Item.create! :title => "Refinery CMS",
-                                                 :content => "Some random text ...",
-                                                 :publish_date => time_now
-          news_item
+          Refinery::News::Item.create!(
+            content: 'Some random text ...',
+            publish_date: publish_date,
+            title: 'Refinery CMS'
+          )
         end
 
         it { is_expected.to be_valid }
@@ -47,7 +48,7 @@ module Refinery
 
         describe '#publish_date' do
           subject { super().publish_date }
-          it { is_expected.to eq(time_now) }
+          it { is_expected.to eq(publish_date) }
         end
       end
 
