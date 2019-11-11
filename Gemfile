@@ -6,6 +6,7 @@ gem 'refinerycms', '~> 4.0.3'
 
 group :development, :test do
   gem 'refinerycms-testing', '~> 4.0.3'
+  gem 'listen'
 end
 
 group :test do
