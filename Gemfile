@@ -2,12 +2,11 @@ source "https://rubygems.org"
 
 gemspec
 
-git "https://github.com/refinery/refinerycms", branch: "master" do
-  gem 'refinerycms'
+gem 'refinerycms', '~> 4.0.3'
 
-  group :development, :test do
-    gem 'refinerycms-testing'
-  end
+group :development, :test do
+  gem 'refinerycms-testing', '~> 4.0.3'
+  gem 'listen'
 end
 
 group :test do
@@ -15,6 +14,12 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+# Add support for refinerycms-acts-as-indexed
+gem 'refinerycms-acts-as-indexed', ['~> 3.0', '>= 3.0.0']
+
+# Add the default visual editor, for now.
+gem 'refinerycms-wymeditor', ['~> 2.2', '>= 2.2.0']
 
 # Database Configuration
 unless ENV['TRAVIS']
@@ -40,6 +45,6 @@ group :assets do
 end
 
 # Load local gems according to Refinery developer preference.
-if File.exist? local_gemfile = File.expand_path('../.gemfile', __FILE__)
-  eval File.read(local_gemfile)
+if File.exist?(local_gemfile = File.expand_path('../.gemfile', __FILE__))
+  eval_gemfile local_gemfile
 end

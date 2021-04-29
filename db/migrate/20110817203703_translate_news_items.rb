@@ -1,4 +1,4 @@
-class TranslateNewsItems < ActiveRecord::Migration
+class TranslateNewsItems < ActiveRecord::Migration[4.2]
 
   def up
     ::Refinery::News::Item.reset_column_information

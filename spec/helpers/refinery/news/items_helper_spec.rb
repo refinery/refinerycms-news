@@ -5,8 +5,8 @@ module Refinery
     describe ItemsHelper, :type => :helper do
       describe '#news_item_archive_links' do
         before do
-          2.times { FactoryGirl.create(:news_item, :publish_date => Time.utc(2012, 05)) }
-          3.times { FactoryGirl.create(:news_item, :publish_date => Time.utc(2012, 04)) }
+          2.times { FactoryBot.create(:news_item, :publish_date => Time.utc(2012, 05)) }
+          3.times { FactoryBot.create(:news_item, :publish_date => Time.utc(2012, 04)) }
         end
 
         it 'returns list of links to archives' do

@@ -1,9 +1,9 @@
 module Refinery
   module News
     class ItemsController < ::ApplicationController
-      before_filter :find_page
-      before_filter :find_published_news_items, :only => [:index]
-      before_filter :find_news_item, :find_latest_news_items, :only => [:show]
+      before_action :find_page
+      before_action :find_published_news_items, :only => [:index]
+      before_action :find_news_item, :find_latest_news_items, :only => [:show]
 
       def index
         # render 'index'
