@@ -1,4 +1,4 @@
-class MoveSlugToNewsItemTranslations < ActiveRecord::Migration
+class MoveSlugToNewsItemTranslations < ActiveRecord::Migration[4.2]
   def up
     # Fix index problem if this is rolled back
     remove_index Refinery::News::Item.translation_class.table_name, :refinery_news_item_id

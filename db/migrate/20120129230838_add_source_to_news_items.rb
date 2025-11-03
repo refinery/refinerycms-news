@@ -1,5 +1,5 @@
 # This migration comes from refinery_news (originally 7)
-class AddSourceToNewsItems < ActiveRecord::Migration
+class AddSourceToNewsItems < ActiveRecord::Migration[4.2]
 
   def up
     unless Refinery::News::Item.column_names.map(&:to_sym).include?(:source)

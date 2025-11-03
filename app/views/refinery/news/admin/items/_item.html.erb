@@ -8,24 +8,20 @@
           (locales = item.translations.collect{|t| t.locale}).present? %>
       <span class='preview'>
         <% locales.each do |locale| %>
-          <%= link_to refinery_icon_tag("flags/#{locale}.png", :size => '16x11'), refinery.edit_news_admin_item_path(item, :switch_locale => locale),
+          <%= link_to refinery_icon_tag("flags/#{locale}", :size => '16x11'), refinery.edit_news_admin_item_path(item, :switch_locale => locale),
                       :class => "locale" %>
         <% end %>
       </span>
     <% end %>
   </span>
   <span class='actions'>
-    <%= link_to refinery_icon_tag('application_go.png'), refinery.news_item_path(item),
-                :title => t('.view_live_html'),
-                :target => "_blank" %>
-    <%= link_to refinery_icon_tag('application_edit.png'), refinery.edit_news_admin_item_path(item),
-                :title => t('.edit') %>
-    <%= link_to refinery_icon_tag('delete.png'), refinery.news_admin_item_path(item),
-                :class => "cancel confirm-delete",
-                :title => t('.delete'),
-                :method => :delete,
-                :data => {
-                  :confirm => t('refinery.admin.delete.message', :title => item.title)
-                } %>
+    <%= action_icon 'go', refinery.news_item_path(item), t('.view_live_html'), target: "_blank" %>
+    <%= action_icon 'edit', refinery.edit_news_admin_item_path(item), t('.edit') %>
+    <%= action_icon 'delete', refinery.news_admin_item_path(item), t('.delete'),
+                    class: "cancel confirm-delete",
+                    method: :delete,
+                    data: {
+                      confirm: t('refinery.admin.delete.message', :title => item.title)
+                    } %>
   </span>
 </li>

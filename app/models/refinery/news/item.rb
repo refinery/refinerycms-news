@@ -1,5 +1,5 @@
 require 'acts_as_indexed'
-require 'globalize'
+require 'mobility'
 
 module Refinery
   module News
@@ -18,11 +18,11 @@ module Refinery
 
       default_scope proc { order "publish_date DESC" }
 
-      friendly_id :title, :use => [:slugged, :globalize]
+      friendly_id :title, :use => [:slugged, :mobility]
 
       # If title changes tell friendly_id to regenerate slug when saving record
       def should_generate_new_friendly_id?
-        title_changed?
+        attribute_changed?(:title)
       end
 
       def not_published? # has the published date not yet arrived?
@@ -83,7 +83,7 @@ module Refinery
         # rejects any page that has not been translated to the current locale.
         def translated
           includes(:translations).where(
-            translation_class.arel_table[:locale].eq(::Globalize.locale)
+            translation_class.arel_table[:locale].eq(::Mobility.locale)
           ).where(
             arel_table[:id].eq(translation_class.arel_table[:refinery_news_item_id])
           ).references(:translations)
