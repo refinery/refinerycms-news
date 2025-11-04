@@ -4,8 +4,7 @@ require 'mobility'
 module Refinery
   module News
     class Item < Refinery::Core::BaseModel
-      extend FriendlyId
-
+      extend Mobility
       translates :title, :body, :slug
 
       alias_attribute :content, :body
@@ -18,6 +17,7 @@ module Refinery
 
       default_scope proc { order "publish_date DESC" }
 
+      extend FriendlyId
       friendly_id :title, :use => :slugged
 
       # If title changes tell friendly_id to regenerate slug when saving record
