@@ -18,7 +18,7 @@ module Refinery
 
       default_scope proc { order "publish_date DESC" }
 
-      friendly_id :title, :use => [:slugged, :mobility]
+      friendly_id :title, :use => :slugged
 
       # If title changes tell friendly_id to regenerate slug when saving record
       def should_generate_new_friendly_id?
